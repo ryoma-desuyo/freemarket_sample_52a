@@ -1,0 +1,189 @@
+.wrapper{
+  margin: 0;
+  padding: 0;
+
+  .header {
+    width: 700px;
+    margin: 0 auto;
+    padding: 8px 0 0;
+
+    &__line {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      &__top {
+        height: 36px;
+        width: 134px;
+      }
+
+      .form_mask {
+        position: relative;
+        margin-left: 50px;
+        border-radius: 0.3em;/*角丸*/
+        border: solid 2px #f5f5f5;/*線色*/
+        margin-left: 45px;
+        width: 100%;
+        background-color: #f5f5f5;
+        .input {
+          position: relative;
+          border-radius: 0.3em;
+          border: solid 1px #6AC4DC;
+          padding-left: 5px;
+          width: 93%;
+          height: 40px;
+          background-color: #f5f5f5;
+          .fa {
+            float: right;
+            padding: 10px;
+            }
+          }
+        }
+      }
+    }
+  .header__bottom{
+    padding-top: 15px;
+    padding-bottom: 20px;
+
+    &__btn {
+      float: right;
+      font-size: 14px;
+
+        &__user {
+          display: inline-block;
+          color: white;/*文字色*/
+          background-color: red;
+          border: solid 2px red;/*線色*/
+          border-radius: 0.3em;/*角丸*/
+          padding: 0 10px;
+          line-height: 30px;
+          }
+
+        &__sign{
+          display: inline-block;
+          color: #6AC4DC;/*文字色*/
+          border: solid 2px #6AC4DC;/*線色*/
+          border-radius: 0.3em;/*角丸*/
+          padding: 0 10px;
+          line-height: 30px;
+        }
+      }
+    
+    &__left {
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 14px;
+      color: #333;
+      text-decoration-line: none;
+      }
+      .list {
+        color: red;
+        padding-right: 3px;
+      }
+      .tag {
+        color: red;
+        padding: 0 3px 0 20px;
+      }
+    }
+    &__nav {
+      float: left;
+      padding-top: 10px;
+    }
+  
+  .top-img {
+    height: 390px;
+    background-color: #6AC4DC; //仮で色つけてます
+  }
+  .main {
+    margin: 0 auto;
+    padding: 40px 0 0;
+    text-align: center;
+    background-color: #f5f5f5;
+
+    .title {
+      font-size: 28px;
+      font-weight: bold;
+      color:  #333;
+    }
+
+    .mid-title {
+      font-size: 22px;
+      margin: 20px;
+      color: #6AC4DC;
+      font-weight: bold;
+    }
+  
+    .main__item {
+      margin: auto;
+      width: 960px;
+      &__box {
+        display: inline-block;
+        margin: 0 0 0 20px;
+        width: 213px;
+        &__img {
+          height: 220px;
+          background-color: white;
+        }
+        &__name {
+          height: 110px;
+          background-color: white;
+          padding: 16px;
+
+          &__price {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+    .box-all {
+      padding: 20px 0 30px;
+      width: 99.5%;
+      text-align: right;
+      color: #6AC4DC;
+    }
+  }
+}
+
+.footer-top {
+  background: rgba(0,0,0,0.2);
+  color: #fff;
+  display: block;
+  padding: 15px 0;
+}
+
+.footer {
+  position: relative;
+  padding: 0 20px 10px 20px;
+  background: #212121;
+  color: #fff;
+  height: 300px;
+
+  &__bottom{
+    margin: 30px auto 20px;
+    position: absolute;
+    bottom: 0;
+  }
+
+  &__btn {
+    bottom: 32px;
+    right: 32px;
+    width: 160px;
+    height: 160px;
+    font-size: 22px;
+    border-radius: 50%;
+    background: #ea352d;
+    color: #fff;
+    text-align: center;
+    float: right;
+    position: fixed;
+    z-index: 1000;
+
+    &__text {
+      margin: 32px 0 0;
+    }
+    .camera-icon {
+      margin: -8px 0 0;
+      font-size: 54px;
+    }
+  }
+}

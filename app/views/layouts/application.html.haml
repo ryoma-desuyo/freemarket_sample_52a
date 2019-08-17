@@ -9,3 +9,133 @@
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
     = yield
+
+  .wrapper
+    .header
+      .header__line
+        .header__line__top
+          = image_tag src:"/logo.png", alt: "メルカリロゴ"
+        .form_mask
+          = form_tag do
+            %input{type:"search",name:"keyword",value:"",placeholder:"何かお探しですか？",class: "input"}
+              =fa_icon "search",class:"icon"
+      .header__bottom
+        .header__bottom__btn
+          .header__bottom__btn__user 新規会員登録
+          .header__bottom__btn__sign ログイン
+
+        .header__bottom__left
+          %a{href: ""}
+            =fa_icon "list-ul",class: "list"
+          %span カテゴリーから探す
+
+          %a{href: ""}
+            =fa_icon "tag", class: "tag"
+          %span ブランドから探す
+
+
+    .top-img
+      =image_tag src:"/images/melcari main.png", alt: "toplogo"
+
+    .main
+      %h2.title ピックアップカテゴリー
+      %h3.mid-title 商品一覧
+
+      //商品投稿画像 4枚*3
+
+      .main__item
+        .main__item__box
+          .main__item__box__img
+            = image_tag src:"https://image.pet-home.jp/user_file/2019/08/13/2000063_th320.jpg",alt: "product"
+          .main__item__box__name
+            .main__item__box__name__product
+              aaaaaa
+            .main__item__box__name__price
+              ¥1111
+
+        .main__item__box
+          .main__item__box__img
+            = image_tag src:"https://image.pet-home.jp/user_file/2019/08/13/2000063_th320.jpg",alt: "product"
+          .main__item__box__name
+            .main__item__box__name__product
+              aaaaaa
+            .main__item__box__name__price
+              ¥1111
+              
+        .main__item__box
+          .main__item__box__img
+            = image_tag src:"https://image.pet-home.jp/user_file/2019/08/13/2000063_th320.jpg",alt: "product"
+          .main__item__box__name
+            .main__item__box__name__product
+              aaaaaa
+            .main__item__box__name__price
+              ¥1111
+
+        .main__item__box
+          .main__item__box__img
+            = image_tag src:"https://image.pet-home.jp/user_file/2019/08/13/2000063_th320.jpg",alt: "product"
+          .main__item__box__name
+            .main__item__box__name__product
+              aaaaaa
+            .main__item__box__name__price
+              ¥1111
+          
+        .box-all
+          すべての商品を見る
+          //a_tag
+
+      .main__item
+        .main__item__box
+          .main__item__box__img
+            = image_tag src:"https://image.pet-home.jp/user_file/2019/08/13/2000063_th320.jpg",alt: "product"
+          .main__item__box__name
+            .main__item__box__name__product
+              aaaaaa
+            .main__item__box__name__price
+              ¥1111
+
+        .main__item__box
+          .main__item__box__img
+            = image_tag src:"https://image.pet-home.jp/user_file/2019/08/13/2000063_th320.jpg",alt: "product"
+          .main__item__box__name
+            .main__item__box__name__product
+              aaaaaa
+            .main__item__box__name__price
+              ¥1111
+              
+        .main__item__box
+          .main__item__box__img
+            = image_tag src:"https://image.pet-home.jp/user_file/2019/08/13/2000063_th320.jpg",alt: "product"
+          .main__item__box__name
+            .main__item__box__name__product
+              aaaaaa
+            .main__item__box__name__price
+              ¥1111
+
+        .main__item__box
+          .main__item__box__img
+            = image_tag src:"https://image.pet-home.jp/user_file/2019/08/13/2000063_th320.jpg",alt: "product"
+          .main__item__box__name
+            .main__item__box__name__product
+              aaaaaa
+            .main__item__box__name__price
+              ¥1111
+          
+        .box-all
+          すべての商品を見る
+          //a_tag
+
+    .footer-top
+      aaa
+
+    .footer
+      メルカリ
+      .footer__bottom
+        mercari logo
+      .footer__btn
+        .footer__btn__text
+          出品
+          .camera-icon
+            =fa_icon "camera"
+
+
