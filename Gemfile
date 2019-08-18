@@ -56,6 +56,8 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'haml-rails'
   gem 'font-awesome-rails'
+  gem 'carrierwave'
+  gem 'fog-aws'
 end
 
 group :test do
