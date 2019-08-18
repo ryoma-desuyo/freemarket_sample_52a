@@ -1,0 +1,98 @@
+.footer-top {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer {
+  position: absolute;
+  padding: 0 20px 10px 20px;
+  background: #212121;
+  color: #fff;
+  width: 1398px;
+
+  &__box {
+    margin: 0 100px;
+    display: flex;
+
+    &__cell {
+      padding: 0 40px 0 0;
+      width: 20%;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 100;
+    }
+
+    &__cell-double {
+      width: 30%;
+      padding: 0 70px 0 0;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 100;
+    }
+    
+  .h2 {
+    text-decoration: none;
+  }
+    .about {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .about-left {
+      list-style-type: none;
+      padding: 0;
+      position: absolute;
+      margin: 0;
+    }
+
+    .about-right {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .about-right {
+      float: right;
+    }
+
+      .text {
+        padding-top: 16px;
+      }
+
+      .sns-icon {
+        font-size: 30px;
+        padding: 20px 15px 0 0;
+      }
+    }
+
+
+  .footer__bottom{
+    margin: 30px 90px;
+    bottom: 0;
+  }
+
+
+  &__btn {
+    bottom: 32px;
+    right: 32px;
+    width: 160px;
+    height: 160px;
+    font-size: 22px;
+    border-radius: 50%;
+    background: #ea352d;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    z-index: 1000;
+
+    &__text {
+      margin: 32px 0 0;
+    }
+    .camera-icon {
+      margin: 8px 0 0;
+      font-size: 54px;
+    }
+  }
+}
