@@ -37,7 +37,7 @@ set :repo_url,  'git@github.com:ryoma-desuyo/freemarket_sample_52a.git'
 
 # Uncomment the following to require manually verifying the host key before first deploy.
 # set :ssh_options, verify_host_key: :secure
-set :linked_files, %w{ config/credenticals.yml.enc }
+set :linked_files, %w{ config/master.key }
 
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads')
 
@@ -65,7 +65,7 @@ namespace :deploy do
       if test "[ ! -d #{shared_path}/config ]"
         execute "mkdir -p #{shared_path}/config"
       end
-      upload!('config/credenticals.yml.enc', "#{shared_path}/config/credenticals.yml.enc")
+      upload!('config/master.key', "#{shared_path}/config/master.key")
     end
   end
   before :starting, 'deploy:upload'
