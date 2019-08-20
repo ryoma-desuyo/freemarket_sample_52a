@@ -1,0 +1,53 @@
+.footer-top
+  =image_tag('footer.png')
+
+.footer
+  %nav.footer__box
+    .footer__box__cell
+      %h2 メルカリについて
+      %ul.about
+        %li.text 会社概要（運営会社)
+        %li.text 採用情報
+        %li.text プレスリリース
+        %li.text 公式ブログ
+        %li.text メルカリロゴ利用ガイドライン
+        %li
+          =fa_icon "twitter",class:"sns-icon"
+          =fa_icon "facebook-square",class:"sns-icon"
+      
+    .footer__box__cell
+      %h2 ヘルプ＆ガイド
+      %ul.about
+        %li.text メルカリガイド
+        %li.text らくらくメルカリ便
+        %li.text ゆうゆうメルカリ便
+        %li.text 車体取引ガイド
+        %li.text メルカリあんしん・あんぜん宣言！
+        %li.text 偽ブランド品撲滅への取り組み
+        %li.text メルカリボックス
+
+    .footer__box__cell-double
+      %h2 プライバシーと利用規約
+      %ul.about-left
+        %li.text プライバシーポリシー
+        %li.text メルカリ利用規約
+      
+      %ul.about-right
+        %li.text 特定商取引に関する表記
+        %li.text 資金決済法に基づく表示
+        
+
+    .footer__box__cell
+      %h2 国
+      %ul.about
+        %li.text 日本
+
+      
+  .footer__bottom
+    = image_tag("footer-logo.png")
+
+  .footer__btn
+    .footer__btn__text
+      出品
+      .camera-icon
+        =fa_icon "camera"

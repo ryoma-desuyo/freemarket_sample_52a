@@ -1,0 +1,37 @@
+.body {
+  margin: 0;
+  padding: 0;
+}
+
+  .wrapper{
+    margin: 0;
+    padding: 0;
+
+    .top-img {
+      overflow: hidden;
+      position: relative;
+    }
+    
+    .top {
+      margin: 0 auto;
+      padding: 20px 0 0;
+      text-align: center;
+      background-color: #f5f5f5;
+
+      .title {
+        font-size: 28px;
+        font-weight: bold;
+        color:  #333;
+        padding-bottom: 8px;
+      }
+
+      .mid-title {
+        font-size: 22px;
+        color: #6AC4DC;
+        font-weight: bold;
+        background-color: #f5f5f5;
+        margin: 0px;
+      }
+    }
+  }
+
