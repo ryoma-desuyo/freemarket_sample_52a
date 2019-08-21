@@ -24,5 +24,17 @@ RSpec.describe User, type: :model do
       user.valid?
       expect(user.errors[:password_confirmation]).to include("doesn't match Password")
     end
+
+    it "is invalid with a password that hasn't Alpanumeric mixed" do
+      user = build(:user, password: "abcdefgh", password_confirmation: "abcdefgh")
+      user.valid?
+      expect(user.errors[:password][0]).to include("doesn't Alphanumeric mixed")
+    end
+
+    it "is invalid with a password that has less than 7 characters" do
+      user = build(:user, password: "000aaa", password_confirmation: "000aaa")
+      user.valid?
+      expect(user.errors[:password][0]).to include("is too short")
+    end
   end
 end
