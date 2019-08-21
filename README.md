@@ -31,7 +31,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|use_id|integer|null: false, foreign_key: true|
+|user_id|integer|null: false, foreign_key: true|
 |family-name|string|null: false|
 |first-name|string|null: false|
 |family-name-kana|string|null: false|
