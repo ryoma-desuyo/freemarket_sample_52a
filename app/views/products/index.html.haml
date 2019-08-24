@@ -1,2 +1,13 @@
-%h1 Products#index
-%p Find me in app/views/products/index.html.haml
+.wrapper
+
+  = render 'mercari/header'
+
+  .top-img
+    = image_tag("mainimg.png",class: "top-visual")
+  .top
+    %h2.title ピックアップカテゴリー
+    %h3.mid-title 商品一覧
+
+= render 'mercari/product'
+
+= render 'mercari/footer'
