@@ -7,9 +7,13 @@
         %input{type:"search",name:"keyword",value:"",placeholder:"何かお探しですか？",class: "input"}
           =fa_icon "search",class:"icon"
   .header__bottom
-    .header__bottom__btn
-      %a.header__bottom__btn__user 新規会員登録
-      %a.header__bottom__btn__sign ログイン
+    %ul.header__bottom__btn
+      %li.header__bottom__btn__user
+        =link_to new_user_registration_path, class: "user-btn" do
+          %span.sign-up 新規会員登録
+      %li.header__bottom__btn__sign 
+        =link_to edit_user_registration_path, class: "sign-btn" do
+          %span.sign-in ログイン
 
     .header__bottom__left
       %a
