@@ -1,2 +1,25 @@
-%h1 Mypages#index
-%p Find me in app/views/mypages/index.html.haml
+.mypage-header
+  .mypage-header__line
+    .mypage-header__line__top
+      = image_tag('logo.svg',class:"logo")
+    .mypage-header__line__form_mask
+      = form_tag do
+        %input{type:"search",name:"keyword",value:"",placeholder:"何かお探しですか？",class: "input"}
+          =fa_icon "search",class:"icon"
+  .mypage-header__bottom
+    .mypage-header__bottom__btn
+      =link_to "", class: "mypage-header__bottom__btn__likes" do
+        = 
+      %a.mypage-header__bottom__btn__likes いいね！一覧
+      %a.mypage-header__bottom__btn__news お知らせ
+      %a.mypage-header__bottom__btn__todo やることリスト
+      %a.mypage-header__bottom__btn__mypage マイページ
+
+    .mypage-header__bottom__left
+      %a
+        =fa_icon "list-ul",class: "list"
+      %span カテゴリーから探す
+
+      %a
+        =fa_icon "tag", class: "tag"
+      %span ブランドから探す
