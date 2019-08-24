@@ -1,5 +1,5 @@
 .footer-top
-  =image_tag('footer.png')
+  =image_tag('footer.png', class: "footer-top__image")
 
 .footer
   %nav.footer__box
@@ -47,7 +47,8 @@
     = image_tag("footer-logo.png")
 
   .footer__btn
-    .footer__btn__text
-      出品
-      .camera-icon
-        =fa_icon "camera"
+    = link_to products_new_path, class: "exhibit" do
+      .footer__btn__text
+        出品
+        .camera-icon
+          =fa_icon "camera"
