@@ -7,5 +7,5 @@ Rails.application.routes.draw do
   get 'product/update'
   get 'product/destroy'
   devise_for :users
-  root 'mercari#index'
+  root 'product#index'
 end
