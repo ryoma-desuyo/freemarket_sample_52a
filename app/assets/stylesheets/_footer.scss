@@ -85,10 +85,13 @@
     font-size: 22px;
     border-radius: 50%;
     background: #ea352d;
-    color: #fff;
     text-align: center;
     position: fixed;
     z-index: 1000;
+    .exhibit {
+      color: #fff;
+      text-decoration: none;
+    }
 
     &__text {
       margin: 32px 0 0;
