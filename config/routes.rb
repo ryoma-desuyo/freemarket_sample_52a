@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
   devise_for :users
-  root 'mercari#index'
+  root 'products#index'
   resources :mypages, only: [:index, :edit, :update]
 end
