@@ -7,6 +7,6 @@ Rails.application.routes.draw do
   get 'products/update'
   get 'products/destroy'
   devise_for :users
-  resources :mypages, only: [:index, :edit, :update]
   root 'products#index'
+  resources :mypages, only: [:index, :edit, :update]
 end
