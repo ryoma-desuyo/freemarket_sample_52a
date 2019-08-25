@@ -11,4 +11,6 @@ Rails.application.routes.draw do
   root 'products#index'
   resources :mypages, only: [:index, :edit, :update]
 
+  
+
 end
