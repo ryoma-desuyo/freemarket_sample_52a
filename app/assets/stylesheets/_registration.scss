@@ -1,0 +1,57 @@
+* {
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  border-style: solid;
+  border-width: 0;
+}
+
+body {
+  background-color: #f5f5f5;
+  position: relative;
+  min-height: 100%;
+  font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+  font-size: 14px;
+  color: #333;
+  line-height: 1;
+}
+.rg-header {
+  height: 128px;
+  text-align: center;
+}
+
+.logo {
+  width: 185px;
+  height: 49px;
+}
+
+.process-bar {
+  display: inline-block;
+}
+.footer-logo {
+  width: 80px;
+  height: 65px;
+}
+
+.input-field {
+  background-color: #fff;
+  width: 700px;
+  margin: 0 auto;
+}
+
+.new_user {
+  padding: 24px 16px 40px;
+}
+
+footer {
+  width: 456px;
+  height: 220px;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  padding: 40px, 0;
+  text-align: center;
+}
