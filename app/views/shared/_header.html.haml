@@ -2,14 +2,15 @@
   .header__line
     .header__line__top
       = image_tag('logo.svg',class:"logo")
+
     .form_mask
       = form_tag do
-        %input{type:"search",name:"keyword",value:"",placeholder:"何かお探しですか？",class: "input"}
-          =fa_icon "search",class:"icon"
+        %input{type:"search",name:"keyword",value:"",placeholder:"何かお探しですか？",class: "input-search"}
+          =fa_icon "search",class:"search-icon"
   .header__bottom
     %ul.header__bottom__btn
       %li.header__bottom__btn__user
-        =link_to new_user_registration_path, class: "user-btn" do
+        =link_to user_session_path, class: "user-btn" do
           %span.sign-up 新規会員登録
       %li.header__bottom__btn__sign 
         =link_to edit_user_registration_path, class: "sign-btn" do

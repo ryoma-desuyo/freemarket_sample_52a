@@ -1,0 +1,171 @@
+.rg-header-sign {
+  text-align: center;
+  height: 130px;
+
+  .logo-header {
+    margin: 40px 0 0;
+    width: 185px;
+    height: 49px;
+  }
+}
+
+.login {
+  display: block;
+  color: #333;
+
+  .login-main {
+    width: 450px;
+    margin: 0 auto;
+    text-align: center;
+
+    &__account {
+      padding: 40px 64px;
+      background-color: white;
+
+      &__btn {
+        display: block;
+        margin: 8px 0 0;
+        border: 1px solid #0099e8;
+        background: #0099e8;
+        color: #fff;
+        line-height: 40px;
+      }
+    }
+
+    &__form {
+      padding: 32px 64px;
+      margin-top: 1px;
+      background-color: white;
+
+      &__facebook{
+      color: white;
+      display: block;
+      margin: 8px 0 0;
+      border: 1px solid #385185;
+      background: #385185;
+      width: 100%;
+      line-height: 48px;
+      font-size: 14px;
+      transition: all ease-out .3s;
+      cursor: pointer;
+      text-align: center;
+
+      .f-icon {
+        font-size: 30px;
+        padding: 8px 0 8px 8px;
+        float: left;
+      }
+    }
+
+      &__google {
+        margin-top: 15px;
+        line-height: 48px;
+        font-size: 14px;
+        border: 1px solid #979797;
+        display: block;
+        width: 100%;
+        transition: all ease-out .3s;
+        cursor: pointer;
+        text-align: center;
+        
+        .g-icon {
+          font-size: 20px;
+          padding: 13px 0 13px 13px;
+          float: left;
+        }
+      }
+    }
+
+    &__input-form {
+      background-color: white;
+      padding-bottom: 50px;
+
+      &__mail {
+        width: 100%;
+        height: 45px;
+
+        .mail-text {
+          height: 45px;
+          width: 72%;
+          padding-left: 20px;
+          border: 2px solid #f5f5f5;
+          border-radius: 0.3em;
+          .email-field:focus {
+          outline: 0;
+          border-color: rgb(0, 140, 255);
+        }
+        }
+      }
+      &__pass {
+        width: 100%;
+        height: 45px;
+        margin-top: 30px;
+
+        .pass-text {
+          height: 45px;
+          width: 72%;
+          padding-left: 20px;
+          border: 2px solid #f5f5f5;
+          border-radius: 0.3em;
+          outline: 0;
+          border-color: rgb(0, 140, 255);
+        }
+      }
+      &__btn {
+        text-align: center;
+        margin: 25px 20px 0 50px;
+        text-align: center;
+        width: 76%;
+        .login-btn {
+          width: 100%;
+          background: #ea352d;
+          border: 1px solid #ea352d;
+          color: #fff;
+          display: block;
+          line-height: 48px;
+          font-size: 14px;
+          cursor: pointer;
+          text-align: center;
+        }
+      }
+    }
+  }
+    .sign-up {
+      display: none;
+    }
+
+    .forget-pass {
+      display: block;
+      margin: 40px 0 20px 22px;
+      float: left;
+      color: #0099e8;
+      text-decoration: none;
+    }
+}
+.sign-footer {
+  width: 456px;
+  height: 220px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 40px 0 0;
+
+  &__nav {
+    &__about{
+      list-style: none;
+      display: inline-flex;
+      .text {
+        padding-left: 15px;
+        font-size: 12px;
+        color: #333;
+      }
+    }
+  }
+  .logo-footer {
+    width: 80px;
+    height: 65px;
+    margin: 40px auto 0;
+  }
+  .mercari {
+    margin: 8px 0 0;
+  }
+}
