@@ -2,18 +2,30 @@
   .mypage-header__line
     .mypage-header__line__top
       = image_tag('logo.svg',class:"logo")
-    .mypage-header__line__form_mask
+    .form_mask
       = form_tag do
         %input{type:"search",name:"keyword",value:"",placeholder:"何かお探しですか？",class: "input"}
           =fa_icon "search",class:"icon"
   .mypage-header__bottom
     .mypage-header__bottom__btn
-      =link_to "", class: "mypage-header__bottom__btn__likes" do
-        = 
-      %a.mypage-header__bottom__btn__likes いいね！一覧
-      %a.mypage-header__bottom__btn__news お知らせ
-      %a.mypage-header__bottom__btn__todo やることリスト
-      %a.mypage-header__bottom__btn__mypage マイページ
+      %ul.buttons
+        %li.likes
+          =link_to "", class: "mypage-header__bottom__btn__likes" do
+            = fa_icon 'heart-o'
+            %span#likes-letter いいね！一覧
+        %li.news
+          =link_to "", class: "mypage-header__bottom__btn__news" do
+            = fa_icon 'bell-o'
+            %span#news-letter お知らせ
+        %li.lists
+          =link_to "", class: "mypage-header__bottom__btn__lists" do
+            = fa_icon 'check'
+            %span#list-letter やることリスト
+        %li.mypage
+          =link_to "", class: "mypage-header__bottom__btn__mypage" do
+            = image_tag 'user-icon.png', size: '32x32', id: 'user-icon'
+            %span#mypage-letter マイページ
+      
 
     .mypage-header__bottom__left
       %a
