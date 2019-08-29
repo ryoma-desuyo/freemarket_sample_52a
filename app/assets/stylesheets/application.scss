@@ -1,9 +1,12 @@
 @import 'index.scss';
 @import "font-awesome";
-@import "reset.scss";
+@import "config/reset.scss";
 @import "header.scss";
 @import "footer.scss";
 @import "product.scss";
+@import "registration.scss";
+@import "sessions/sessions.scss";
+@import "users.scss";
 @import "mypages.scss";
 @import "sidebar.scss";
-@import "edit.scss"
+@import "edit.scss";
