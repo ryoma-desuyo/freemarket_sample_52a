@@ -8,5 +8,9 @@ Rails.application.routes.draw do
   get 'products/destroy'
   devise_for :users
   root 'products#index'
-  resources :mypages, only: [:index, :edit, :update]
+  resources :mypages, only: [:index, :edit, :update] do
+    member do
+      get 'identification'
+    end
+  end
 end
