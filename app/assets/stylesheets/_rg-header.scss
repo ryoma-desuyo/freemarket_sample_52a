@@ -1,9 +1,7 @@
 .rg-header {
   height: 128px;
   text-align: center;
-}
-
-.rg-header h1 {
+} .rg-header h1 {
   margin: 40px 0 0;
   display: inline-block;
 }
@@ -18,13 +16,9 @@
   border: 0;
   display: inline-block;
   vertical-align: top;
-}
-
-.process-bar ol {
+} ol {
   list-style: none;
-}
-
-.process-bar li {
+} li {
   position: relative;
   z-index: 1;
   display: inline-block;
