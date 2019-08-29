@@ -1,0 +1,23 @@
+.member-registration
+
+  = render "devise/registrations/rg-header"
+
+  %main
+    .member-information
+      %h2.l-head 
+        電話番号の確認
+      .number-confirmation
+        .form-fields
+          .form-field
+            = label :number, "携帯電話の番号"
+            %br/
+            %input{type: "text", placeholder: "携帯電話の番号を入力", class: "input-default"}
+          .form-group
+            %p 本人確認のため、携帯電話のSMS(ショートメッセージサービス)を利用して認証を行います。
+          %button.red-btn{type: "submit"} SMSを送信する
+          %p※電話番号は本人確認や不正利用防止のために利用します。他のユーザーに公開されることはありません。
+          %p.about-user-info
+            %a.text-right
+              電話番号の確認が必要な理由
+
+  = render "devise/registrations/rg-footer"
