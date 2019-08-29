@@ -40,8 +40,6 @@
     }
   }
 .mypage-header__bottom{
-  border-bottom: 1px solid rgb(238, 238, 238);
-  
   &__btn {
     float: right;
     font-size: 14px;
@@ -142,3 +140,33 @@
       padding: 0 3px 0 20px;
     }
   }
+
+.topic-path{
+  background-color: #fff;
+  border-top: 1px solid rgb(238, 238, 238);
+  .list{
+    font-size: 14px;
+    margin-left: 210px;
+    padding: 0;
+    .list-first{
+      display: inline-block;
+      #list1{
+        text-decoration: none;
+        color: rgb(51, 51, 51);
+      }
+    }
+    .list-second{
+      display: inline-block;
+      .list2{
+        text-decoration: none;
+        color: rgb(51, 51, 51);
+        font-weight: 600;
+      }
+    }
+  }
+    .fa-chevron-right{
+      font-size: 9px;
+      color: #888;
+      margin: 0px 6px;
+    }
+}
