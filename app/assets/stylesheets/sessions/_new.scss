@@ -83,8 +83,6 @@
 
         .pass-text {
           @include text-form;
-          outline: 0;
-          border-color: rgb(0, 140, 255);
         }
       }
       &__btn {
