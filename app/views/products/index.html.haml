@@ -1,6 +1,6 @@
 .wrapper
 
-  = render 'mercari/header'
+  = render 'shared/header'
 
   .top-img
     = image_tag("mainimg.png",class: "top-visual")
@@ -8,6 +8,6 @@
     %h2.title ピックアップカテゴリー
     %h3.mid-title 商品一覧
 
-= render 'mercari/product'
+= render 'products/product'
 
-= render 'mercari/footer'
+= render 'shared/footer'
