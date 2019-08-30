@@ -8,4 +8,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   def address
   end
+
+  def credit
+  end
 end
