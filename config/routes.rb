@@ -7,5 +7,6 @@ Rails.application.routes.draw do
     get "sign_up/number", to:"users/registrations#number"
     get "sign_up/address", to: "users/registrations#address"
     get "sign_up/credit", to: "users/registrations#credit"
+    get "/sign_up/done", to:"users/registrations#done"
   end
 end

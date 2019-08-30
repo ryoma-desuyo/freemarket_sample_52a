@@ -1,0 +1,15 @@
+.member-registration
+
+  = render "devise/registrations/rg-header"
+  %main
+    .member-information
+      %h2.l-head 
+        会員登録完了
+      .default-confirmation
+        .form-fields
+          %p ありがとうございます。会員登録が完了しました。
+          %button.red-btn{type: "submit"} メルカリを始める
+  .footer__ad
+    = image_tag("footer.png")
+
+  = render "devise/registrations/rg-footer"

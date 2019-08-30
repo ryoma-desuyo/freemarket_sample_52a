@@ -11,4 +11,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   def credit
   end
+
+  def done
+  end
 end
