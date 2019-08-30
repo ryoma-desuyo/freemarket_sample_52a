@@ -75,6 +75,14 @@ main {
   color: #fff;
   font-size: 12px;
   vertical-align: top;
+} .optional {
+  background-color: #ccc;
+  margin: 0 0 0 8px;
+  padding: 2px 4px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  vertical-align: top;
 }
 
 .form-group {
@@ -115,6 +123,7 @@ main {
 }.text-center {
   text-align: center;
 }
+
 .red-btn{
   margin: 24px 0 0;
   width: 100%;
@@ -132,6 +141,11 @@ main {
 } 
 
 .number-confirmation {
+  padding: 40px 40px 64px;
+  border-top: 1px solid #f5f5f5;
+}
+
+.address-confirmation {
   padding: 40px 40px 64px;
   border-top: 1px solid #f5f5f5;
 }

@@ -6,4 +6,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
   def number  
   end
 
+  def address
+  end
 end
