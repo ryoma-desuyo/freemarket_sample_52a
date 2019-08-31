@@ -1,2 +1,107 @@
-%h1 Mypages#index
-%p Find me in app/views/mypages/index.html.haml
+
+
+
+
+
+
+.main-mypage
+  .main-mypage__right
+    .main-mypage__right__profile
+      =link_to '', id: 'profile-line' do
+        .main-mypage__right__profile__icon
+          =image_tag 'user_icon', size: '60x60', id: 'my-icon'
+        %h2#user-name
+          ユーザーネーム
+        .main-mypage__right__profile__number
+          .main-mypage__right__profile__number__evaluation
+            評価
+            %span#evaluation-number 99
+          .main-mypage__right__profile__number__product
+            出品数
+            %span#product-number 99
+    .main-mypage__right__imformation
+      %ul.main-mypage__right__imformation__imformation-tab
+        %li.main-mypage__right__imformation__imformation-tab__news-tab
+          %h3#news
+            お知らせ
+        %li.main-mypage__right__imformation__imformation-tab__to-do-list-tab
+          %h3#to-do-list
+            やることリスト
+      .main-mypage__right__imformation__content
+        %ul.main-mypage__right__imformation__content__list
+          %li.main-mypage__right__imformation__content__list__part
+            =link_to '', class: 'main-mypage__right__imformation__content__list__part__link' do
+              =image_tag 'mercari_icon.png', size: '48x48', class: 'main-mypage__right__imformation__content__list__part__link__logo'
+              .main-mypage__right__imformation__content__list__part__link__body
+                .main-mypage__right__imformation__content__list__part__link__body__text
+                  あああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
+                .main-mypage__right__imformation__content__list__part__link__body__time
+                  = fa_icon 'clock-o', class: 'main-mypage__right__imformation__content__list__link__body__time__icon'
+                  %span.main-mypage__right__imformation__content__list__part__link__body__time__text
+                    1日前
+              =fa_icon 'chevron-right', class: 'main-mypage__right__imformation__content__list__part__link__right'
+
+          %li.main-mypage__right__imformation__content__list__part
+            =link_to '', class: 'main-mypage__right__imformation__content__list__part__link' do
+              =image_tag 'mercari_icon.png', size: '48x48', class: 'main-mypage__right__imformation__content__list__part__link__logo'
+              .main-mypage__right__imformation__content__list__part__link__body
+                .main-mypage__right__imformation__content__list__part__link__body__text
+                  いいいいいいいいいいいいいいいいいいいいいいいいいいいいい
+                .main-mypage__right__imformation__content__list__part__link__body__time
+                  = fa_icon 'clock-o', class: 'main-mypage__right__imformation__content__list__link__body__time__icon'
+                  %span.main-mypage__right__imformation__content__list__part__link__body__time__text
+                    1日前
+              =fa_icon 'chevron-right', class: 'main-mypage__right__imformation__content__list__part__link__right'
+
+          %li.main-mypage__right__imformation__content__list__part
+            =link_to '', class: 'main-mypage__right__imformation__content__list__part__link' do
+              =image_tag 'mercari_icon.png', size: '48x48', class: 'main-mypage__right__imformation__content__list__part__link__logo'
+              .main-mypage__right__imformation__content__list__part__link__body
+                .main-mypage__right__imformation__content__list__part__link__body__text
+                  うううううううううううううううううううううううううううううううううううううううううううう
+                .main-mypage__right__imformation__content__list__part__link__body__time
+                  = fa_icon 'clock-o', class: 'main-mypage__right__imformation__content__list__link__body__time__icon'
+                  %span.main-mypage__right__imformation__content__list__part__link__body__time__text
+                    1日前
+              =fa_icon 'chevron-right', class: 'main-mypage__right__imformation__content__list__part__link__right'
+
+          %li.main-mypage__right__imformation__content__list__part
+            =link_to '', class: 'main-mypage__right__imformation__content__list__part__link' do
+              =image_tag 'mercari_icon.png', size: '48x48', class: 'main-mypage__right__imformation__content__list__part__link__logo'
+              .main-mypage__right__imformation__content__list__part__link__body
+                .main-mypage__right__imformation__content__list__part__link__body__text
+                  えええええええええええええええええええええええええええええええええええええええええええええええええええ
+                .main-mypage__right__imformation__content__list__part__link__body__time
+                  = fa_icon 'clock-o', class: 'main-mypage__right__imformation__content__list__link__body__time__icon'
+                  %span.main-mypage__right__imformation__content__list__part__link__body__time__text
+                    1日前
+              =fa_icon 'chevron-right', class: 'main-mypage__right__imformation__content__list__part__link__right'
+
+          %li.main-mypage__right__imformation__content__list__part
+            =link_to '', class: 'main-mypage__right__imformation__content__list__part__link' do
+              =image_tag 'mercari_icon.png', size: '48x48', class: 'main-mypage__right__imformation__content__list__part__link__logo'
+              .main-mypage__right__imformation__content__list__part__link__body
+                .main-mypage__right__imformation__content__list__part__link__body__text
+                  おおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおお
+                .main-mypage__right__imformation__content__list__part__link__body__time
+                  = fa_icon 'clock-o', class: 'main-mypage__right__imformation__content__list__link__body__time__icon'
+                  %span.main-mypage__right__imformation__content__list__part__link__body__time__text
+                    1日前
+              =fa_icon 'chevron-right', class: 'main-mypage__right__imformation__content__list__part__link__right'
+
+
+          %li.main-mypage__right__imformation__content__list__part
+            =link_to '一覧を見る', '', class: 'main-mypage__right__imformation__content__list__part__link-list'
+
+    .main-mypage__right__purchase
+      %h2.main-mypage__right__purchase__title
+        購入した商品
+      %ul.main-mypage__right__purchase__list
+        %li.main-mypage__right__purchase__list__now
+          取引中
+        %li.main-mypage__right__purchase__list__past
+          過去の取引
+      .main-mypage__right__purchase__content
+        %ul.main-mypage__right__purchase__content__list
+          %li.main-mypage__right__purchase__content__list__product
+            取引中の商品がありません
