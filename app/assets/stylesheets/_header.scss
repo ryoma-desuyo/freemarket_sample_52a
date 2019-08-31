@@ -48,24 +48,35 @@
     font-size: 14px;
     bottom: 8px;
     position: relative;
+    margin: 0;
 
       &__user {
         display: inline-block;
-        color: white;/*文字色*/
         background-color: red;
         border: solid 2px red;/*線色*/
         border-radius: 0.3em;/*角丸*/
         padding: 0 10px;
         line-height: 30px;
+        .user-btn {
+          text-decoration: none;
         }
+        .sign-up {
+          color: white;
+        }
+      }
 
       &__sign{
         display: inline-block;
-        color: #6AC4DC;/*文字色*/
         border: solid 2px #6AC4DC;/*線色*/
         border-radius: 0.3em;/*角丸*/
         padding: 0 10px;
         line-height: 30px;
+        .sign-btn{
+          text-decoration: none;
+        }
+        .sign-in {
+          color: #6AC4DC;
+        }
       }
     }
   

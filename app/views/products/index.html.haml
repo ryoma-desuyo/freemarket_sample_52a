@@ -1,0 +1,13 @@
+.wrapper
+
+  = render 'shared/header'
+
+  .top-img
+    = image_tag("mainimg.png",class: "top-visual")
+  .top
+    %h2.title ピックアップカテゴリー
+    %h3.mid-title 商品一覧
+
+= render 'products/product'
+
+= render 'shared/footer'

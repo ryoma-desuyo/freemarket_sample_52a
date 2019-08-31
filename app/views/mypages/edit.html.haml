@@ -1,0 +1,20 @@
+= render partial: 'shared/header'
+
+.containar
+  .profile-edit
+    .profile-edit__head
+      %h2.title プロフィール
+    .profile-edit__icon
+      = image_tag('mypage-background', class: "mypage-background")
+      = image_tag('user-icon.png', class: "user-icon")
+      = form_tag do
+        %input{type:"text",name:"nickname",value:"",placeholder:"例)AYA☆セール中",class: "input-defalt", style:"margin-top: 70px;"}
+    .profile-edit__context
+      = form_tag do
+        %textarea{type:"text",name:"introduction",value:"",placeholder:"例）こんにちは☆ ご覧いただきありがとうございます！かわいいものやきれいめオフィスカジュアル中心に出品しています。服のサイズは主に9号です。気持ちよくお取引できるよう心がけていますので、商品や発送方法などご質問がありましたらお気軽にどうぞ♪",class: "textarea-defalt"}
+    .profile-edit__update
+      %button.btn-default.btn-red{type:"submit"} 変更する
+
+  = render partial: 'shared/sidebar'
+
+= render partial: 'shared/footer'

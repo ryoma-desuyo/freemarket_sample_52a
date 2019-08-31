@@ -8,9 +8,13 @@
     padding: 0;
 
     .top-img {
+      .image {
+      width: 100%;
       overflow: hidden;
       position: relative;
+      }
     }
+    
     
     .top {
       margin: 0 auto;

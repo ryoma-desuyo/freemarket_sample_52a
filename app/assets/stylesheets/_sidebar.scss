@@ -1,0 +1,36 @@
+.side-bar{
+  margin-left: 210px;
+  width: 280px;
+  .mypage-nav {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+    .mypage-nav-head {
+      margin: 40px 0 0;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    .mypage-nav-list {
+      list-style: none;
+      padding: 0px;
+      &__li {
+        height: 45px;
+      }
+    }
+    .mypage-nav-list-item {
+      position: relative;
+      background: #fff;
+      font-size: 14px;
+      color: #333;
+      text-decoration: none;
+      display: inline-block;
+      width: 248px;
+      border-bottom: solid 0px rgb(204, 204, 204);
+      padding: 15px;
+      height: 14px;
+      .icon {
+        color: rgb(204, 204, 204);
+        float: right;
+      }
+  }
+}
