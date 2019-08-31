@@ -7,4 +7,8 @@ class MypagesController < ApplicationController
 
   def update
   end
+
+  def identification
+    
+  end
 end
