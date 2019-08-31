@@ -14,20 +14,20 @@
             %input{type: "text", placeholder: "半角英数字のみ", class: "input-default"}
             %br/
             %ul.signup-card-list
-              %li
+              %li.signup-card-list__card
                 = image_tag("visa.svg", width: 49, height: 20)
-              %li
-                = image_tag("master-card.svg", width: 49, height: 20)
-              %li
-                = image_tag("saison-card.svg", width: 49, height: 20)
-              %li
-                = image_tag("jcb.svg", width: 49, height: 20)
-              %li
-                = image_tag("american_express.svg", width: 49, height: 20)
-              %li
-                = image_tag("dinersclub.svg", width: 49, height: 20)
-              %li
-                = image_tag("discover.svg", width: 49, height: 20)
+              %li.signup-card-list__card
+                = image_tag("master-card.svg", width: 34, height: 20)
+              %li.signup-card-list__card
+                = image_tag("saison-card.svg", width: 30, height: 20)
+              %li.signup-card-list__card
+                = image_tag("jcb.svg", width: 32, height: 20)
+              %li.signup-card-list__card
+                = image_tag("american_express.svg", width: 21, height: 20)
+              %li.signup-card-list__card
+                = image_tag("dinersclub.svg", width: 32, height: 20)
+              %li.signup-card-list__card
+                = image_tag("discover.svg", width: 32, height: 20)
 
           .form-field
             = label :expiration_date, "有効期限"

@@ -14,16 +14,15 @@
   border: 0;
   display: inline-block;
   vertical-align: top;
-} ol {
-  list-style: none;
-} li {
-  position: relative;
-  z-index: 1;
-  display: inline-block;
-  font-size: 12px;
-  margin: 0 40px 0 0;
-  color: #888;
-  min-width: 60px;
+  &__point {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    font-size: 12px;
+    margin: 0 40px 0 0;
+    color: #888;
+    min-width: 60px;
+  }
 }
 
 .process-status, .process-status__first, .process-status__end {
