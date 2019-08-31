@@ -1,11 +1,11 @@
 %header.rg-header
-  %h1
-    %a= image_tag("logo.svg", class: "logo")
-  .process-bar
-    %ol{class: "clearfix"}
+  %h1.rg-header__logo
+    %a= image_tag("logo.svg")
+  %nav.process-bar
+    %ol.clearfix
       %li
         会員情報
-        .process-status-first
+        .process-status__first
       %li 
         電話番号認証
         .process-status
@@ -17,4 +17,4 @@
         .process-status
       %li 
         完了
-        .process-status-end
+        .process-status__end

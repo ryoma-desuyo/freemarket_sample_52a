@@ -53,10 +53,10 @@
             %input{type: "text", placeholder: "カード背面4桁もしくは3桁の番号", class: "input-default"}
 
           %p.about-card-info
-            %a.text-right
-              カード裏面の番号とは
+            %a.text-right カード裏面の番号とは>
 
-          %button.red-btn{type: "submit"} 次へ進む
+          %button.red-btn{type: "submit"} 
+            =link_to "次へ進む", sign_up_done_path
 
 
 

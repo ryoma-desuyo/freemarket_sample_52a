@@ -33,4 +33,7 @@
   display: flex;
   position: relative;
   overflow: hidden;
+  & img {
+    margin: 0 auto;
+  }
 }
