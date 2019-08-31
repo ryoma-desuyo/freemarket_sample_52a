@@ -36,13 +36,6 @@ main {
 .form-fields {
   max-width: 343px;
   margin: 0 auto;
-}.form-field:first-child {
-  margin: 0;
-}
-
-.form-field .input-default{
-  width: 343px;
-  margin: 8px 0 0;
 }
 
 .form-field {
@@ -60,9 +53,18 @@ main {
   background-color: #fff;
   line-height: 1.5;
   font-size: 16px;
-} .input-default-half{
-  margin: 8px 8px 0 0;
-  width: 50%;
+  margin: 8px 0 0;
+  width: 100%;
+  box-sizing: border-box;
+} 
+
+.form-field:first-child {
+  margin: 0;
+}
+
+.input-default-half{
+  margin-top: 8px;
+  width: calc(50% - 6px);
   height: 48px;
   padding: 10px 16px 8px;
   border-radius: 4px;
@@ -70,7 +72,10 @@ main {
   background-color: #fff;
   line-height: 1.5;
   font-size: 16px;
-} .require {
+  box-sizing: border-box;
+} 
+
+.require {
   background-color: #ea352d;
   margin: 0 0 0 8px;
   padding: 2px 4px;
@@ -78,7 +83,9 @@ main {
   color: #fff;
   font-size: 12px;
   vertical-align: top;
-} .optional {
+} 
+
+.optional {
   background-color: #ccc;
   margin: 0 0 0 8px;
   padding: 2px 4px;

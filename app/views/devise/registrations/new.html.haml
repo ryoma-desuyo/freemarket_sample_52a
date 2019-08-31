@@ -13,25 +13,21 @@
           .form-field
             %label ニックネーム
             %span.require 必須
-            %br/
             = f.text_field :nickname, autofocus: true, autocomplete: "nickname", placeholder: "例)メルカリ太郎", class: "input-default", required: ""
 
           .form-field
             %label メールアドレス
             %span.require 必須
-            %br/
             = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "PC・携帯どちらでも可", class: "input-default", required: ""
 
           .form-field
             %label パスワード
             %span.require 必須
-            %br/
             = f.password_field :password, autocomplete: "new-password", placeholder: "7文字以上", class: "input-default", required: ""
 
           .form-field
             %label パスワード確認
             %span.require 必須
-            %br/
             = f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "7文字以上", class: "input-default", required: ""
 
           .form-group
