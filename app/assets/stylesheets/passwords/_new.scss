@@ -1,0 +1,58 @@
+.password {
+  display: block;
+  color: #333;
+  margin: 0 auto;
+
+  .password-main {
+    @include form-page;
+
+    &__title {
+      padding: 32px 16px;
+      font-size: 22px;
+    }
+  }
+
+  .password-form {
+    @include form-page(700px, 0 auto, none);
+    border-top: 1px solid #f5f5f5;
+
+    &__input {
+    padding: 64px;
+    margin: 0px 60px 0px 60px;
+    
+      &__email {
+        width: 340px;
+        margin: 0 auto;
+
+        .mailadd {
+          font-weight: 600;
+        }
+        .email-form {
+          @include text-form;
+          width: 100%;
+          margin: 8px 0 8px 0;
+          font-size: 16px;
+          line-height: 1.5;
+        }
+        
+        .form-text {
+          line-height: 1.5;
+          font-size: 12px;
+          color: #888;
+        }
+      }
+      
+      &__send-btn {
+        @include form-btn (#ea352d, #ea352d, white, 48px);
+        margin: 40px 0 0 40px;
+        width: 86%;
+
+        .send {
+          text-decoration: none;
+          color: white;
+          background-color: #ea352d;
+        }
+      }
+    }
+  }
+}
