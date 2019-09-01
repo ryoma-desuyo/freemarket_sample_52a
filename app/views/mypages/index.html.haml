@@ -1,6 +1,5 @@
 = render 'shared/mypage-header'
 .main-mypage
-  = render 'shared/sidebar'
   .main-mypage__right
     .main-mypage__right__profile
       =link_to '', id: 'profile-line' do
@@ -101,3 +100,5 @@
         %ul.main-mypage__right__purchase__content__list
           %li.main-mypage__right__purchase__content__list__product
             取引中の商品がありません
+  = render 'shared/sidebar'
+= render partial: 'shared/footer'
