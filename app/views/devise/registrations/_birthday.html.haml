@@ -1,0 +1,20 @@
+.form-field
+  = label :birthday, "生年月日"
+  %span{class: "require"} 必須
+  .form-field_bithday
+    ._select-wrap
+      %select{name: "year", class: "select-default"}
+        %option --
+        - for year in 1900..2019
+          %option{value: "#{year}"} #{year}
+      %span 年
+      %select{name: "month", class: "select-default"}
+        %option --
+        - for month in 1..12
+          %option{value: "#{month}"} #{month}
+      %span 月
+      %select{name: "day", class: "select-default"}
+        %option --
+        - for day in 1..31
+          %option{value: "#{day}"} #{day}
+      %span 日

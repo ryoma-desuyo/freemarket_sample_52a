@@ -1,0 +1,39 @@
+.rg-footer {
+  width: 456px;
+  height: 220px;
+  margin: 0 auto;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.rg-footer a {
+  display: block;
+  margin: 40px 0 auto;
+}
+.rg-footer ul {
+  list-style: none;
+}
+
+.rg-footer li {
+  display: inline-block;
+  margin: 0 0 0 16px;
+  font-size: 12px;
+}
+
+.footer-logo {
+  width: 80px;
+  height: 65px;
+}
+
+.footer__ad {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  & img {
+    margin: 0 auto;
+  }
+}
