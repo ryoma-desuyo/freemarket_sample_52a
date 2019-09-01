@@ -1,0 +1,66 @@
+= render partial: 'shared/header'
+
+.containar
+  .profile-identification
+    .profile-identification__head
+      %h2.title 本人情報の登録
+    .profile-identification__context
+      %p.text
+        お客さまの本人情報をご登録ください。
+        %br
+        登録されたお名前・生年月日を変更する場合、本人確認書類の提出が必要になります。
+      %p.text-right
+        =link_to mypages_path ,class:"about-identification-upload" do
+          本人確認書類のアップロードについて
+          =fa_icon "chevron-right", class: "icon"
+      .profile-identification__context__form-group
+        %label.content お名前
+        %p テスト 太郎
+      .profile-identification__context__form-group
+        %label.content お名前カナ
+        %p テスト タロウ
+      .profile-identification__context__form-group
+        %label.content 生年月日
+        %p 1991/11/11
+      .profile-identification__context__form-group
+        = form_tag do
+          %label.content 郵便番号
+          %span.form-arbitrary 任意
+          %br
+          %input{type:"text", name:"address-number",value:"" ,placeholder:"例）1234567", class: "input-defalt"}
+      .profile-identification__context__form-group
+        %label.content 都道府県
+        %span.form-arbitrary  任意
+        %br
+        .select-wrap
+          = collection_select :hoge, :foo, Prefecture.all, :id, :name
+
+      .profile-identification__context__form-group
+        = form_tag do
+          %label.content 市区町村
+          %span.form-arbitrary  任意
+          %br
+          %input{type:"text", name:"address-number",value:"" ,placeholder:"例）横浜市緑区", class: "input-defalt"}
+      .profile-identification__context__form-group
+        = form_tag do
+          %label.content 番地
+          %span.form-arbitrary  任意
+          %br
+          %input{type:"text", name:"address-number",value:"" ,placeholder:"例）青山1-1-1", class: "input-defalt"}
+      .profile-identification__context__form-group
+        = form_tag do
+          %label.content 建物名
+          %span.form-arbitrary  任意
+          %br
+          %input{type:"text", name:"address-number",value:"" ,placeholder:"例）柳ビル103", class: "input-defalt"}
+
+    .profile-identification__update
+      %button.btn-default.btn-red{type:"submit"} 登録する
+      %p.text-right
+        =link_to mypages_path ,class:"about-identification-upload" do
+          本人情報の登録について
+          =fa_icon "chevron-right", class: "icon"
+
+  = render partial: 'shared/sidebar'
+
+= render partial: 'shared/footer'

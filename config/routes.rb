@@ -8,8 +8,14 @@ Rails.application.routes.draw do
     get "sign_up/credit", to: "users/registrations#credit"
     get "/sign_up/done", to:"users/registrations#done"
   end
+  
+  root 'products#index'
+  resources :mypages, only: [:index, :edit, :update] do
+    member do
+      get 'identification'
+    end
+  end
   resources :products
   resources :mypages, only: [:index, :edit, :update]
-  root 'products#index'
   get 'users/new'
 end
