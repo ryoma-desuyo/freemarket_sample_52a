@@ -28,13 +28,13 @@
       
 
     .mypage-header__bottom__left
-      %a
+      =link_to '', class: "mypage-header__bottom__left__category-search" do
         =fa_icon "list-ul",class: "list"
-      %span カテゴリーから探す
+        %span#category-search カテゴリーから探す
 
-      %a
+      =link_to '', class: "mypage-header__bottom__left__brand-search" do
         =fa_icon "tag", class: "tag"
-      %span ブランドから探す
+        %span#brand-search ブランドから探す
 
 .topic-path
   %ul.list

@@ -126,15 +126,29 @@
     font-size: 14px;
     color: #333;
     text-decoration-line: none;
+    &__category-search{
+      text-decoration: none;
     }
+    &__brand-search{
+      text-decoration: none;
+    }
+  }
     .list {
       color: red;
       padding-right: 3px;
     }
+    #category-search{
+      color: #333;
+    }
+   
     .tag {
       color: red;
       padding: 0 3px 0 20px;
     }
+    #brand-search{
+      color: #333;
+    }
+ 
   }
 
 .topic-path{
