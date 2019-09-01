@@ -17,7 +17,6 @@
 
     .form_mask {
       position: relative;
-      margin-left: 50px;
       border-radius: 0.3em;/*角丸*/
       border: solid 2px #f5f5f5;/*線色*/
       margin-left: 45px;
@@ -44,9 +43,9 @@
     float: right;
     font-size: 14px;
     position: relative;
+    top: 15px;
     margin: 0;
-    .buttons{   
-    }
+ 
       .likes{
         display: inline-block;
         vertical-align: top;
@@ -59,10 +58,7 @@
             color: #ccc;
             font-size: 18px;
           }
-          #mypage-letter{
-          margin-left: 3px;
-          vertical-align: top;
-          }
+        
           #likes-letter{
             margin-left: 3px;
             vertical-align: top;
@@ -144,10 +140,13 @@
 .topic-path{
   background-color: #fff;
   border-top: 1px solid rgb(238, 238, 238);
+  height: 50px;
   .list{
     font-size: 14px;
     margin-left: 210px;
     padding: 0;
+    position: relative;
+    top: 10px;
     .list-first{
       display: inline-block;
       #list1{
