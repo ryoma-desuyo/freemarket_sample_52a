@@ -7,14 +7,14 @@
         %option --
         - for year in 1900..2019
           %option{value: "#{year}"} #{year}
-      %span 年
+      %span.days 年
       %select{name: "month", class: "select-default"}
         %option --
         - for month in 1..12
           %option{value: "#{month}"} #{month}
-      %span 月
+      %span.days 月
       %select{name: "day", class: "select-default"}
         %option --
         - for day in 1..31
           %option{value: "#{day}"} #{day}
-      %span 日
+      %span.days 日
