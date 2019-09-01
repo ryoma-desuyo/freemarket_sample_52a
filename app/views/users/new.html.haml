@@ -1,0 +1,24 @@
+.wrapper
+
+  = render 'devise/sessions/header'
+
+  .signup
+    .signup-main
+      .signup-main__account
+        新規会員登録
+
+    
+    .signup-btn
+      .signup-btn__form
+        .signup-btn__form__email
+          =link_to new_user_registration_path, class:"email-form" do
+            =fa_icon "envelope", class: "m-icon"
+            %span メールアドレスで登録する
+        .signup-btn__form__facebook
+          =fa_icon "facebook-square", class: "f-icon"
+          %span Facebookで登録する
+        .signup-btn__form__google
+          =fa_icon "google", class: "g-icon"
+          %span Googleで登録する
+  
+  = render 'devise/sessions/footer'
