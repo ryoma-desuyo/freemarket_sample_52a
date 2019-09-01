@@ -1,7 +1,8 @@
 .header {
   width: 1020px;
   margin: 0 auto;
-  padding: 8px 0 0;
+  padding: 8px 210px 0px 210px;
+  background-color: white;
 
   &__line {
     display: flex;
@@ -23,18 +24,19 @@
       margin-left: 45px;
       width: 100%;
       background-color: #f5f5f5;
-      .input {
+      .input-search {
         position: relative;
         border-radius: 0.3em;
         border: none;
         padding-left: 5px;
-        width: 93%;
+        width: 100%;
         height: 40px;
         background-color: #f5f5f5;
-        .fa {
-          float: right;
-          padding: 10px;
-          }
+      }
+      .search-icon {
+        position: absolute;
+        right: 30px;
+        top: 13px;
         }
       }
     }

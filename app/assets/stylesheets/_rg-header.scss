@@ -1,0 +1,58 @@
+.rg-header {
+  height: 128px;
+  text-align: center;
+   &__logo {
+  margin: 40px 0 0;
+  display: inline-block;
+  width: 185px;
+  height: 49px;
+ }
+}
+
+.process-bar {
+  padding: 40px 0 0 44px;
+  border: 0;
+  display: inline-block;
+  vertical-align: top;
+  &__point {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    font-size: 12px;
+    margin: 0 40px 0 0;
+    color: #888;
+    min-width: 60px;
+  }
+}
+
+.process-status, .process-status__first, .process-status__end {
+  width: 12px;
+  height: 12px;
+  margin: 8px auto 0;
+  background-color: #ccc;
+  border-radius: 50%;
+}
+
+.process-status::after, .process-status__first::after {
+  position: absolute;
+  bottom: 5px;
+  z-index: -1;
+  display: block;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background-color: #ccc;
+  left: 50%;
+}
+
+.process-status::before, .process-status__end::before {
+  position: absolute;
+  bottom: 5px;
+  z-index: -1;
+  display: block;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background-color: #ccc;
+  right: 50%;
+}
