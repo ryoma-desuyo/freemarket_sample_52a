@@ -1,4 +1,52 @@
-= render partial: 'shared/mypage-header'
+.mypage-header
+  .mypage-header__line
+    .mypage-header__line__top
+      = image_tag('logo.svg',class:"logo")
+    .form_mask
+      = form_tag do
+        %input{type:"search",name:"keyword",value:"",placeholder:"何かお探しですか？",class: "input"}
+          =fa_icon "search",class:"icon"
+  .mypage-header__bottom
+    .mypage-header__bottom__btn
+      %ul.buttons
+        %li.likes
+          =link_to "", class: "mypage-header__bottom__btn__likes" do
+            = fa_icon 'heart-o'
+            %span#likes-letter いいね！一覧
+        %li.news
+          =link_to "", class: "mypage-header__bottom__btn__news" do
+            = fa_icon 'bell-o'
+            %span#news-letter お知らせ
+        %li.lists
+          =link_to "", class: "mypage-header__bottom__btn__lists" do
+            = fa_icon 'check'
+            %span#list-letter やることリスト
+        %li.mypage
+          =link_to "", class: "mypage-header__bottom__btn__mypage" do
+            = image_tag 'user-icon.png', size: '32x32', id: 'user-icon'
+            %span#mypage-letter マイページ
+      
+
+    .mypage-header__bottom__left
+      =link_to '', class: "mypage-header__bottom__left__category-search" do
+        =fa_icon "list-ul",class: "list"
+        %span#category-search カテゴリーから探す
+
+      =link_to '', class: "mypage-header__bottom__left__brand-search" do
+        =fa_icon "tag", class: "tag"
+        %span#brand-search ブランドから探す
+
+.topic-path
+  %ul.list
+    %li.list-first
+      = link_to '', id: "list1" do
+        %span.list1 メルカリ
+      %i.fa.fa-chevron-right
+    %li.list-second
+      %span.list2 マイページ  
+      %i.fa.fa-chevron-right
+    %li.list-second
+      %span.list2 プロフィール
 
 .containar
   .profile-edit
