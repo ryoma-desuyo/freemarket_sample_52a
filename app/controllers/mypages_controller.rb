@@ -9,6 +9,6 @@ class MypagesController < ApplicationController
   end
 
   def identification
-    
+    @address = Prefecture.find(params[:id])
   end
 end
