@@ -1,0 +1,218 @@
+
+
+
+.main-mypage{
+  background-color:rgb(245, 245, 245);
+  height: 2000px;
+  &__right{  
+    float: right;
+    margin-top: 40px;
+    margin-right: 210px;
+    padding-bottom: 40px;
+    width: 700px;
+    &__profile{
+      height: 200px;
+      background-image: url(profile-background);
+      background-size: cover;
+        #profile-line{
+          display: block;
+          width: 700px;
+          height: 111px;
+          padding-top: 40px;
+          text-align: center;
+          text-decoration-line: none;
+          font-size: 14px;
+          color: #333
+        }    
+          &__icon{
+            #my-icon{
+              border-radius: 50%;
+            }
+          }
+          #user-name{
+            margin-top: 8px;
+            font-size: 12px;
+          }
+        &__number{
+
+          &__evaluation{
+            display: inline-block;
+            #evaluation-number{
+              margin-left: 8px;
+              font-weight: 600;
+              font-size: 12px;
+            }
+          }
+          &__product{
+            margin-left: 16px;
+            display: inline-block;
+            #product-number{
+              margin-left: 8px;
+              font-weight: 600;
+              font-size: 12px;
+            }
+          }
+        }      
+    }
+    &__imformation{
+
+      &__imformation-tab{
+        text-align: center;
+        font-size: 0;
+        padding: 0;
+        height: 74px;
+
+        &__news-tab{
+          display: inline-block;
+          width: 50%;
+          background-color: #fff;
+          border-top: 2px solid #ea352d;
+          box-sizing: border-box;
+          height: 74px;
+
+          #news{
+            font-size: 14px;
+            font-weight: bold;
+            padding-top: 14px;
+          }
+        }
+
+        &__to-do-list-tab{
+          display: inline-block;
+          width: 50%;
+          background-color: #eee;
+          height: 74px;
+          position: relative;
+          bottom: 2px;
+
+          #to-do-list{
+            font-size: 14px;
+            font-weight: bold;
+            padding-top: 14px;
+          }
+        }        
+      }
+      &__content{
+        background-color: #fff;
+        &__list{
+          background-color: #fff;
+          font-size: 0;
+          padding: 0;
+          &__part{
+            background-color: #fff;
+            border-bottom: 1px solid #eee;
+            padding: 16px;
+            &__link{
+              display: block;
+              &__logo{
+                box-sizing: border-box;
+                border: 2px solid#eee;
+                display: inline-block;
+              }
+              &__body{
+                display: inline-block;
+                background-color: #fff;
+                font-size: 14px;
+                vertical-align: top;
+                margin-left: 22px;
+                width: 560px;
+            
+                &__text{
+                  color: black;
+                  font-size: 12px;
+                }
+                &__time{
+                  color: #888;
+          
+                  &__icon{
+                    font-size: 16px;
+                  }
+                  &__text{
+                    font-size: 14px;
+                  }
+                } 
+              }
+              &__right{
+                font-size: 14px;
+                display: inline-block;
+                position: relative;
+                left: 30px;
+                bottom: 10px;
+                
+              }
+            }
+            &__link-list{
+              font-size: 14px;
+              color: black;
+              display: block;
+              height: 50px;
+              margin: 0 auto;
+              background-color: #eee;
+              text-align: center;
+              text-decoration: none; 
+              line-height: 56px;
+            }
+          }
+        }     
+      }
+    }
+    &__purchase{
+      &__title{
+        font-size: 15px;
+        background-color: #fafafa;
+        margin-top: 40px;
+        padding: 0 16px;
+        line-height: 72px;
+        margin-bottom: 0;
+
+      }
+      &__list{
+        font-size: 0;
+        padding-left: 0;
+        
+        &__now{
+          box-sizing: border-box;
+          border-top: 2px solid #ea352d;
+          display: inline-block;
+          background-color: #fff;
+          width: 50%;
+          font-size: 16px;
+          height: 72px;
+          text-align: center;
+          line-height: 72px;
+
+        }
+        &__past{
+          display: inline-block;
+          width: 50%;
+          background-color: #eee;
+          font-size: 16px;
+          height: 72px;
+          text-align: center;
+          line-height: 72px;
+          vertical-align: top;
+
+        }
+      }
+      &__content{
+        height: 236px;
+        background-color: #fff;
+        background-image: url('mercari_icon.png');
+        background-size: 115px 115px;
+        background-repeat: no-repeat;
+        background-position: 300px 30px;
+        &__list{
+          margin-top: 0;
+          &__product{
+            text-align: center;
+            color: #ccc;
+            text-decoration: none;
+            position: relative;
+            top: 170px;
+
+          }
+        }
+      }
+    }
+  }   
+}

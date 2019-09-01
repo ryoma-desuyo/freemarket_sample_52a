@@ -1,46 +1,102 @@
-.mypage-header
-  .mypage-header__line
-    .mypage-header__line__top
-      = image_tag('logo.svg',class:"logo")
-    .form_mask
-      = form_tag do
-        %input{type:"search",name:"keyword",value:"",placeholder:"何かお探しですか？",class: "input"}
-          =fa_icon "search",class:"icon"
-  .mypage-header__bottom
-    .mypage-header__bottom__btn
-      %ul.buttons
-        %li.likes
-          =link_to "", class: "mypage-header__bottom__btn__likes" do
-            = fa_icon 'heart-o'
-            %span#likes-letter いいね！一覧
-        %li.news
-          =link_to "", class: "mypage-header__bottom__btn__news" do
-            = fa_icon 'bell-o'
-            %span#news-letter お知らせ
-        %li.lists
-          =link_to "", class: "mypage-header__bottom__btn__lists" do
-            = fa_icon 'check'
-            %span#list-letter やることリスト
-        %li.mypage
-          =link_to "", class: "mypage-header__bottom__btn__mypage" do
-            = image_tag 'user-icon.png', size: '32x32', id: 'user-icon'
-            %span#mypage-letter マイページ
-      
 
-    .mypage-header__bottom__left
-      =link_to '', class: "mypage-header__bottom__left__category-search" do
-        =fa_icon "list-ul",class: "list"
-        %span#category-search カテゴリーから探す
+.main-mypage
+  .main-mypage__right
+    .main-mypage__right__profile
+      =link_to '', id: 'profile-line' do
+        .main-mypage__right__profile__icon
+          =image_tag 'user_icon', size: '60x60', id: 'my-icon'
+        %h2#user-name
+          ユーザーネーム
+        .main-mypage__right__profile__number
+          .main-mypage__right__profile__number__evaluation
+            評価
+            %span#evaluation-number 99
+          .main-mypage__right__profile__number__product
+            出品数
+            %span#product-number 99
+    .main-mypage__right__imformation
+      %ul.main-mypage__right__imformation__imformation-tab
+        %li.main-mypage__right__imformation__imformation-tab__news-tab
+          %h3#news
+            お知らせ
+        %li.main-mypage__right__imformation__imformation-tab__to-do-list-tab
+          %h3#to-do-list
+            やることリスト
+      .main-mypage__right__imformation__content
+        %ul.main-mypage__right__imformation__content__list
+          %li.main-mypage__right__imformation__content__list__part
+            =link_to '', class: 'main-mypage__right__imformation__content__list__part__link' do
+              =image_tag 'mercari_icon.png', size: '48x48', class: 'main-mypage__right__imformation__content__list__part__link__logo'
+              .main-mypage__right__imformation__content__list__part__link__body
+                .main-mypage__right__imformation__content__list__part__link__body__text
+                  あああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
+                .main-mypage__right__imformation__content__list__part__link__body__time
+                  = fa_icon 'clock-o', class: 'main-mypage__right__imformation__content__list__link__body__time__icon'
+                  %span.main-mypage__right__imformation__content__list__part__link__body__time__text
+                    1日前
+              =fa_icon 'chevron-right', class: 'main-mypage__right__imformation__content__list__part__link__right'
 
-      =link_to '', class: "mypage-header__bottom__left__brand-search" do
-        =fa_icon "tag", class: "tag"
-        %span#brand-search ブランドから探す
+          %li.main-mypage__right__imformation__content__list__part
+            =link_to '', class: 'main-mypage__right__imformation__content__list__part__link' do
+              =image_tag 'mercari_icon.png', size: '48x48', class: 'main-mypage__right__imformation__content__list__part__link__logo'
+              .main-mypage__right__imformation__content__list__part__link__body
+                .main-mypage__right__imformation__content__list__part__link__body__text
+                  いいいいいいいいいいいいいいいいいいいいいいいいいいいいい
+                .main-mypage__right__imformation__content__list__part__link__body__time
+                  = fa_icon 'clock-o', class: 'main-mypage__right__imformation__content__list__link__body__time__icon'
+                  %span.main-mypage__right__imformation__content__list__part__link__body__time__text
+                    1日前
+              =fa_icon 'chevron-right', class: 'main-mypage__right__imformation__content__list__part__link__right'
 
-.topic-path
-  %ul.list
-    %li.list-first
-      = link_to '', id: "list1" do
-        %span.list1 メルカリ
-      %i.fa.fa-chevron-right
-    %li.list-second
-      %span.list2 マイページ
+          %li.main-mypage__right__imformation__content__list__part
+            =link_to '', class: 'main-mypage__right__imformation__content__list__part__link' do
+              =image_tag 'mercari_icon.png', size: '48x48', class: 'main-mypage__right__imformation__content__list__part__link__logo'
+              .main-mypage__right__imformation__content__list__part__link__body
+                .main-mypage__right__imformation__content__list__part__link__body__text
+                  うううううううううううううううううううううううううううううううううううううううううううう
+                .main-mypage__right__imformation__content__list__part__link__body__time
+                  = fa_icon 'clock-o', class: 'main-mypage__right__imformation__content__list__link__body__time__icon'
+                  %span.main-mypage__right__imformation__content__list__part__link__body__time__text
+                    1日前
+              =fa_icon 'chevron-right', class: 'main-mypage__right__imformation__content__list__part__link__right'
+
+          %li.main-mypage__right__imformation__content__list__part
+            =link_to '', class: 'main-mypage__right__imformation__content__list__part__link' do
+              =image_tag 'mercari_icon.png', size: '48x48', class: 'main-mypage__right__imformation__content__list__part__link__logo'
+              .main-mypage__right__imformation__content__list__part__link__body
+                .main-mypage__right__imformation__content__list__part__link__body__text
+                  えええええええええええええええええええええええええええええええええええええええええええええええええええ
+                .main-mypage__right__imformation__content__list__part__link__body__time
+                  = fa_icon 'clock-o', class: 'main-mypage__right__imformation__content__list__link__body__time__icon'
+                  %span.main-mypage__right__imformation__content__list__part__link__body__time__text
+                    1日前
+              =fa_icon 'chevron-right', class: 'main-mypage__right__imformation__content__list__part__link__right'
+
+          %li.main-mypage__right__imformation__content__list__part
+            =link_to '', class: 'main-mypage__right__imformation__content__list__part__link' do
+              =image_tag 'mercari_icon.png', size: '48x48', class: 'main-mypage__right__imformation__content__list__part__link__logo'
+              .main-mypage__right__imformation__content__list__part__link__body
+                .main-mypage__right__imformation__content__list__part__link__body__text
+                  おおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおお
+                .main-mypage__right__imformation__content__list__part__link__body__time
+                  = fa_icon 'clock-o', class: 'main-mypage__right__imformation__content__list__link__body__time__icon'
+                  %span.main-mypage__right__imformation__content__list__part__link__body__time__text
+                    1日前
+              =fa_icon 'chevron-right', class: 'main-mypage__right__imformation__content__list__part__link__right'
+
+
+          %li.main-mypage__right__imformation__content__list__part
+            =link_to '一覧を見る', '', class: 'main-mypage__right__imformation__content__list__part__link-list'
+
+    .main-mypage__right__purchase
+      %h2.main-mypage__right__purchase__title
+        購入した商品
+      %ul.main-mypage__right__purchase__list
+        %li.main-mypage__right__purchase__list__now
+          取引中
+        %li.main-mypage__right__purchase__list__past
+          過去の取引
+      .main-mypage__right__purchase__content
+        %ul.main-mypage__right__purchase__content__list
+          %li.main-mypage__right__purchase__content__list__product
+            取引中の商品がありません
