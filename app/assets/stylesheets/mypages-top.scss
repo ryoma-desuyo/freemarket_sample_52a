@@ -12,7 +12,7 @@
     width: 700px;
     &__profile{
       height: 200px;
-      background-image: image-url(profile-background.jpg);
+      background-image: url(profile-background.jpg);
       background-size: cover;
         #profile-line{
           display: block;
@@ -197,7 +197,7 @@
       &__content{
         height: 236px;
         background-color: #fff;
-        background-image: image-url('mercari_icon.png');
+        background-image: url('mercari_icon.png');
         background-size: 115px 115px;
         background-repeat: no-repeat;
         background-position: 300px 30px;
