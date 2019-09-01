@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   resources :products
   resources :mypages, only: [:index, :edit, :update]
   root 'products#index'
+  get 'users/new'
 end
