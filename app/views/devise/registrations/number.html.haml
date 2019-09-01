@@ -14,10 +14,10 @@
             %br/
             %input{type: "text", placeholder: "携帯電話の番号を入力", class: "input-default"}
           .form-group
-            %p 本人確認のため、携帯電話のSMS(ショートメッセージサービス)を利用して認証を行います。
+            %p.text-info 本人確認のため、携帯電話のSMS(ショートメッセージサービス)を利用して認証を行います。
           %button.red-btn{type: "submit"} 
             = link_to "SMSを送信する", sign_up_address_path
-          %p※電話番号は本人確認や不正利用防止のために利用します。他のユーザーに公開されることはありません。
+          %p.text-info ※電話番号は本人確認や不正利用防止のために利用します。他のユーザーに公開されることはありません。
           .about-user-info
             .text-right
               =link_to "電話番号の確認が必要な理由>", "https://www.mercari.com/jp/help_center/article/244/"
