@@ -39,13 +39,13 @@
                   %option --
                   - for month in 01..12
                     %option{value: "#{month}"} #{month}
-                %span 月
+                %span.days 月
 
                 %select{name: "year", class: "select-default"}
                   %option --
                   - for year in 19..29
                     %option{value: "#{year}"} #{year}
-                %span 年
+                %span.days 年
           
           .form-field
             = label :security_code, "セキュリティーコード"
