@@ -24,7 +24,7 @@ main {
   background-color: #fff;
   width: 700px;
   margin: 0 auto;
-} h2 {
+} .l-head {
   font-size: 22px;
   padding: 32px;
   text-align: center;
@@ -97,9 +97,12 @@ main {
 
 .form-group {
   margin: 24px 0 0;
-} h3 {
+  & h3 {
   font-size: 16px;
-} p {
+  }
+}
+
+.text-info {
   margin: 8px 0 0;
   padding: 0;
   line-height: 1.5;
@@ -117,7 +120,9 @@ main {
   font-size: 16px;
   line-height: 1.5;
   cursor: pointer;
-} span {
+}
+
+.days {
   margin: 0 2px;
 }
 
