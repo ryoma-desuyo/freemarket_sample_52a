@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'users/new'
   devise_for :users, controllers: {
     registrations: "users/registrations"
   }
@@ -12,4 +11,5 @@ Rails.application.routes.draw do
   resources :products
   resources :mypages, only: [:index, :edit, :update]
   root 'products#index'
+  get 'users/new'
 end
