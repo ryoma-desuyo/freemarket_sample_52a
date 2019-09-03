@@ -12,49 +12,54 @@
     width: 700px;
     &__profile{
       height: 200px;
-      background-image: url(profile-background.jpg);
-      background-size: cover;
-        #profile-line{
-          display: block;
-          width: 700px;
-          height: 111px;
-          padding-top: 40px;
-          text-align: center;
-          text-decoration-line: none;
-          font-size: 14px;
-          color: #333
-        }    
-          &__icon{
-            #my-icon{
-              border-radius: 50%;
-            }
-          }
-          #user-name{
-            margin-top: 8px;
+      width: 700px;
+    }
+    #profile-line{
+      display: block;
+      width: 700px;
+      height: 111px;
+      padding-top: 40px;
+      text-align: center;
+      text-decoration-line: none;
+      font-size: 14px;
+      color: #333;
+      position: relative;
+      bottom: 200px;
+    }
+      .main-mypage__right__profile__icon{
+        #my-icon{
+          border-radius: 50%;
+        }
+      }
+      #user-name{
+        margin-top: 8px;
+         font-size: 12px;
+      }
+      .main-mypage__right__profile__number{
+        position: relative;
+        top: 10px;
+        &__evaluation{
+          display: inline-block;
+          #evaluation-number{
+            margin-left: 8px;
+            font-weight: 600;
             font-size: 12px;
           }
-        &__number{
+        }
+        &__product{
+          margin-left: 16px;
+          display: inline-block;
+          #product-number{
+            margin-left: 8px;
+            font-weight: 600;
+            font-size: 12px;
+          }
+        }
+      }    
 
-          &__evaluation{
-            display: inline-block;
-            #evaluation-number{
-              margin-left: 8px;
-              font-weight: 600;
-              font-size: 12px;
-            }
-          }
-          &__product{
-            margin-left: 16px;
-            display: inline-block;
-            #product-number{
-              margin-left: 8px;
-              font-weight: 600;
-              font-size: 12px;
-            }
-          }
-        }      
-    }
     &__imformation{
+      position: relative;
+      bottom: 155px;
 
       &__imformation-tab{
         text-align: center;
@@ -73,7 +78,7 @@
           #news{
             font-size: 14px;
             font-weight: bold;
-            padding-top: 14px;
+            padding-top: 30px;
           }
         }
 
@@ -88,7 +93,7 @@
           #to-do-list{
             font-size: 14px;
             font-weight: bold;
-            padding-top: 14px;
+            padding-top: 30px;
           }
         }        
       }
@@ -157,6 +162,8 @@
       }
     }
     &__purchase{
+      position: relative;
+      bottom: 160px;
       &__title{
         font-size: 15px;
         background-color: #fafafa;
@@ -197,19 +204,20 @@
       &__content{
         height: 236px;
         background-color: #fff;
-        background-image: url('mercari_icon.png');
-        background-size: 115px 115px;
-        background-repeat: no-repeat;
         background-position: 300px 30px;
+        text-align:center;
         &__list{
           margin-top: 0;
+          #purchase-mercari-icon{
+            position: relative;
+            top: 35px;
+          }
           &__product{
             text-align: center;
             color: #ccc;
             text-decoration: none;
             position: relative;
-            top: 170px;
-
+            top: 40px;
           }
         }
       }

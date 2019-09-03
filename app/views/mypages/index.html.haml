@@ -1,19 +1,19 @@
 = render 'shared/mypage-header'
 .main-mypage
   .main-mypage__right
-    .main-mypage__right__profile
-      =link_to '', id: 'profile-line' do
-        .main-mypage__right__profile__icon
-          =image_tag 'user_icon.png', size: '60x60', id: 'my-icon'
-        %h2#user-name
-          ユーザーネーム
-        .main-mypage__right__profile__number
-          .main-mypage__right__profile__number__evaluation
-            評価
-            %span#evaluation-number 99
-          .main-mypage__right__profile__number__product
-            出品数
-            %span#product-number 99
+    =image_tag 'profile-background.jpg', class: 'main-mypage__right__profile'
+    =link_to '', id: 'profile-line' do      
+      .main-mypage__right__profile__icon
+        =image_tag 'user_icon.png', size: '60x60', id: 'my-icon'
+      %h2#user-name
+        ユーザーネーム
+      .main-mypage__right__profile__number
+        .main-mypage__right__profile__number__evaluation
+          評価
+          %span#evaluation-number 99
+        .main-mypage__right__profile__number__product
+          出品数
+          %span#product-number 99
     .main-mypage__right__imformation
       %ul.main-mypage__right__imformation__imformation-tab
         %li.main-mypage__right__imformation__imformation-tab__news-tab
@@ -98,6 +98,7 @@
           過去の取引
       .main-mypage__right__purchase__content
         %ul.main-mypage__right__purchase__content__list
+          =image_tag 'mercari_icon.png',height: '110px', width: '110px', id: 'purchase-mercari-icon'
           %li.main-mypage__right__purchase__content__list__product
             取引中の商品がありません
   = render 'shared/sidebar'
