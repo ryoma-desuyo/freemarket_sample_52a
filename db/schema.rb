@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 2019_08_31_092502) do
     t.string "first_name", default: "", null: false
     t.string "family_name_kana", default: "", null: false
     t.string "first_name_kana", default: "", null: false
-    t.string "birthday", default: "", null: false
+    t.date "birthday", null: false
     t.string "postal_code", default: "", null: false
     t.string "prefecture", default: "", null: false
     t.string "city", default: "", null: false
