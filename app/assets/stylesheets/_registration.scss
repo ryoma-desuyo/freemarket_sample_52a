@@ -122,6 +122,18 @@ main {
   cursor: pointer;
 }
 
+._select-wrap {
+  height: 56px;
+  & select {
+    width: 76px;
+    margin: 8px 0 0;
+    height: 48px;
+    border: 1px solid #ccc;
+    background: 0;
+    font-size: 16px;
+    cursor: pointer;
+  }
+}
 .days {
   margin: 0 2px;
 }
