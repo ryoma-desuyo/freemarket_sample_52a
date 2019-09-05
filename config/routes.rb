@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     post "sign_up/number", to:"users/registrations#number"
     post "sign_up/address", to: "users/registrations#address"
     get "sign_up/credit", to: "users/registrations#credit"
-    post "/sign_up/completed" to:"users/registrations#create"
+    post "/sign_up/completed", to:"users/registrations#create"
     get "/sign_up/done", to:"users/registrations#done"
   end
   
