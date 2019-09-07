@@ -21,15 +21,10 @@ Rails.application.routes.draw do
     get "/sign_up/done", to:"users/registrations#done"
     get 'login', to:'users/sessions#new', as: :new_user_session
     post 'login', to:'users/sessions#create', as: :user_session
+    get '/users/logout', to: "users#logout"
     delete 'logout', to:'users/sessions#destroy', as: :destroy_user_session
   end
   
-  resources :users do
-    collection do
-      get 'logout'
-    end
-  end
-
   root 'products#index'
   resources :mypages, only: [:index, :edit, :update] do
     member do
