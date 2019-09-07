@@ -161,7 +161,13 @@ main {
   background-color: #ea352d;
   border: #ea352d;
   color: #fff;
-} .about-user-info {
+  & a {
+    text-decoration: none;
+    color: #fff;
+  } 
+} 
+
+.about-user-info {
   text-align: right;
   margin: 24px 0 0;
   & a {
@@ -186,6 +192,7 @@ main {
 .about-card-info {
   text-align: right;
   color: #0099e8;
+  margin: 8px 0 0;
 }
 
 .default-confirmation {
