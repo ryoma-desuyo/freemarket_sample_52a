@@ -9,11 +9,10 @@
       .default-confirmation
         .form-fields
           %p ありがとうございます。会員登録が完了しました。
-          %button.red-btn{type: "submit"} 
-            = link_to "メルカリを始める", products_path
-          %button.red-btn{type: "submit"} メルカリを始める
+
           %button.red-btn
-            = link_to "メルカリを始める", mypages_path, class: 'btn'
+            = link_to "メルカリを始める", products_path, class: 'btn'
+
   .footer__ad
     = image_tag("footer.png", width: 700)
 
