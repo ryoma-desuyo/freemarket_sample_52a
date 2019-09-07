@@ -1,1 +1,9 @@
-= link_to "ログアウト", destroy_user_session_path, method: :delete
+= render 'shared/mypage-header'
+.mp-main
+  .mp-lo
+    .mp-lo__logout-field
+      .mp-lo__logout-field__btn-place
+        = link_to "ログアウト", destroy_user_session_path, method: :delete, class: "logout-btn"
+
+  = render 'shared/sidebar'
+= render partial: 'shared/footer'
