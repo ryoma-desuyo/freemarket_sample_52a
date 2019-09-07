@@ -7,7 +7,6 @@
     .member-information
       %h2.l-head 
         電話番号の確認
-      .default-confirmation
       = form_for(@user, url: sign_up_address_path) do |f|
         = f.hidden_field :nickname, value: @user.nickname
         = f.hidden_field :email, value: @user.email
@@ -25,7 +24,6 @@
             = label :number, "携帯電話の番号"
             %br/
             = f.telephone_field :phone_number, autofocus: true, autocomplete: "phone_number", placeholder: "携帯電話の番号を入力", class: "input-default"
-            -# %input{type: "text", placeholder: "携帯電話の番号を入力", class: "input-default"}
           .form-group
             %p.text-info 本人確認のため、携帯電話のSMS(ショートメッセージサービス)を利用して認証を行います。
 
