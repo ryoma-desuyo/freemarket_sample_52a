@@ -6,7 +6,7 @@
         .main-mypage__right__profile__icon
           =image_tag 'user_icon.png', size: '60x60', id: 'my-icon'
         %h2#user-name
-          ユーザーネーム
+          = current_user.nickname
         .main-mypage__right__profile__number
           .main-mypage__right__profile__number__evaluation
             評価
