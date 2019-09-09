@@ -22,7 +22,7 @@
           .login-main__input-form__mail
             = f.email_field :email, autofocus: true, placeholder: "メールアドレス", class: "mail-text"
           .login-main__input-form__pass
-            = f.password_field :text, placeholder: "パスワード", class: "pass-text"
+            = f.password_field :password, placeholder: "パスワード", class: "pass-text"
           .login-main__input-form__btn
             = f.submit "ログイン", class: "login-btn"
           = render "devise/shared/links"
