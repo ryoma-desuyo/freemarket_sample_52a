@@ -19,4 +19,7 @@ class ProductsController < ApplicationController
 
   def destroy
   end
+
+  def sell
+  end
 end

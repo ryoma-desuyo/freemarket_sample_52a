@@ -26,13 +26,21 @@ Rails.application.routes.draw do
   end
   
   root 'products#index'
+
   resources :mypages, only: [:index, :edit, :update] do
     member do
       get 'identification'
     end
   end
+  
 
-  resources :products
-  resources :mypages, only: [:index, :edit, :update]
-  get 'users/new'
+  resources :products do
+    collection do
+      get 'sell'
+    end
+  end
+
+  resources :mypages, only: [:index, :edit, :update] do
+    get 'users/new'
+  end
 end
