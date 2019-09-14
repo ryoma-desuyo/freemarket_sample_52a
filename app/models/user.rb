@@ -6,6 +6,8 @@ class User < ApplicationRecord
 
   validates :password, presence: true, length: {in: 7..128}, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i }
 
+  has_many :products
+
   has_many :buyed_products, foreign_key: "buyer_id", class_name: "Product"
   #userが買った商品
   has_many :selling_products, -> { where("buyer_id is NULL") }, foreign_key: "seller_id", class_name: "Product"
