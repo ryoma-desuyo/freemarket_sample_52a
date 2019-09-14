@@ -63,9 +63,6 @@
   }
 }
 
-.table-icons__icon-good i:first-child {
-  margin-left: 0;
-}
 .table-icons__icon-good i{
   font-size: 17px;
   color: #ef5185;
@@ -79,6 +76,10 @@
   font-size: 17px;
   color:#6ab5d8;
   margin: 8px 0 0 16px;
+}
+
+.table-icons__icon-good i:first-child {
+  margin-left: 0;
 }
 
 .item-price {
