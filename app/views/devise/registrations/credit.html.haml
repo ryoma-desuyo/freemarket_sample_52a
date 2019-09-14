@@ -52,6 +52,11 @@
             %span{class: "require"} 必須
             %br/
             %input{type: "text", placeholder: "カード背面4桁もしくは3桁の番号", class: "input-default"}
+          .form-field
+            = label :full_name, "名義人"
+            %span{class: "require"} 必須
+            %br/
+            %input{type: "text", class: "input-default"}
 
           %p.about-card-info
             %a.text-right カード裏面の番号とは>
