@@ -1,4 +1,8 @@
 class ProductsController < ApplicationController
+
+  def details
+  end
+  
   def index
   end
 
@@ -18,5 +22,8 @@ class ProductsController < ApplicationController
   end
 
   def destroy
+  end
+
+  def sell
   end
 end
