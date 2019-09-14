@@ -43,4 +43,11 @@ Rails.application.routes.draw do
   resources :mypages, only: [:index, :edit, :update] do
     get 'users/new'
   end
+      get "details"
+    end
+  end
+  
+  resources :mypages, only: [:index, :edit, :update]
+  get 'users/new'
+
 end
