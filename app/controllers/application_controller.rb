@@ -30,9 +30,4 @@ class ApplicationController < ActionController::Base
 
     devise_parameter_sanitizer.permit(:sign_up, keys: added_keys)
   end
-
-  private
-  def user_params
-    params.require(:user).permit(:id)
-  end
 end
