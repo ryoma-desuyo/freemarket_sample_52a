@@ -1,8 +1,6 @@
 .footer-top {
   display: flex;
   position: relative;
-  &__image {
-  }
 }
 
 .footer {
@@ -10,26 +8,33 @@
   padding: 0 20px 10px 20px;
   background: #212121;
   color: #fff;
-  width: 1398px;
+  width: 1400px;
 
   &__box {
-    margin: 0 100px;
+    width: 1050px;
+    margin: 0 auto;
     display: flex;
 
     &__cell {
-      padding: 0 40px 0 0;
+      padding: 18px 40px 0 0;
       width: 20%;
       color: #fff;
       font-size: 12px;
       font-weight: 100;
+      & h2 {
+        font-size: 15px;
+      }
     }
 
     &__cell-double {
-      width: 30%;
-      padding: 0 70px 0 0;
+      width: 79%;
+      padding: 18px 70px 0 0;
       color: #fff;
       font-size: 12px;
       font-weight: 100;
+      & h2 {
+        font-size: 15px;
+      }
     }
     
   .h2 {
@@ -38,20 +43,20 @@
     .about {
       list-style-type: none;
       padding: 0;
-      margin: 0;
+      margin: 16px 0 0;
     }
 
     .about-left {
       list-style-type: none;
       padding: 0;
       position: absolute;
-      margin: 0;
+      margin: 16px 0 0;
     }
 
     .about-right {
       list-style-type: none;
       padding: 0;
-      margin: 0;
+      margin: 16px 0 0;
     }
 
     .about-right {
@@ -60,6 +65,8 @@
 
       .text {
         padding-top: 16px;
+        opacity: .7;
+        font-size: 12px;
       }
 
       .sns-icon {
@@ -70,8 +77,14 @@
 
 
   .footer__bottom{
-    margin: 30px 90px;
-    bottom: 0;
+    width: 1050px;
+    margin: 30px 155px;
+    &__small-icon {
+      display: inline-block;
+      width: 750px;
+      text-align: center;
+      font-size: 14px;
+    }
   }
 
 
