@@ -24,6 +24,9 @@ class ProductsController < ApplicationController
   def destroy
   end
 
+  def buying
+  end
+  
   def sell
   end
 end

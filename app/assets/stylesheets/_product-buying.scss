@@ -1,0 +1,166 @@
+.buying-container{
+  background-color: #f5f5f5;
+  &__header{
+  text-align: center;
+  height: 128px;
+  line-height: 128px;
+    &__image{
+      vertical-align: middle; 
+    }
+  }
+  &__main{
+    margin: 0px 370px;
+    background-color: #ffffff;
+    &__head{
+      text-align: center;
+      font-size: 22px;
+      font-weight: 600;
+      height: 55px;
+      line-height: 55px;
+    }
+    &__content{
+      border-top: 1px solid #f5f5f5;
+      &__product{
+        margin: 25px auto 25px;
+        width: 320px;
+        &__image{
+          float: left;
+          margin-right: 10px;
+        }
+        &__name{
+          vertical-align: top;
+          width: 320px;
+          height: 64px;
+        }
+      }
+      &__price{
+        text-align: center;
+        font-size: 16px;
+        font-weight: 600;
+        margin-top: 8px;
+        &__detail{
+          font-size: 14px;
+          font-weight: normal;
+          margin-left: 4px;
+        }
+      }
+      &__point{
+        width: 320px;
+        height: 48px;
+        margin: 16px auto 0px;
+        background-color: rgb(204, 204, 204);
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 48px;
+        text-align: center;
+      }
+      &__payment{
+        width: 320px;
+        height: 60px;
+        margin: 0 auto;
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 60px;
+        &__right{
+          float: right;
+          font-size: 21px;
+          font-weight: bold;
+        }
+      }
+      &__alert{
+        color: rgb(234, 53, 45);
+        font-size: 14px;
+        text-align: center;
+      }
+      &__buy-button{
+        width: 320px;
+        height: 48px;
+        margin: 16px auto 0px;
+        background-color: rgb(136, 136, 136);
+        color: rgb(255, 255, 255);
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 48px;
+        text-align: center;
+      }
+    }
+    &__address{
+      border-top: 1px solid #f5f5f5;
+      margin-top: 40px;
+      &__content{
+        margin: 16px auto 40px;
+        width: 320px;
+        &__title{
+          font-weight: bold;
+          font-size: 13px;
+        }
+        &__postal-code{
+          margin-top: 8px;
+          font-size: 12px;
+        }
+        &__address{
+          margin-top: 4px;
+          font-size: 13px;
+        }
+        &__name{
+          margin-top: 4px;
+          font-size: 13px;
+        }
+        &__change{
+          color: rgb(0, 153, 232);
+          font-size: 13px;
+          text-decoration: none;
+          margin-top: 8px;
+          display: block;
+          text-align: right;
+        }
+      }
+    }
+    &__payment{
+      border-top: 1px solid #f5f5f5;
+      margin-top: 40px;
+      padding-bottom: 40px;
+      &__content{
+        margin: 16px auto 0px;
+        width: 320px;
+
+        &__title{
+          font-weight: bold;
+          font-size: 13px;
+        }
+        &__detail{
+          margin-top: 40px;
+          font-size: 13px;
+        }
+        &__change{
+          color: rgb(0, 153, 232);
+          font-size: 13px;
+          text-decoration: none;
+          margin-top: 8px;
+          display: block;
+          text-align: right;
+        }
+      }
+    }
+  }
+  &__footer{
+    font-size: 12px;
+    padding: 40px 0px;
+    text-align: center;
+    &__list{
+      &__part{
+        display: inline-block;
+        margin: 0 5px;
+      }    
+    }
+    &__link{   
+      text-align: center;
+      &__logo{
+        margin: 40px auto 8px;
+      }
+    }
+    &__copyright{
+      font-size: 11px;
+    }
+  }
+}
