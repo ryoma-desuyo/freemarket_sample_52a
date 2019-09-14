@@ -28,6 +28,7 @@ Rails.application.routes.draw do
   resources :mypages, only: [:index, :edit, :update] do
     member do
       get 'identification'
+      get 'card'
     end
   end
   

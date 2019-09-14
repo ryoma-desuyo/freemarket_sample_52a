@@ -1,0 +1,27 @@
+= render 'shared/mypage-header'
+
+.card-main
+
+  .card-main__right
+    .card-main__right__head
+      支払い方法
+    .card-main__right__middle
+      .card-main__right__middle__title
+        クレジットカード一覧
+      = link_to '', class: 'card-addition' do
+        .card-addition__button  
+          =fa_icon 'credit-card'
+          クレジットカードを追加する
+
+      .card-main__right__bottom
+        =link_to '', class: 'card-main__right__bottom__block' do
+          %span
+            支払い方法について
+          =fa_icon 'chevron-right'
+
+  = render 'shared/sidebar'
+
+  =render 'shared/footer'
+
+  
+      
