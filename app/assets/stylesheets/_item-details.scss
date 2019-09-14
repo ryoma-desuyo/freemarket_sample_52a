@@ -43,16 +43,6 @@
   }
 }
 
-.btn-box__right {
-  color: #0099e8;
-  margin: 8px 0 0;
-  float: right;
-  & a {
-    color: #0099e8;
-    text-decoration: none;
-    font-size: 14px;
-  }
-}
 
 .item-details__main td {
   width: 61%;
@@ -79,7 +69,7 @@
   font-size: 17px;
   color: #ef5185;
   margin: 8px 0 0 16px;
-  
+
 } .table-icons__icon-normal i {
   font-size: 17px;
   color: #fba933;
@@ -140,6 +130,17 @@
       border-radius: 40px;
       cursor: pointer;
     }
+  }
+}
+
+.btn-box__right {
+  color: #0099e8;
+  margin: 8px 0 0;
+  float: right;
+  & a {
+    color: #0099e8;
+    text-decoration: none;
+    font-size: 14px;
   }
 }
 
