@@ -37,6 +37,7 @@ Rails.application.routes.draw do
   resources :products do
     collection do
       get 'sell'
+      get 'details'
     end
   end
 end
