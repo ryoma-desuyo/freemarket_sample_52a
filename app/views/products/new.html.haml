@@ -1,9 +1,9 @@
 .main-block__head.registration 商品の情報を入力
-= form_for @product, url: confirm_products_path do |f|
+= form_for @product do |f|
 
   .image
     = f.label :image, "画像"
-    = f.file_field @product.image
+    = f.file_field :image
 
   .product_name
     = f.label :name, "商品名"
