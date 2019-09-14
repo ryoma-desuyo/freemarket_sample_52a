@@ -3,14 +3,6 @@ Rails.application.routes.draw do
     registrations: "users/registrations",
     sessions: "users/sessions"
   },
-  # as :user do
-  #   get "/sign_up/basic_info", to: "users/registrations#basic_info"
-  #   post "sign_up/number", to:"users/registrations#number"
-  #   post "sign_up/address", to: "users/registrations#address"
-  #   get "sign_up/credit", to: "users/registrations#credit"
-  #   post "/sign_up/completed", to:"users/registrations#create"
-  #   get "/sign_up/done", to:"users/registrations#done"
-  # end
   skip: %i[sessions]
   as :user do
     get "/sign_up/basic_info", to: "users/registrations#basic_info"
@@ -25,15 +17,36 @@ Rails.application.routes.draw do
     delete 'logout', to:'users/sessions#destroy', as: :destroy_user_session
   end
   
+  resources :users do
+    collection do
+      get 'logout'
+    end
+  end
+
   root 'products#index'
 
   resources :mypages, only: [:index, :edit, :update] do
     member do
       get 'identification'
+      get 'card'
+    end
+  end
+  
+
+  resources :products do
+    collection do
+      get 'sell'
+      get 'details'
     end
   end
 
   resources :products
+
+  resources :products do
+    member do
+      get 'buying'
+    end
+  end
 
   resources :mypages, only: [:index, :edit, :update]
   get 'users/new'

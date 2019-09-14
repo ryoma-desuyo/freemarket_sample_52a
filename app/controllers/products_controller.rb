@@ -1,4 +1,8 @@
 class ProductsController < ApplicationController
+
+  def details
+  end
+  
   def index
     @products = Product.all
   end
@@ -29,9 +33,13 @@ class ProductsController < ApplicationController
   def destroy
   end
 
-
 private
   def product_params
     params.require(:product).permit(:id, :name, :image, :description, :product_category_id, :brand, :condition, :delivery_fee, :shipping_area, :days_before_shipping, :price, :status).merge(seller_id: current_user.id)
+
+  def buying
+  end
+  
+  def sell
   end
 end
