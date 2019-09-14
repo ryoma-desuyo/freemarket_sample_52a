@@ -39,15 +39,4 @@ Rails.application.routes.draw do
       get 'sell'
     end
   end
-
-  resources :mypages, only: [:index, :edit, :update] do
-    get 'users/new'
-  end
-      get "details"
-    end
-  end
-  
-  resources :mypages, only: [:index, :edit, :update]
-  get 'users/new'
-
 end
