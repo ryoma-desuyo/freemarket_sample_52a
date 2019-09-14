@@ -1,0 +1,251 @@
+%head
+= render "shared/details-header"
+.details-back
+  .item-details
+    %h1.item-details__name aaaaaaaaaaaaa
+    .item-details__main
+      .item-details__main__photo
+        = image_tag("item-parker.jpg", width: 238.33, height: 300)
+      %table.item-details__main__photo__table
+        %tbody
+          %tr
+            %th 出品者
+            %td
+              %a aaaaa
+              .table-icons
+                .table-icons__icon-good
+                  =fa_icon 'heart'
+                  %span 23
+                .table-icons__icon-normal
+                  =fa_icon 'heart'
+                  %span 21
+                .table-icons__icon-bad
+                  =fa_icon 'heart'
+                  %span 12
+          %tr
+            %th カテゴリー
+            %td
+              %a メンズ
+              %br/
+              %a
+                = fa_icon 'chevron-right'
+                トップス
+              %br/
+              %a
+                = fa_icon 'chevron-right'
+                パーカー
+          %tr
+            %th ブランド
+            %td
+              %a xxxxxxx
+          %tr
+            %th 商品のサイズ
+            %td S
+          %tr
+            %th 商品の状態
+            %td 未使用に近い
+          %tr
+            %th 配送料の負担
+            %td 送料込み(出品者負担)
+          %tr
+            %th 配送の方法
+            %td らくらくメルカリ便
+          %tr
+            %th 配送元地域
+            %td
+              %a aaaaaa
+          %tr
+            %th 配送日の目安
+            %td 1~2で発送
+    .item-price
+      .payment-amount ¥3,200
+      .item-tax (税込)
+      .shipping-fee 送料込み
+
+    .item-buy-button
+      %a 購入画面に進む 
+    
+    .item-description
+      %p.item-description__text
+        アンダーアーマーのパーカーです。
+        サイズはS〜Mです。定価は約10000円でした。
+        着用回数も少なく状態の良い商品です。
+        不明点やご質問はお気軽にどうぞ。
+      
+    .btn-box
+      .btn-box__left
+        %button
+          = fa_icon 'heart-o'
+          %span いいね！
+          %span 19
+        %button.flag-caution
+          = fa_icon 'flag'
+          %span 不適切な商品の報告
+      .btn-box__right
+        = fa_icon "lock"
+        = link_to "あんしん・あんぜんへの取り組み", "https://www.mercari.com/jp/safe/description/"
+  
+  .item-message
+    .item-message__field
+      .item-message__field__input-area
+        %p 相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
+        %textarea{type: "text", name: "body", class: "message-for-seller"}
+        %button.send-message
+          %span コメントする
+  
+  %ul.item-pre-next
+    %li.item-pre
+      %a 
+        = fa_icon 'chevron-left'
+        aaaaaaaaaaaaaaaa
+    %li.item-next
+      %a 
+        aaaaaaaaaaaaaaaa
+        = fa_icon 'chevron-right'
+
+  .sns-icons
+    %ul.sns-icons__icon
+      %li.facebook-icon
+        = fa_icon 'facebook-square'
+      %li.twitter-icon
+        = fa_icon 'twitter-square'
+      %li.pinterest-icon
+        = fa_icon 'pinterest-square'
+
+  .other-users-products
+    .other-users-products__items
+      %h2 xxxxxさんのその他の出品
+      .other-products
+        .item-box
+          = image_tag("item-parker4.jpg")
+          .box-body
+            %h3 aaaaaa
+            .body-num
+              .body-num__price
+                ¥3333
+              .body-num__price__like
+                = fa_icon "heart-o"
+                %span 8
+        .item-box
+          = image_tag("item-t-shirt.jpg")
+          .box-body
+            %h3 aaaaaa
+            .body-num
+              .body-num__price
+                ¥3333
+              .body-num__price__like
+                = fa_icon "heart-o"
+                %span 8
+        .item-box
+          = image_tag("item-hat.jpg")
+          .box-body
+            %h3 aaaaaaa
+            .body-num
+              .body-num__price
+                ¥3333
+              .body-num__price__like
+                = fa_icon "heart-o"
+                %span 8
+        .item-box
+          = image_tag("item-parker4.jpg")
+          .box-body
+            %h3 aaaaaa
+            .body-num
+              .body-num__price
+                ¥3333
+              .body-num__price__like
+                = fa_icon "heart-o"
+                %span 8
+        .item-box
+          = image_tag("item-t-shirt.jpg")
+          .box-body
+            %h3 aaaaaa
+            .body-num
+              .body-num__price
+                ¥3333
+              .body-num__price__like
+                = fa_icon "heart-o"
+                %span 8
+        .item-box
+          = image_tag("item-hat.jpg")
+          .box-body
+            %h3 aaaaaaa
+            .body-num
+              .body-num__price
+                ¥3333
+              .body-num__price__like
+                = fa_icon "heart-o"
+                %span 8
+
+    .other-users-products__items
+      %h2 xxxxxのxxxx その他の商品
+      .other-products
+        .item-box
+          = image_tag("item-parker2.jpg")
+          .box-body
+            %h3 aaaaaaa
+            .body-num
+              .body-num__price
+                ¥3333
+              .body-num__price__like
+                = fa_icon "heart-o"
+                %span 8
+        .item-box
+          = image_tag("item-parker3.jpg")
+          .box-body
+            %h3 aaaaaaaa
+            .body-num
+              .body-num__price
+                ¥3333
+              .body-num__price__like
+                = fa_icon "heart-o"
+                %span 8
+        .item-box
+          = image_tag("item-parker5.jpg")
+          .box-body
+            %h3 aaaaaaa
+            .body-num
+              .body-num__price
+                ¥3333
+              .body-num__price__like
+                = fa_icon "heart-o"
+                %span 8
+        .item-box
+          = image_tag("item-parker2.jpg")
+          .box-body
+            %h3 aaaaaaa
+            .body-num
+              .body-num__price
+                ¥3333
+              .body-num__price__like
+                = fa_icon "heart-o"
+                %span 8
+        .item-box
+          = image_tag("item-parker3.jpg")
+          .box-body
+            %h3 aaaaaaaa
+            .body-num
+              .body-num__price
+                ¥3333
+              .body-num__price__like
+                = fa_icon "heart-o"
+                %span 8
+        .item-box
+          = image_tag("item-parker5.jpg")
+          .box-body
+            %h3 aaaaaaa
+            .body-num
+              .body-num__price
+                ¥3333
+              .body-num__price__like
+                = fa_icon "heart-o"
+                %span 8
+
+
+.bread-crumbs
+  %ul
+    %li 
+      メルカリ
+      = fa_icon 'chevron-right'
+    %li aaaaaaaaaaaaa
+= render "shared/footer"
