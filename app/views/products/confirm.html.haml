@@ -1,50 +1,49 @@
 .main-block__head.registration 商品の情報を入力
-= form_for @product, url: confirm_products_path do |f|
+= form_for @product do |f|
 
   .image
     = f.label :image, "画像"
-    = f.file_field @product.image
+    = f.hidden_field :image
 
   .product_name
     = f.label :name, "商品名"
-    = f.text_field :name
+    = f.hidden_field :name
 
   .description
     = f.label :description,"商品説明"
-    = f.text_field :description
+    = f.hidden_field :description
  
   .category
     = f.label :category, "カテゴリー"
-    = f.text_field :product_category_id
+    = f.hidden_field :product_category_id
 
   .brand
     = f.label :bland, "ブランド"
-    = f.text_field :brand
+    = f.hidden_field :brand
 
   .condition
     = f.label :condition, "コンディション"
-    = f.text_field :condition
+    = f.hidden_field :condition
 
   .delivery_fee
     = f.label :delivery_fee, "送料"
-    = f.text_field :delivery_fee
+    = f.hidden_field :delivery_fee
 
   .shipping_area
     = f.label :shipping_area, "地域"
-    = f.text_field :shipping_area
+    = f.hidden_field :shipping_area
 
   .days_before_shipping
     = f.label :days_before_shipping, "日数"
-    = f.text_field :days_before_shipping
+    = f.hidden_field :days_before_shipping
 
   .price
     = f.label :price, "値段"
-    = f.text_field :price
+    = f.hidden_field :price
 
   .status
     = f.label :status, "???"
-    = f.text_field :status
+    = f.hidden_field :status
 
   .submit
     = f.submit
- 

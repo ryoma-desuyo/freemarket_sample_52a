@@ -8,5 +8,6 @@ class Product < ApplicationRecord
   #belongs_to :brand
   has_one :like
 
+  mount_uploader :image, ImageUploader
   
 end
