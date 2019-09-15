@@ -70,7 +70,7 @@
 |user_id|integer|null: false, foreign_key: true|
 |name|string|null: false|
 |description|text|null: false, index: true|
-|product-category_id|integer|null: false, foreign_key: true|
+|product_category_id|integer|null: false, foreign_key: true|
 |product-brand_id|integer|foreign_key: true|
 |condition|text|null: false|
 |delivery-fee|text|null: false|

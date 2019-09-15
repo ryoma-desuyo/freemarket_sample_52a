@@ -32,20 +32,17 @@ Rails.application.routes.draw do
     end
   end
   
+  resources :products, only: [:index, :create, :new, :show] do
+    member do
+      get 'buying'
+    end
 
-  resources :products do
     collection do
       get 'sell'
       get 'details'
     end
   end
 
-  resources :products do
-    member do
-      get 'buying'
-    end
-  end
-  
   resources :mypages, only: [:index, :edit, :update]
   get 'users/new'
 end

@@ -27,3 +27,8 @@
 /config/master.key
 
 .Ds_Store
+
+# Ignore Byebug command history file.
+.byebug_history
+public/uploads/*
+
