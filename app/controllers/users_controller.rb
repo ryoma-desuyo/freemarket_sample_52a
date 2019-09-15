@@ -8,4 +8,5 @@ class UsersController < ApplicationController
 
   def credits
   end
+
 end

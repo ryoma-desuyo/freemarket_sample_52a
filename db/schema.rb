@@ -19,6 +19,33 @@ ActiveRecord::Schema.define(version: 2019_09_08_025458) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "products", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name", null: false
+    t.text "description", null: false
+    t.text "image", null: false
+    t.text "product_category_id", null: false
+    t.text "brand"
+    t.text "condition", null: false
+    t.text "delivery_fee", null: false
+    t.string "shipping_area", null: false
+    t.string "days_before_shipping", null: false
+    t.integer "price", null: false
+    t.string "status", null: false
+    t.integer "seller_id", null: false
+    t.integer "buyer_id", default: 0
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "sns_credentials", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "provider"
+    t.string "uid"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_sns_credentials_on_user_id"
+  end
+
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -27,6 +54,8 @@ ActiveRecord::Schema.define(version: 2019_09_08_025458) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "provider"
+    t.string "uid"
     t.string "nickname", default: "", null: false
     t.string "family_name", default: "", null: false
     t.string "first_name", default: "", null: false
@@ -45,4 +74,5 @@ ActiveRecord::Schema.define(version: 2019_09_08_025458) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "sns_credentials", "users"
 end
