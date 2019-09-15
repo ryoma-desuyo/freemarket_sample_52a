@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   resources :users do
     collection do
       get 'logout'
+      get 'credits'
     end
   end
 
@@ -46,6 +47,5 @@ Rails.application.routes.draw do
     end
   end
   
-  resources :mypages, only: [:index, :edit, :update]
   get 'users/new'
 end
