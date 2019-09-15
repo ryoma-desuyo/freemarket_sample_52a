@@ -1,7 +1,14 @@
-%h1 Products#show
-%p Find me in app/views/products/show.html.haml
-
 .product
   - @products.each do |product|
-    = @products
+    = product.name
+    = image_tag product.image.url
+    = product.description
+    = product.product_category_id
+    = product.brand
+    = product.condition
+    = product.delivery_fee
+    = product.shipping_area
+    = product.days_before_shipping
+    = product.price
+    = product.status
   .product__content

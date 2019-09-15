@@ -24,7 +24,7 @@ class ProductsController < ApplicationController
   end
 
   def show
-    @products = Product.where(params(:seller_id))
+    @products = Product.all
   end
 
   def update
@@ -35,7 +35,8 @@ class ProductsController < ApplicationController
 
 private
   def product_params
-    params.require(:product).permit(:id, :name, :image, :description, :product_category_id, :brand, :condition, :delivery_fee, :shipping_area, :days_before_shipping, :price, :status).merge(seller_id: current_user.id)
+    params.require(:product).permit(:name, :image, :description, :product_category_id, :brand, :condition, :delivery_fee, :shipping_area, :days_before_shipping, :price, :status).merge(seller_id: current_user.id)
+  end
 
   def buying
   end

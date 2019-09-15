@@ -15,6 +15,4 @@ class User < ApplicationRecord
   has_many :sold_products, -> { where("buyer_id is not NULL") }, foreign_key: "seller_id", class_name: "Product"
   #売り切れた商品
 
-  mount_uploader :image, ImageUploader
-  
 end
