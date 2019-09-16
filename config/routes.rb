@@ -51,6 +51,8 @@ Rails.application.routes.draw do
     member do
       get 'buying'
     end
+
+    post "products/:id/destroy" => "products#destroy"
   end
   
   resources :mypages, only: [:index, :edit, :update]
