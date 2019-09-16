@@ -43,4 +43,7 @@ private
   
   def sell
   end
+
+  def exhibit
+  end
 end

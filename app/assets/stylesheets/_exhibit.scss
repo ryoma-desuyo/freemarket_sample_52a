@@ -1,0 +1,144 @@
+.details-back {
+  padding-top: 40px;
+  background-color: whitesmoke;
+  height: 100%;
+}
+.item-details {
+  background-color: white;
+  width: 700px;
+  padding: 24px 40px 40px;
+  margin-left: 540px;
+  box-sizing: border-box;
+  &__name {
+    font-size: 21px;
+    text-align: center;
+    line-height: 1.4;
+    margin: 0;
+  }
+}
+
+.item-details__main {
+  margin: 16px 0 0;
+  display: flex;
+  &__photo {
+    width: 300px;
+    margin: 0;
+    &__table {
+      float: right;
+      max-width: 300px;
+      height: 420px;
+      margin: 0 auto;
+      width: 100%;
+      border-collapse: collapse;
+      & th {
+        font-weight: 400;
+        text-align: left;
+        background-color: #fafafa;
+        width: 39%;
+        font-size: 14px;
+        padding: 8px;
+        border: 1px solid #f5f5f5;
+      }
+    }
+  }
+}
+
+
+.item-details__main td {
+  width: 61%;
+  background-color: #fff;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #f5f5f5;
+  border-collapse: collapse;
+  & a {
+    margin: 0;
+    color: #0099e8;
+  }
+}
+
+.table-icons {
+  display: flex;
+  & span {
+    font-size: 12px;
+  }
+}
+
+
+.table-icons__icon-good i{
+  font-size: 17px;
+  color: #ef5185;
+  margin: 8px 0 0 16px;
+
+} .table-icons__icon-normal i {
+  font-size: 17px;
+  color: #fba933;
+  margin: 8px 0 0 16px;
+} .table-icons__icon-bad i {
+  font-size: 17px;
+  color:#6ab5d8;
+  margin: 8px 0 0 16px;
+}
+
+.item-price {
+  margin: 24px 0 0;
+  text-align: center;
+} .payment-amount {
+  margin: 0 16px 0 0;
+  font-size: 40px;
+  font-weight: 600;
+  display: inline-flex;
+} .item-tax {
+  font-size: 10px;
+  display: inline-flex;
+} .shipping-fee {
+  font-size: 16px;
+  display: inline-flex;
+}
+
+
+.item-description {
+  padding: 32px 0 0;
+  line-height: 1.5;
+  &__text {
+    white-space: pre-wrap;
+    font-size: 18px;
+  }
+}
+
+.item-change {
+  margin-left: 540px;
+  margin-right: 200px;
+  padding: 20px;
+  background-color: #fff;
+  font-size: 13px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  .item-edit-button {
+    display: block;
+    margin-top: 16px;
+    background: #ea352d;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+  }
+  p {
+    text-align: center;
+    margin: 10px;
+    font-size: 15px;
+  }
+}
+.item-message {
+  width: 700px;
+  margin-left: 540px;
+  &__field__input-area {
+    padding: 24px;
+    background-color: #fff;
+    margin-bottom: 50px;
+    & p {
+      padding: 8px;
+      font-size: 13px;
+      background-color: #fff6de;
+    }
+  }
+}

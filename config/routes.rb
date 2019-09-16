@@ -39,6 +39,7 @@ Rails.application.routes.draw do
   resources :products, only: [:index, :create, :new, :show] do
     member do
       get 'buying'
+      get 'exhibit'
     end
 
     collection do
