@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   resources :users do
     collection do
       get 'logout'
+      get 'credits'
     end
   end
 
@@ -28,6 +29,9 @@ Rails.application.routes.draw do
   resources :mypages, only: [:index, :edit, :update] do
     member do
       get 'identification'
+    end
+
+    collection do
       get 'card'
     end
   end
@@ -43,6 +47,12 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :products do
+    member do
+      get 'buying'
+    end
+  end
+  
   resources :mypages, only: [:index, :edit, :update]
   get 'users/new'
 end

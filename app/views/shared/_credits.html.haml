@@ -1,0 +1,59 @@
+= render 'shared/details-header'
+.default-body
+  .member-registration
+    %main
+      .payment-information
+        %h2.l-head 
+          クレジットカード情報入力
+        .default-confirmation
+          .form-fields
+            .form-field
+              = label :card_number, "カード番号"
+              %span{class: "require"} 必須
+              %br/
+              %input{type: "text", placeholder: "半角英数字のみ", class: "input-default"}
+              %br/
+              %ul.signup-card-list
+                %li.signup-card-list__card
+                  = image_tag("visa.svg", width: 49, height: 20)
+                %li.signup-card-list__card
+                  = image_tag("master-card.svg", width: 34, height: 20)
+                %li.signup-card-list__card
+                  = image_tag("saison-card.svg", width: 30, height: 20)
+                %li.signup-card-list__card
+                  = image_tag("jcb.svg", width: 32, height: 20)
+                %li.signup-card-list__card
+                  = image_tag("american_express.svg", width: 21, height: 20)
+                %li.signup-card-list__card
+                  = image_tag("dinersclub.svg", width: 32, height: 20)
+                %li.signup-card-list__card
+                  = image_tag("discover.svg", width: 32, height: 20)
+
+            .form-field
+              = label :expiration_date, "有効期限"
+              %span{class: "require"} 必須
+              .form-field_date
+                ._select-wrap
+                  %select{name: "month", class: "select-default"}
+                    %option --
+                    - for month in 01..12
+                      %option{value: "#{month}"} #{month}
+                  %span.days 月
+
+                  %select{name: "year", class: "select-default"}
+                    %option --
+                    - for year in 19..29
+                      %option{value: "#{year}"} #{year}
+                  %span.days 年
+            
+            .form-field
+              = label :security_code, "セキュリティーコード"
+              %span{class: "require"} 必須
+              %br/
+              %input{type: "text", placeholder: "カード背面4桁もしくは3桁の番号", class: "input-default"}
+
+            %p.about-card-info
+              %a.text-right カード裏面の番号とは>
+
+            %button.red-btn{type: "submit"} 追加する
+      = render 'shared/sidebar'

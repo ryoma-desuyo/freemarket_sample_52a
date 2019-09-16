@@ -6,5 +6,7 @@ class UsersController < ApplicationController
   def logout
   end
 
+  def credits
+  end
 
 end
