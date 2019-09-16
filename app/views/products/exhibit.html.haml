@@ -1,0 +1,85 @@
+%head
+= render "shared/details-header"
+.details-back
+  .item-details
+    %h1.item-details__name aaaaaaaaaaaaa
+    .item-details__main
+      .item-details__main__photo
+        = image_tag("item-parker.jpg", width: 238.33, height: 300)
+      %table.item-details__main__photo__table
+        %tbody
+          %tr
+            %th 出品者
+            %td
+              %a aaaaa
+              .table-icons
+                .table-icons__icon-good
+                  =fa_icon 'smile-o'
+                  %span 23
+                .table-icons__icon-normal
+                  =fa_icon 'meh-o'
+                  %span 21
+                .table-icons__icon-bad
+                  =fa_icon 'frown-o'
+                  %span 12
+          %tr
+            %th カテゴリー
+            %td
+              %a メンズ
+              %br/
+              %a
+                = fa_icon 'chevron-right'
+                トップス
+              %br/
+              %a
+                = fa_icon 'chevron-right'
+                パーカー
+          %tr
+            %th ブランド
+            %td
+              %a xxxxxxx
+          %tr
+            %th 商品のサイズ
+            %td S
+          %tr
+            %th 商品の状態
+            %td 未使用に近い
+          %tr
+            %th 配送料の負担
+            %td 送料込み(出品者負担)
+          %tr
+            %th 配送の方法
+            %td らくらくメルカリ便
+          %tr
+            %th 配送元地域
+            %td
+              %a aaaaaa
+          %tr
+            %th 配送日の目安
+            %td 1~2で発送
+    .item-price
+      .payment-amount ¥3,200
+      .item-tax (税込)
+      .shipping-fee 送料込み
+    
+    .item-description
+      %p.item-description__text
+        アンダーアーマーのパーカーです。
+        サイズはS〜Mです。定価は約10000円でした。
+        着用回数も少なく状態の良い商品です。
+        不明点やご質問はお気軽にどうぞ。
+  .item-change
+    %a.item-edit-button 商品の編集
+    %p or
+    %button.send-message 出品を一旦停止する
+    %button.send-message この商品を削除する
+  
+  .item-message
+    .item-message__field
+      .item-message__field__input-area
+        %p 相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
+        %textarea{type: "text", name: "body", class: "message-for-seller"}
+        %button.send-message
+          %span コメントする
+
+= render "shared/footer"
