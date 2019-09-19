@@ -36,7 +36,7 @@ Rails.application.routes.draw do
     end
   end
   
-  resources :products, only: [:index, :create, :new, :show] do
+  resources :products, only: [:index, :create, :new, :show, :delete] do
     member do
       get 'buying'
       get 'exhibit'
