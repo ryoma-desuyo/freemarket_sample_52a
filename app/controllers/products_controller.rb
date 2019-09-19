@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  before_action :find_product, only: [:destroy, :exhibit]
+  before_action :set_product, only: [:destroy, :exhibit]
 
   def details
   end
@@ -44,7 +44,7 @@ class ProductsController < ApplicationController
   end
 
 private
-  def find_product
+  def set_product
     @product = Product.find(params[:id])
   end
   def product_params
