@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+  before_action :find_product, only: [:destroy, :exhibit]
 
   def details
   end
@@ -31,7 +32,6 @@ class ProductsController < ApplicationController
   end
 
   def destroy
-    @product = Product.find(params[:id])
     if @product.destroy
       redirect_to mypages_path, notice: '削除しました'
     else
@@ -40,10 +40,12 @@ class ProductsController < ApplicationController
   end
 
   def exhibit
-    @product = Product.find(params[:id])
   end
 
 private
+  def find_product
+    @product = Product.find(params[:id])
+  end
   def product_params
     params.require(:product).permit(:name, :image, :description, :product_category_id, :brand, :condition, :delivery_fee, :shipping_area, :days_before_shipping, :price, :status).merge(seller_id: current_user.id)
   end
