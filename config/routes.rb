@@ -47,12 +47,6 @@ Rails.application.routes.draw do
       get 'details'
     end
   end
-
-  resources :products do
-    member do
-      get 'buying'
-    end
-  end
   
   resources :mypages, only: [:index, :edit, :update]
   get 'users/new'
