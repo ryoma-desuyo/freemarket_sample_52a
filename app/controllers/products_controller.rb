@@ -31,6 +31,16 @@ class ProductsController < ApplicationController
   end
 
   def destroy
+    @product = Product.find(params[:id])
+    if @product.destroy
+      redirect_to mypages_path, notice: '削除しました'
+    else
+      redirect_to maypages_path, alert: '削除できませんでした'
+    end
+  end
+
+  def exhibit
+    @product = Product.find(params[:id])
   end
 
 private
@@ -43,7 +53,5 @@ private
   
   def sell
   end
-
-  def exhibit
-  end
 end
+
