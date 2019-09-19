@@ -73,7 +73,7 @@
     %p or
     %button.send-message 出品を一旦停止する
     %button.send-message
-      = link_to 'この商品を削除する', "/products/#{@product.id}", method: :delete 
+      = link_to 'この商品を削除する', product_path(@product), method: :delete 
 
 
   .item-message
