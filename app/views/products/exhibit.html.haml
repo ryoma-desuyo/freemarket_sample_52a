@@ -73,8 +73,10 @@
       %button.go-edit-page 商品の編集
     %p or
     %button.send-message 出品を一旦停止する
-    %button.send-message この商品を削除する
-  
+    %button.send-message
+      = link_to 'この商品を削除する', product_path(@product), method: :delete 
+
+
   .item-message
     .item-message__field
       .item-message__field__input-area
