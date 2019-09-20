@@ -140,6 +140,8 @@
             に同意したことになります。
 
         %button.btn-default.btn-red{type:"submit"} 変更する
-        %button.btn-default.btn-gray{type:"submit"} キャンセル
+
+        = link_to exhibit_product_path do
+          %button.btn-default.btn-gray キャンセル
         
   = render 'devise/registrations/rg-footer'
