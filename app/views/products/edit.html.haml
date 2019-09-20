@@ -1,2 +1,145 @@
-%h1 Products#edit
-%p Find me in app/views/products/edit.html.haml
+-# .product
+-# - @products.each do |product|
+-#   = product.name
+-#   = image_tag product.image.url
+-#   = product.description
+-#   = product.product_category_id
+-#   = product.brand
+-#   = product.condition
+-#   = product.delivery_fee
+-#   = product.shipping_area
+-#   = product.days_before_shipping
+-#   = product.price
+-# .product__content
+
+.containar-edit
+  = image_tag 'mercari_logo_sell.svg', size: '100×49', id: 'mercari_logo_sell', class: "mercari-lg"
+  .sell-page
+    = form_for @product do |f|
+      .sell-page__head
+        %h2.title 商品の情報を入力
+      .sell-page__context
+        .sell-page__context__upload
+          %label.content 出品画像
+          %span.form-arbitrary 必須
+          %p 最大10枚までアップロードできます
+          = f.file_field :image
+          = image_tag 'uploadfile-image.png', class: 'uploadfile-image' 
+      .sell-page__contxt__upload__form
+      .sell-page__context__explain
+        .sell-page__context__explain__form-group
+          .products-form
+            %label.content 商品名
+            %span.form-arbitrary 必須
+            %br
+            = f.text_field :name, placeholder:"商品名(必須40文字まで)", class: "input-defalt"
+            .sell-page__context__explain__form-group__description
+              %label.content 商品の説明
+              %span.form-arbitrary 必須
+              %br
+              = f.text_field :description, placeholder:"商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。", class: "textarea-explain"
+      .sell-page__context__property
+        .sell-page__context__property__form-group
+          %h3.sell-sub-head 商品の詳細
+        .sell-page__context__property__form-group__right
+          %br
+          %label.content カテゴリー
+          %span.form-arbitrary  必須
+          %br
+          = f.text_field :product_category_id, placeholder:"カテゴリー（仮）"
+          .select-wrap
+            %select{class: "select-default", name: "product_category_id"}
+              %option{value: ""} --
+              %option{value: ""} レディース
+              %option{value: ""} メンズ
+              %option{value: ""} ベビー・キッズ
+              %option{value: ""} インテリア・住まい・小物
+              %option{value: ""} 本・音楽・ゲーム
+              %option{value: ""} おもちゃ・ホビー・グッズ
+              %option{value: ""} コスメ・香水・美容
+              %option{value: ""} 家電・スマホ・カメラ
+              %option{value: ""} スポーツ・レジャー
+              %option{value: ""} ハンドメイド
+              %option{value: ""} チケット
+              %option{value: ""} 自転車・オートバイ
+              %option{value: ""} その他
+        .sell-page__context__property__form-group__right
+          %label.content 商品の状態
+          %span.form-arbitrary  必須
+          %br
+          = f.text_field :condition, placeholder:"商品の状態（仮）"
+          .select-wrap
+            %select{class: "select-default", name: "condition"}
+              %option{value: ""} --
+              %option{value: ""} 新品、未使用 
+              %option{value: ""} 未使用に近い
+              %option{value: ""} 目立った傷や汚れなし
+              %option{value: ""} やや傷や汚れあり
+              %option{value: ""} 傷や汚れあり
+              %option{value: ""} 全体的に状態が悪い
+      .sell-page__context__delivery
+        .sell-page__context__delivery__form-group
+          %h3.sell-sub-head 配送について
+          %a.form-question{:href => "/jp/help_center/article/64/", :target => "_blank"} ?
+          .sell-page__context__delivery__form-group__right
+            %label.content 配送料の負担
+            %span.form-arbitrary  必須
+            %br
+            .select-wrap
+              = f.text_field :delivery_fee, placeholder:"配送料（仮）"
+              %select{class: "select-default", name: "delivery_fee"}
+                %option{value: ""} --
+                %option{value: ""} 送料込み(出品者負担)
+                %option{value: ""} 着払い(購入者負担)
+            .sell-page__context__delivery__form-group__shipping-area
+              %label.content 発送元の地域
+              %span.form-arbitrary  必須
+              %br
+            .select-wrap
+              = f.text_field :shipping_area, placeholder:"地域（仮）"
+              = collection_select :hoge, :foo, Prefecture.all, :id, :name
+            %label.content 発送までの日数
+            %span.form-arbitrary  必須
+            %br
+            .select-wrap
+              = f.text_field :days_before_shipping, placeholder:"日数（仮）"
+              %select{class: "select-default", name: "days_before_shipping"}
+                %option{value: ""} --
+                %option{value: ""} 1~2日で発送
+                %option{value: ""} 2~3日で発送
+                %option{value: ""} 4~7日で発送
+      .sell-page__context__price
+        .sell-page__context__price__form-group
+          %h3.sell-sub-head 販売価格(300〜9,999,999)
+          %a.form-question{:href => "/jp/help_center/article/64/", :target => "_blank"} ?
+          .sell-page__context__price__form-group__right
+            .sell-page__context__price__form-group__right__price
+              %label.content 価格
+              %span.form-arbitrary  必須
+              %p.icon ¥
+              = f.text_field :price, placeholder:"例)300", class: "input-defalt"
+            .sell-page__context__price__form-group__right__fee
+              %label.content 販売手数料(10%)
+              %br
+              %label.resultlabel 販売利益
+              %p.result -
+      .sell-page__update
+        .sell-page__update__precautions
+          %p.precaution
+            %a.precaution-a{href: 'http://mercari'} 禁止されている出品
+            、
+            %a.precaution-a{href: 'http://mercari'} 行為
+            を必ずご確認ください。
+            %p.precaution
+            またブランド品でシリアルナンバー等がある場合はご記載ください。
+            %a.precaution-a{href: 'http://mercari'}偽ブランドの販売
+            は犯罪であり処罰される可能性があります。
+            %p.precaution
+            また、出品をもちまして
+            %a.precaution-a{href: 'http://mercari'}加盟店規約
+            に同意したことになります。
+
+        %button.btn-default.btn-red{type:"submit"} 変更する
+        %button.btn-default.btn-gray{type:"submit"} キャンセル
+        
+  = render 'devise/registrations/rg-footer'
