@@ -22,13 +22,17 @@ class ProductsController < ApplicationController
   end
 
   def edit
-  end
-
-  def show
-    @products = Product.all
+    @product = Product.find(params[:id])
   end
 
   def update
+    @product = Product.find(params[:id])
+    # @product.update(product_params)
+    if @product.update(product_params)
+      redirect_to exhibit_product_path, notice: "変更しました"
+    else
+      redirect_to product_edit_path, alert: "変更に失敗しました"
+    end
   end
 
   def destroy
