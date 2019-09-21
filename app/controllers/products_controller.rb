@@ -23,6 +23,7 @@ class ProductsController < ApplicationController
   end
 
   def edit
+    @products = Product.all
     @product = Product.find(params[:id])
   end
 
@@ -30,9 +31,9 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
     # @product.update(product_params)
     if @product.update(product_params)
-      redirect_to exhibit_product_path, notice: "変更しました"
+      redirect_to exhibit_product_path
     else
-      redirect_to product_edit_path, alert: "変更に失敗しました"
+      redirect_to product_edit_path, alert: '編集に失敗しました'
     end
   end
 
@@ -45,12 +46,14 @@ class ProductsController < ApplicationController
   end
 
   def exhibit
+    @products = Product.all
   end
 
 private
   def set_product
     @product = Product.find(params[:id])
   end
+
   def product_params
     params.require(:product).permit(:name, :image, :description, :product_category_id, :brand, :condition, :delivery_fee, :shipping_area, :days_before_shipping, :price, :status).merge(seller_id: current_user.id)
   end
