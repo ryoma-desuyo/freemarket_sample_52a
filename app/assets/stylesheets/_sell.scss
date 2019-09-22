@@ -1,6 +1,6 @@
 .containar-sell {
   background-color: #f5f5f5;
-  height: 2500px;
+  height: 2550px;
   img {
     width: 200px;
     margin-left: 620px;
@@ -94,18 +94,20 @@
           background: #fff;
           line-height: 1.5;
           font-size: inherit;
+          margin-bottom: 30px;
         }
         &__description{
           .textarea-explain {
             display: block;
-            width: 91%;
-            max-width: 91%;
+            width: 92%;
+            max-width: 92%;
             padding: 10px;
             border: 1px solid #ccc;
             background: #fff;
             font-size: 16px;
             line-height: 1.5;
             min-height: 100px;
+            margin-top: 8px;
           }
       }
         .select-defalt {
@@ -452,6 +454,15 @@
             padding-top: 30px;
             padding-bottom: 30px;
             border-bottom: solid 1px #ccc;
+            font-size: 14px;
+            .content {
+              font-weight: lighter;
+            }
+          }
+          .sell-page__context__price__form-group__right__result {
+            padding-top: 20px;
+            font-size: 16px;
+            padding-bottom: 30px;
           }
         }
         .resultlabel {
@@ -585,7 +596,7 @@
     &__fotter {
       height: 150px;
       width: 1440px;
-      margin-top: 2150px;
+      margin-top: 2260px;
       text-align: center;
       font-size: 12px;
       .sellpage__fotter__terms {
