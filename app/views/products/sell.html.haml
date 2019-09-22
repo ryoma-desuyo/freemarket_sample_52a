@@ -9,7 +9,7 @@
           %label.content 出品画像
           %span.form-arbitrary 出品
           %p 最大10枚までアップロードできます
-          = f.file_field :image
+          = f.file_field :image, multiple: true
           = image_tag 'uploadfile-image.png', class: 'uploadfile-image' 
 
       .sell-page__context__explain

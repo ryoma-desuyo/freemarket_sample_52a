@@ -2,10 +2,11 @@
 = render "shared/details-header"
 .details-back
   .item-details
-    %h1.item-details__name aaaaaaaaaaaaa
+    %h1.item-details__name 
+      = @product.name
     .item-details__main
       .item-details__main__photo
-        = image_tag("item-parker.jpg", width: 238.33, height: 300)
+        = image_tag @product.image.url, width: 238.33, height: 300
       %table.item-details__main__photo__table
         %tbody
           %tr
@@ -25,7 +26,8 @@
           %tr
             %th カテゴリー
             %td
-              %a メンズ
+              %a 
+                = @product.product_category_id
               %br/
               %a
                 = fa_icon 'chevron-right'
@@ -37,37 +39,41 @@
           %tr
             %th ブランド
             %td
-              %a xxxxxxx
+              %a
+                = @product.brand
           %tr
             %th 商品のサイズ
             %td S
           %tr
             %th 商品の状態
-            %td 未使用に近い
+            %td 
+              = @product.condition
           %tr
             %th 配送料の負担
-            %td 送料込み(出品者負担)
+            %td
+              = @product.delivery_fee
           %tr
             %th 配送の方法
             %td らくらくメルカリ便
           %tr
             %th 配送元地域
             %td
-              %a aaaaaa
+              %a
+                = @product.shipping_area
           %tr
             %th 配送日の目安
-            %td 1~2で発送
+            %td
+              = @product.days_before_shipping
     .item-price
-      .payment-amount ¥3,200
+      .paymant-price ¥
+      .payment-amount
+        = @product.price
       .item-tax (税込)
       .shipping-fee 送料込み
     
     .item-description
       %p.item-description__text
-        アンダーアーマーのパーカーです。
-        サイズはS〜Mです。定価は約10000円でした。
-        着用回数も少なく状態の良い商品です。
-        不明点やご質問はお気軽にどうぞ。
+        = @product.description
   .item-change
     %a.item-edit-button 商品の編集
     %p or
