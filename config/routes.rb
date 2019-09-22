@@ -40,6 +40,8 @@ Rails.application.routes.draw do
     member do
       get 'buying'
       get 'exhibit'
+      get 'comfirm'
+      post 'buying'
     end
 
     collection do
@@ -50,4 +52,6 @@ Rails.application.routes.draw do
   
   resources :mypages, only: [:index, :edit, :update]
   get 'users/new'
+
+  resources :cards, only: [:new, :create]
 end

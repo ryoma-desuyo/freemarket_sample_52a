@@ -8,6 +8,8 @@ class User < ApplicationRecord
 
   has_many :products
 
+  has_many :cards
+
   has_many :buyed_products, foreign_key: "buyer_id", class_name: "Product"
   #userが買った商品
   has_many :selling_products, -> { where("buyer_id is NULL") }, foreign_key: "seller_id", class_name: "Product"
