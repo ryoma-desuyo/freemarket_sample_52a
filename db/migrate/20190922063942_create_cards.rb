@@ -7,5 +7,6 @@ class CreateCards < ActiveRecord::Migration[5.2]
       t.timestamps
     end
     add_index :cards, :card_id
+    add_index :cards, :customer_id
   end
 end
