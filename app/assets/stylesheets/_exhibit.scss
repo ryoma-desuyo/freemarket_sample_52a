@@ -83,6 +83,11 @@
 .item-price {
   margin: 24px 0 0;
   text-align: center;
+}.paymant-price {
+  margin: 0 16px 0 0;
+  font-size: 40px;
+  font-weight: 600;
+  display: inline-flex;
 } .payment-amount {
   margin: 0 16px 0 0;
   font-size: 40px;
@@ -126,6 +131,10 @@
     text-align: center;
     margin: 10px;
     font-size: 15px;
+  }
+  a {
+    color: #fff;
+    text-decoration: none;
   }
 }
 .item-message {
