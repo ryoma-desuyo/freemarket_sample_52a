@@ -31,18 +31,9 @@ ActiveRecord::Schema.define(version: 2019_09_17_011336) do
     t.string "days_before_shipping", null: false
     t.integer "price", null: false
     t.integer "seller_id", null: false
-    t.integer "buyer_id", default: 0
+    t.integer "buyer_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-  end
-
-  create_table "sns_credentials", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "provider"
-    t.string "uid"
-    t.bigint "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_sns_credentials_on_user_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -53,8 +44,6 @@ ActiveRecord::Schema.define(version: 2019_09_17_011336) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "provider"
-    t.string "uid"
     t.string "nickname", default: "", null: false
     t.string "family_name", default: "", null: false
     t.string "first_name", default: "", null: false
@@ -73,5 +62,4 @@ ActiveRecord::Schema.define(version: 2019_09_17_011336) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "sns_credentials", "users"
 end
