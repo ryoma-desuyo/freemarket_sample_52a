@@ -1,72 +1,72 @@
-.products-list-main
-  .products-list-main__chanel
-    .products-list-main__chanel__head#chanel__head
-      %span.products-list-main__chanel__head__left
+.products-list-main2
+  .products-list-main2__chanel
+    .products-list-main2__chanel__head#chanel__head
+      %span.products-list-main2__chanel__head__left
         シャネル新着アイテム
-      =link_to '', class: 'products-list-main__chanel__head__right' do
+      =link_to '', class: 'products-list-main2__chanel__head__right' do
         もっと見る
-        %span.products-list-main__chanel__head__right__icon
+        %span.products-list-main2__chanel__head__right__icon
           =fa_icon 'chevron-right'
     - products_chanel. each do |product|
-      =link_to exhibit_product_path(product), class: 'products-list-main__chanel__item' do
-        .products-list-main__chanel__item__flame
-          =image_tag product.image.url, size: '188x188', class:'products-list-main__chanel__item__flame__image'
-          %span.products-list-main__chanel__item__flame__price
+      =link_to exhibit_product_path(product), class: 'products-list-main2__chanel__item' do
+        .products-list-main2__chanel__item__flame
+          =image_tag product.image.url, size: '188x188', class:'products-list-main2__chanel__item__flame__image'
+          %span.products-list-main2__chanel__item__flame__price
             ='¥' + "#{product.price}"
-        .products-list-main__chanel__item__bottom
-          %span.products-list-main__chanel__item__bottom__name
+        .products-list-main2__chanel__item__bottom
+          %span.products-list-main2__chanel__item__bottom__name
             =product.name
 
-  .products-list-main__louis_vuitton
-    .products-list-main__louis_vuitton__head#louis_vuitton__head
-      %span.products-list-main__louis_vuitton__head__left
+  .products-list-main2__louis_vuitton
+    .products-list-main2__louis_vuitton__head#louis_vuitton__head
+      %span.products-list-main2__louis_vuitton__head__left
         ルイヴィトン新着アイテム
-      =link_to '', class: 'products-list-main__louis_vuitton__head__right' do
+      =link_to '', class: 'products-list-main2__louis_vuitton__head__right' do
         もっと見る
-        %span.products-list-main__louis_vuitton__head__right__icon
+        %span.products-list-main2__louis_vuitton__head__right__icon
           =fa_icon 'chevron-right'
     - products_louis_vuitton. each do |product|
-      =link_to exhibit_product_path(product), class: 'products-list-main__louis_vuitton__item' do
-        .products-list-main__louis_vuitton__item__flame
-          =image_tag product.image.url, size: '188x188', class:'products-list-main__louis_vuitton__item__flame__image'
-          %span.products-list-main__louis_vuitton__item__flame__price
+      =link_to exhibit_product_path(product), class: 'products-list-main2__louis_vuitton__item' do
+        .products-list-main2__louis_vuitton__item__flame
+          =image_tag product.image.url, size: '188x188', class:'products-list-main2__louis_vuitton__item__flame__image'
+          %span.products-list-main2__louis_vuitton__item__flame__price
             ='¥' + "#{product.price}"
-        .products-list-main__louis_vuitton__item__bottom
-          %span.products-list-main__louis_vuitton__item__bottom__name
+        .products-list-main2__louis_vuitton__item__bottom
+          %span.products-list-main2__louis_vuitton__item__bottom__name
             =product.name
 
-  .products-list-main__supreme
-    .products-list-main__supreme__head#supreme__head
-      %span.products-list-main__supreme__head__left
+  .products-list-main2__supreme
+    .products-list-main2__supreme__head#supreme__head
+      %span.products-list-main2__supreme__head__left
         シュプリーム新着アイテム
-      =link_to '', class: 'products-list-main__supreme__head__right' do
+      =link_to '', class: 'products-list-main2__supreme__head__right' do
         もっと見る
-        %span.products-list-main__supreme__head__right__icon
+        %span.products-list-main2__supreme__head__right__icon
           =fa_icon 'chevron-right'
     - products_supreme. each do |product|
-      =link_to exhibit_product_path(product), class: 'products-list-main__supreme__item' do
-        .products-list-main__supreme__item__flame
-          =image_tag product.image.url, size: '188x188', class:'products-list-main__supreme__item__flame__image'
-          %span.products-list-main__supreme__item__flame__price
+      =link_to exhibit_product_path(product), class: 'products-list-main2__supreme__item' do
+        .products-list-main2__supreme__item__flame
+          =image_tag product.image.url, size: '188x188', class:'products-list-main2__supreme__item__flame__image'
+          %span.products-list-main2__supreme__item__flame__price
             ='¥' + "#{product.price}"
-        .products-list-main__supreme__item__bottom
-          %span.products-list-main__supreme__item__bottom__name
+        .products-list-main2__supreme__item__bottom
+          %span.products-list-main2__supreme__item__bottom__name
             =product.name
 
-  .products-list-main__nike
-    .products-list-main__nike__head#nike__head
-      %span.products-list-main__nike__head__left
+  .products-list-main2__nike
+    .products-list-main2__nike__head#nike__head
+      %span.products-list-main2__nike__head__left
         ナイキ新着アイテム
-      =link_to '', class: 'products-list-main__nike__head__right' do
+      =link_to '', class: 'products-list-main2__nike__head__right' do
         もっと見る
-        %span.products-list-main__nike__head__right__icon
+        %span.products-list-main2__nike__head__right__icon
           =fa_icon 'chevron-right'
     - products_nike. each do |product|
-      =link_to exhibit_product_path(product), class: 'products-list-main__nike__item' do
-        .products-list-main__nike__item__flame
-          =image_tag product.image.url, size: '188x188', class:'products-list-main__nike__item__flame__image'
-          %span.products-list-main__nike__item__flame__price
+      =link_to exhibit_product_path(product), class: 'products-list-main2__nike__item' do
+        .products-list-main2__nike__item__flame
+          =image_tag product.image.url, size: '188x188', class:'products-list-main2__nike__item__flame__image'
+          %span.products-list-main2__nike__item__flame__price
             ='¥' + "#{product.price}"
-        .products-list-main__nike__item__bottom
-          %span.products-list-main__nike__item__bottom__name
+        .products-list-main2__nike__item__bottom
+          %span.products-list-main2__nike__item__bottom__name
             =product.name

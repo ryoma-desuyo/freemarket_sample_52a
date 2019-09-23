@@ -1,74 +1,74 @@
-.products-list-main
-  .products-list-main__ladies
-    .products-list-main__ladies__head#ladies__head
-      %span.products-list-main__ladies__head__left
+.products-list-main1
+  .products-list-main1__ladies
+    .products-list-main1__ladies__head#ladies__head
+      %span.products-list-main1__ladies__head__left
         レディース新着アイテム
-      =link_to '', class: 'products-list-main__ladies__head__right' do
+      =link_to '', class: 'products-list-main1__ladies__head__right' do
         もっと見る
-        %span.products-list-main__ladies__head__right__icon
+        %span.products-list-main1__ladies__head__right__icon
           =fa_icon 'chevron-right'
     - products_ladies. each do |product|
-      =link_to exhibit_product_path(product), class: 'products-list-main__ladies__item' do
-        .products-list-main__ladies__item__flame
-          =image_tag product.image.url, size: '188x188', class:'products-list-main__ladies__item__flame__image'
-          %span.products-list-main__ladies__item__flame__price
+      =link_to exhibit_product_path(product), class: 'products-list-main1__ladies__item' do
+        .products-list-main1__ladies__item__flame
+          =image_tag product.image.url, size: '188x188', class:'products-list-main1__ladies__item__flame__image'
+          %span.products-list-main1__ladies__item__flame__price
             ='¥' + "#{product.price}"
-        .products-list-main__ladies__item__bottom
-          %span.products-list-main__ladies__item__bottom__name
+        .products-list-main1__ladies__item__bottom
+          %span.products-list-main1__ladies__item__bottom__name
             =product.name
 
-  .products-list-main__mens
-    .products-list-main__mens__head#mens__head
-      %span.products-list-main__mens__head__left
+  .products-list-main1__mens
+    .products-list-main1__mens__head#mens__head
+      %span.products-list-main1__mens__head__left
         メンズ新着アイテム
-      =link_to '', class: 'products-list-main__mens__head__right' do
+      =link_to '', class: 'products-list-main1__mens__head__right' do
         もっと見る
-        %span.products-list-main__mens__head__right__icon
+        %span.products-list-main1__mens__head__right__icon
           =fa_icon 'chevron-right'
     - products_mens. each do |product|
-      =link_to exhibit_product_path(product), class: 'products-list-main__mens__item' do
-        .products-list-main__mens__item__flame
-          =image_tag product.image.url, size: '188x188', class:'products-list-main__mens__item__flame__image'
-          %span.products-list-main__mens__item__flame__price
+      =link_to exhibit_product_path(product), class: 'products-list-main1__mens__item' do
+        .products-list-main1__mens__item__flame
+          =image_tag product.image.url, size: '188x188', class:'products-list-main1__mens__item__flame__image'
+          %span.products-list-main1__mens__item__flame__price
             ='¥' + "#{product.price}"
-        .products-list-main__mens__item__bottom
-          %span.products-list-main__mens__item__bottom__name
+        .products-list-main1__mens__item__bottom
+          %span.products-list-main1__mens__item__bottom__name
             =product.name
 
-  .products-list-main__appliances
-    .products-list-main__appliances__head#appliances__head
-      %span.products-list-main__appliances__head__left
+  .products-list-main1__appliances
+    .products-list-main1__appliances__head#appliances__head
+      %span.products-list-main1__appliances__head__left
         家電・スマホ・カメラ新着アイテム
-      =link_to '', class: 'products-list-main__appliances__head__right' do
+      =link_to '', class: 'products-list-main1__appliances__head__right' do
         もっと見る
-        %span.products-list-main__appliances__head__right__icon
+        %span.products-list-main1__appliances__head__right__icon
           =fa_icon 'chevron-right'
     - products_appliances. each do |product|
-      =link_to exhibit_product_path(product), class: 'products-list-main__appliances__item' do
-        .products-list-main__appliances__item__flame
-          =image_tag product.image.url, size: '188x188', class:'products-list-main__appliances__item__flame__image'
-          %span.products-list-main__appliances__item__flame__price
+      =link_to exhibit_product_path(product), class: 'products-list-main1__appliances__item' do
+        .products-list-main1__appliances__item__flame
+          =image_tag product.image.url, size: '188x188', class:'products-list-main1__appliances__item__flame__image'
+          %span.products-list-main1__appliances__item__flame__price
             ='¥' + "#{product.price}"
-        .products-list-main__appliances__item__bottom
-          %span.products-list-main__appliances__item__bottom__name
+        .products-list-main1__appliances__item__bottom
+          %span.products-list-main1__appliances__item__bottom__name
             =product.name
 
-  .products-list-main__toys
-    .products-list-main__toys__head#toys__head
-      %span.products-list-main__toys__head__left
+  .products-list-main1__toys
+    .products-list-main1__toys__head#toys__head
+      %span.products-list-main1__toys__head__left
         おもちゃ・ホビー・グッズ新着アイテム
-      =link_to '', class: 'products-list-main__toys__head__right' do
+      =link_to '', class: 'products-list-main1__toys__head__right' do
         もっと見る
-        %span.products-list-main__toys__head__right__icon
+        %span.products-list-main1__toys__head__right__icon
           =fa_icon 'chevron-right'
     - products_toys. each do |product|
-      =link_to exhibit_product_path(product), class: 'products-list-main__toys__item' do
-        .products-list-main__toys__item__flame
-          =image_tag product.image.url, size: '188x188', class:'products-list-main__toys__item__flame__image'
-          %span.products-list-main__toys__item__flame__price
+      =link_to exhibit_product_path(product), class: 'products-list-main1__toys__item' do
+        .products-list-main1__toys__item__flame
+          =image_tag product.image.url, size: '188x188', class:'products-list-main1__toys__item__flame__image'
+          %span.products-list-main1__toys__item__flame__price
             ='¥' + "#{product.price}"
-        .products-list-main__toys__item__bottom
-          %span.products-list-main__toys__item__bottom__name
+        .products-list-main1__toys__item__bottom
+          %span.products-list-main1__toys__item__bottom__name
             =product.name
 
 
