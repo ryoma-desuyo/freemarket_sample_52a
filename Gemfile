@@ -82,4 +82,5 @@ group :production do
 end
 
 gem 'active_hash'
-
+gem "gretel"
+gem 'payjp'

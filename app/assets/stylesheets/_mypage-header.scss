@@ -45,7 +45,6 @@
     position: relative;
     top: 15px;
     margin: 0;
- 
       .likes{
         display: inline-block;
         vertical-align: top;
@@ -140,7 +139,7 @@
     #category-search{
       color: #333;
     }
-   
+  
     .tag {
       color: red;
       padding: 0 3px 0 20px;
@@ -148,47 +147,23 @@
     #brand-search{
       color: #333;
     }
- 
   }
 
-.topic-path{
-  background-color: #fff;
-  border-top: 1px solid rgb(238, 238, 238);
-  height: 50px;
-  box-shadow: 0 3px 3px 0 rgba(0,0,0,0.16);
-  position: relative;
-  .list{
+  .breadcrumbs-list{
+    background-color: #fff;
+    border-top: 1px solid rgb(238, 238, 238);
+    box-shadow: 0 3px 3px 0 rgba(0,0,0,0.16);
     font-size: 14px;
-    margin-left: 210px;
-    padding: 0;
     position: relative;
-    top: 10px;
-    .list-first{
-      display: inline-block;
-      #list1{
-        text-decoration: none;
-        color: rgb(51, 51, 51);
-      }
+    text-decoration: none;
+    color: rgb(51, 51, 51);
+    padding: 20px 210px;
+    font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+    a {
+      text-decoration: none;
+      color: #333333;
     }
-    .list-second{
-      display: inline-block;
-      .list2{
-        text-decoration: none;
-        color: rgb(51, 51, 51);
-      }
-    }
-    .list-third{
-      display: inline-block;
-      .list3{
-        text-decoration: none;
-        color: rgb(51, 51, 51);
-        font-weight: 600;
-      }
+    .current {
+      font-weight: 800;
     }
   }
-    .fa-chevron-right{
-      font-size: 9px;
-      color: #888;
-      margin: 0px 6px;
-    }
-}

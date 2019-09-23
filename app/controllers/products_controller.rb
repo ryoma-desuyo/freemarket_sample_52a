@@ -14,7 +14,6 @@ class ProductsController < ApplicationController
       redirect_to mypages_path
     else
       render "index"
-      
     end
   end
 
@@ -41,7 +40,7 @@ class ProductsController < ApplicationController
     if @product.destroy
       redirect_to mypages_path, notice: '削除しました'
     else
-      redirect_to maypages_path, alert: '削除できませんでした'
+      redirect_to mypages_path, alert: '削除できませんでした'
     end
   end
 
