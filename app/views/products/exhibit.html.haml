@@ -15,7 +15,7 @@
             %tr
               %th 出品者
               %td
-                %a aaaa
+                %a aaaaa
                 .table-icons
                   .table-icons__icon-good
                     =fa_icon 'smile-o'
@@ -29,15 +29,16 @@
             %tr
               %th カテゴリー
               %td
-                %a メンズ
-                %br/
-                %a
-                  = fa_icon 'chevron-right'
-                  トップス
-                %br/
-                %a
-                  = fa_icon 'chevron-right'
-                  パーカー
+                %a 
+                  = product.product_category_id
+                -# %br/
+                -# %a
+                -#   = fa_icon 'chevron-right'
+                -#   トップス
+                -# %br/
+                -# %a
+                -#   = fa_icon 'chevron-right'
+                -#   パーカー
             %tr
               %th ブランド
               %td
@@ -47,20 +48,24 @@
               %td S
             %tr
               %th 商品の状態
-              %td 未使用に近い
+              %td 
+                = product.condition
             %tr
               %th 配送料の負担
-              %td 送料込み(出品者負担)
+              %td 
+                = product.delivery_fee
             %tr
               %th 配送の方法
               %td らくらくメルカリ便
             %tr
               %th 配送元地域
               %td
-                %a aaaaaa
+                %a 
+                  = product.shipping_area
             %tr
               %th 配送日の目安
-              %td 1~2で発送
+              %td 
+                = product.days_before_shipping
       .item-price
         .payment-amount 
           ¥
