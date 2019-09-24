@@ -1,6 +1,8 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:destroy, :exhibit]
 
+  require 'payjp'
+
   def details
   end
   
@@ -42,6 +44,19 @@ class ProductsController < ApplicationController
   def exhibit
   end
 
+  def comfirm
+
+  end
+
+  def buying
+    Payjp.api_key = "sk_test_b7523af6ac88df1a31e90bbe"
+    Payjp::Charge.create(
+      amount: 809,
+      card: params['payjp-token'],
+      currency: 'jpy'
+    )
+  end
+
 private
   def set_product
     @product = Product.find(params[:id])
@@ -49,9 +64,6 @@ private
 
   def product_params
     params.require(:product).permit(:id, :name, :image, :description, :product_category_id, :brand, :condition, :delivery_fee, :shipping_area, :days_before_shipping, :price, :status).merge(seller_id: current_user.id)
-  end
-
-  def buying
   end
   
   def sell
