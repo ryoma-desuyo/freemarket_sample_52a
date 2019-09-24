@@ -3,9 +3,9 @@ require 'rails_helper'
 RSpec.describe ProductsController, type: :controller do
 
   describe "GET #index" do
-    it "returns http success" do
+    it "renders index" do
       get :index
-      expect(response).to have_http_status(:success)
+      expect(response).to render_template :index    #indexアクションが実行された時に、index.html.hamlに遷移しているかのテスト
     end
   end
 

@@ -31,4 +31,5 @@
 # Ignore Byebug command history file.
 .byebug_history
 public/uploads/*
+app/assets/images/*
 
