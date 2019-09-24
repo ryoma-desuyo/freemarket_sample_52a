@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 2019_09_22_063942) do
     t.string "card_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["card_id"], name: "cards"
+    t.index ["card_id"], name: "index_cards_on_card_id"
     t.index ["user_id"], name: "index_cards_on_user_id"
   end
 
