@@ -22,13 +22,11 @@ class ProductsController < ApplicationController
   end
 
   def edit
-    @products = Product.all
-    @product = Product.find(params[:id])
+    set_product
   end
 
   def update
-    @product = Product.find(params[:id])
-    # @product.update(product_params)
+    set_product
     if @product.update(product_params)
       redirect_to exhibit_product_path
     else
@@ -45,7 +43,7 @@ class ProductsController < ApplicationController
   end
 
   def exhibit
-    @products = Product.all
+    set_product
   end
 
 private

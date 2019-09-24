@@ -10,10 +10,8 @@
           %span.form-arbitrary 必須
           %p 最大10枚までアップロードできます
           .image-container
-            - @products.each do |product|
-              %figure
-                = image_tag product.image.url
-                -# %button.image-edit__btn 削除
+            %figure
+              = image_tag @product.image.url
           .upload-mask
             = f.label :image, class: "uploadfile-image-mask" do
               = image_tag 'uploadfile-image.png', class: 'uploadfile-image'
@@ -80,16 +78,15 @@
               = f.text_field :price, placeholder:"例)300", class: "input-defalt"
             .sell-page__context__price__form-group__right__fee
               .fee-content
-                - @products.each do |product|
-                  %label.content 販売手数料(10%)
-                  .fee-result
-                    ¥
-                    = (product.price * 0.10).floor
-                  %br/
-                  %label.content 販売利益
-                  .fee-result
-                    ¥
-                    = (product.price - (product.price * 0.10)).ceil
+                %label.content 販売手数料(10%)
+                .fee-result
+                  ¥
+                  = (@product.price * 0.10).floor
+                %br/
+                %label.content 販売利益
+                .fee-result
+                  ¥
+                  = (@product.price - (@product.price * 0.10)).ceil
                 
       .sell-page__update
         .sell-page__update__precautions
