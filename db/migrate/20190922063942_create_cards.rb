@@ -6,6 +6,6 @@ class CreateCards < ActiveRecord::Migration[5.2]
       t.string :card_id, null: false
       t.timestamps
     end
-    ALTER TABLE cards ADD INDEX index_name(card_id)
+    add_index :cards, :card_id
   end
 end
