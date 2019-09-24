@@ -4,10 +4,32 @@
 
   .top-img
     = image_tag("mainimg.png",class: "top-visual")
-  .top
-    %h2.title ピックアップカテゴリー
-    %h3.mid-title 商品一覧
+  .popular-category
+    .popular-category__title 人気のカテゴリー
+    %ul.popular-category__lists
+      %li.popular-category__lists__part
+        =link_to 'レディース', '#ladies__head', class: 'popular-category__lists__part__link'
+      %li.popular-category__lists__part
+        =link_to 'メンズ', '#mens__head', class: 'popular-category__lists__part__link'
+      %li.popular-category__lists__part
+        =link_to '家電・スマホ・カメラ','#appliances__head', class: 'popular-category__lists__part__link'
+      %li.popular-category__lists__part
+        = link_to 'おもちゃ・ホビー・グッズ','#toys__head', class: 'popular-category__lists__part__link'
 
-= render 'products/product'
+  = render 'shared/products-category', {products: @products, products_ladies: @products_ladies, products_mens: @products_mens, products_appliances: @products_appliances, products_toys: @products_toys}
 
-= render 'shared/footer'
+  .popular-brand
+    .popular-brand__title 人気のブランド
+    %ul.popular-brand__lists
+      %li.popular-brand__lists__part
+        =link_to 'シャネル', '#chanel__head', class: 'popular-brand__lists__part__link'
+      %li.popular-brand__lists__part
+        =link_to 'ルイヴィトン', '#louis_vuitton__head', class: 'popular-brand__lists__part__link'
+      %li.popular-brand__lists__part
+        =link_to 'シュプリーム','#supreme__head', class: 'popular-brand__lists__part__link'
+      %li.popular-brand__lists__part
+        = link_to 'ナイキ','#nike__head', class: 'popular-brand__lists__part__link'
+  
+  = render 'shared/products-brand', {products: @products, products_chanel: @products_chanel, products_louis_vuitton: @products_louis_vuitton, products_supreme: @products_supreme, products_nike: @products_nike}
+
+  = render 'shared/footer'

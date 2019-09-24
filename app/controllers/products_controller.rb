@@ -1,17 +1,27 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:destroy, :exhibit]
 
+  require 'payjp'
+
   def details
   end
   
   def index
     @products = Product.all
+    @products_ladies = Product.where(product_category_id: 'レディース')
+    @products_mens = Product.where(product_category_id: 'メンズ')
+    @products_appliances = Product.where(product_category_id: '家電・スマホ・カメラ')
+    @products_toys = Product.where(product_category_id: 'おもちゃ・ホビー・グッズ')
+    @products_chanel = Product.where(brand: 'シャネル')
+    @products_louis_vuitton = Product.where(brand: 'ルイヴィトン')
+    @products_supreme = Product.where(brand: 'シュプリーム')
+    @products_nike = Product.where(brand: 'ナイキ')
   end
 
   def create
     @product = Product.new(product_params)
-    if @product.save!
-      redirect_to mypages_path
+    if @product.save(product_params)
+      redirect_to exhibit_product_path(@product.id)
     else
       render "index"
     end
@@ -46,19 +56,34 @@ class ProductsController < ApplicationController
     set_product
   end
 
+  def comfirm
+
+  end
+
+  def buying
+    Payjp.api_key = "sk_test_b7523af6ac88df1a31e90bbe"
+    Payjp::Charge.create(
+      amount: 809,
+      card: params['payjp-token'],
+      currency: 'jpy'
+    )
+  end
+
 private
   def set_product
     @product = Product.find(params[:id])
   end
 
   def product_params
-    params.require(:product).permit(:name, :image, :description, :product_category_id, :brand, :condition, :delivery_fee, :shipping_area, :days_before_shipping, :price, :status).merge(seller_id: current_user.id)
-  end
-
-  def buying
+    params.require(:product).permit(:id, :name, :image, :description, :product_category_id, :brand, :condition, :delivery_fee, :shipping_area, :days_before_shipping, :price, :status).merge(seller_id: current_user.id)
   end
   
   def sell
   end
+
+  def exhibit
+    @product = Product.find(params[:id])
+  end
+
 end
 
