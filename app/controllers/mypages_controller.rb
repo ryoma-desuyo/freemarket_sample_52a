@@ -2,6 +2,10 @@ class MypagesController < ApplicationController
   def index
   end
 
+  def products_list
+    @products = Product.all
+  end
+
   def edit
   end
 
