@@ -7,7 +7,6 @@
   background-color: white;
   width: 700px;
   padding: 24px 40px 40px;
-  margin-left: 540px;
   box-sizing: border-box;
   &__name {
     font-size: 21px;
@@ -83,6 +82,11 @@
 .item-price {
   margin: 24px 0 0;
   text-align: center;
+}.paymant-price {
+  margin: 0 16px 0 0;
+  font-size: 40px;
+  font-weight: 600;
+  display: inline-flex;
 } .payment-amount {
   margin: 0 16px 0 0;
   font-size: 40px;
@@ -127,10 +131,13 @@
     margin: 10px;
     font-size: 15px;
   }
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
 }
 .item-message {
   width: 700px;
-  margin-left: 540px;
   &__field__input-area {
     padding: 24px;
     background-color: #fff;

@@ -1,4 +1,8 @@
+- if flash[:notice]
+  %p.flash= flash[:notice]
 = render 'shared/mypage-header'
+- breadcrumb :mypage
+= render "layouts/breadcrumbs"
 .main-mypage
   .main-mypage__right
     =image_tag 'profile-background.jpg', class: 'main-mypage__right__profile'

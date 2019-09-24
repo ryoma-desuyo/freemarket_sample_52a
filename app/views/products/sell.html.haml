@@ -8,9 +8,10 @@
         .sell-page__context__upload
           %label.content 出品画像
           %span.form-arbitrary 出品
-          %p 最大10枚までアップロードできます
-          = f.file_field :image
+          %p 最大10枚までアップロードできま
           = image_tag 'uploadfile-image.png', class: 'uploadfile-image' 
+          = file_field_tag "images[]", type: :file, multiple: true
+          = form.check_box :remove_img 画像を削除する
 
       .sell-page__context__explain
         .sell-page__context__explain__form-group
