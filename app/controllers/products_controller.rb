@@ -8,6 +8,14 @@ class ProductsController < ApplicationController
   
   def index
     @products = Product.all
+    @products_ladies = Product.where(product_category_id: 'レディース')
+    @products_mens = Product.where(product_category_id: 'メンズ')
+    @products_appliances = Product.where(product_category_id: '家電・スマホ・カメラ')
+    @products_toys = Product.where(product_category_id: 'おもちゃ・ホビー・グッズ')
+    @products_chanel = Product.where(brand: 'シャネル')
+    @products_louis_vuitton = Product.where(brand: 'ルイヴィトン')
+    @products_supreme = Product.where(brand: 'シュプリーム')
+    @products_nike = Product.where(brand: 'ナイキ')
   end
 
   def create
