@@ -1,0 +1,18 @@
+= render "shared/mypage-header"
+
+.items-list_container
+  .right-content
+    .right-content__title
+      出品した商品
+    - @products.each do |product|
+      .right-content__title__box
+        %ul
+          %li 
+            = link_to exhibit_product_path(product.id), class: "item-name" do
+              %button
+                = image_tag(product.image.url, width: 48, height: 63)
+                = product.name
+
+  = render "shared/sidebar"
+
+= render "shared/footer"

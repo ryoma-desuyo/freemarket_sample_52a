@@ -4,10 +4,11 @@
 = render "layouts/breadcrumbs"
 .details-back
   .item-details{ style: "margin-left: 540px;" }
-    %h1.item-details__name aaaaaaaaaaaaa
+    %h1.item-details__name
+      = @product.name
     .item-details__main
       .item-details__main__photo
-        = image_tag @product.image.url, width: 238.33, height: 300
+        = image_tag(@product.image.url, width: 238.33, height: 300)
       %table.item-details__main__photo__table
         %tbody
           %tr
@@ -29,14 +30,6 @@
             %td
               %a 
                 = @product.product_category_id
-              %br/
-              %a
-                = fa_icon 'chevron-right'
-                トップス
-              %br/
-              %a
-                = fa_icon 'chevron-right'
-                パーカー
           %tr
             %th ブランド
             %td
@@ -51,7 +44,7 @@
               = @product.condition
           %tr
             %th 配送料の負担
-            %td
+            %td 
               = @product.delivery_fee
           %tr
             %th 配送の方法
@@ -59,24 +52,26 @@
           %tr
             %th 配送元地域
             %td
-              %a
+              %a 
                 = @product.shipping_area
           %tr
             %th 配送日の目安
-            %td
+            %td 
               = @product.days_before_shipping
     .item-price
-      .paymant-price ¥
-      .payment-amount
+      .payment-amount 
+        ¥
         = @product.price
       .item-tax (税込)
       .shipping-fee 送料込み
-    
+      
     .item-description
       %p.item-description__text
         = @product.description
+
   .item-change
-    %a.item-edit-button 商品の編集
+    = link_to edit_product_path do
+      %button.go-edit-page 商品の編集
     %p or
     %button.send-message 出品を一旦停止する
     %button.send-message
