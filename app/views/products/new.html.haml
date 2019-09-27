@@ -1,16 +1,22 @@
 .containar-sell
   = link_to image_tag('mercari_logo_sell.svg', size: '100×49', id: 'mercari_logo_sell'), root_path
   .sell-page
-    = form_for @product do |f|
+    = form_for @product, html: {class: "sell-form dropzone", id: "item-dropzone"} do |f|
       .sell-page__head
         %h2.title 商品の情報を入力
       .sell-page__context
         .sell-page__context__upload
           %label.content 出品画像
           %span.form-arbitrary 出品
-          %p 最大10枚までアップロードできます
-          = f.file_field :image
-          = image_tag 'uploadfile-image.png', class: 'uploadfile-image'
+          = f.fields_for :product_images do |image|
+            .dropzone-container.clearfix
+              #preview
+              .dropzone-area
+                %p 最大10枚までアップロードできます
+                = image.label :image, class: "dropzone-box", for: "upload-image" do
+                  .input_area
+                    = image.file_field :image, id: "image-upload", multiple: true, onchange: "previewFile()"
+                  %p ここをクリックしてください
       .sell-page__contxt__upload__form
       .sell-page__context__explain
         .sell-page__context__explain__form-group
