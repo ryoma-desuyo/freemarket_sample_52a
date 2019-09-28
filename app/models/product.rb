@@ -8,7 +8,5 @@ class Product < ApplicationRecord
   accepts_nested_attributes_for :product_images
 
   has_one :like
-
-  mount_uploader :image, ImageUploader
   
 end
