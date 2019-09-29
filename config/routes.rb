@@ -46,7 +46,6 @@ Rails.application.routes.draw do
     end
 
     collection do
-      get 'sell'
       get 'details'
     end
   end
