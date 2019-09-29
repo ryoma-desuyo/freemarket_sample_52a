@@ -91,17 +91,21 @@
       .sell-page__update
         .sell-page__update__precautions
           %p.precaution
-            %a.precaution-a{href: 'http://mercari'} 禁止されている出品
+            =link_to root_path, class: "precaution-a" do 
+              禁止されている出品
             、
-            %a.precaution-a{href: 'http://mercari'} 行為
+            =link_to root_path, class: "precaution-a" do 
+              行為
             を必ずご確認ください。
             %p.precaution
             またブランド品でシリアルナンバー等がある場合はご記載ください。
-            %a.precaution-a{href: 'http://mercari'}偽ブランドの販売
+            =link_to root_path, class: "precaution-a" do
+              偽ブランドの販売
             は犯罪であり処罰される可能性があります。
             %p.precaution
             また、出品をもちまして
-            %a.precaution-a{href: 'http://mercari'}加盟店規約
+            =link_to root_path, class: "precaution-a" do
+              加盟店規約
             に同意したことになります。
 
         %button.btn-default.btn-red{type:"submit"} 変更する
