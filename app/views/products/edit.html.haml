@@ -11,7 +11,7 @@
           %p 最大10枚までアップロードできます
           .image-container
             %figure
-              = image_tag @product.image.url
+              = image_tag @product.product_images[0].image.url
           .upload-mask
             = f.label :image, class: "uploadfile-image-mask" do
               = image_tag 'uploadfile-image.png', class: 'uploadfile-image'
