@@ -33,7 +33,7 @@ Rails.application.routes.draw do
 
     collection do
       get 'card'
-      get 'products-list'
+      get 'products_list'
     end
   end
   
