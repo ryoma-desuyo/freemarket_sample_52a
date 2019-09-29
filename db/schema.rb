@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 2019_09_25_070353) do
     t.string "card_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["card_id"], name: "index_cards_on_card_id"
+    t.index ["card_id"], name: "cards"
     t.index ["user_id"], name: "index_cards_on_user_id"
   end
 
@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 2019_09_25_070353) do
   create_table "products", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
     t.text "description", null: false
+    t.text "image", null: false
     t.text "product_category_id", null: false
     t.text "brand"
     t.text "condition", null: false
@@ -47,19 +48,9 @@ ActiveRecord::Schema.define(version: 2019_09_25_070353) do
     t.string "days_before_shipping", null: false
     t.integer "price", null: false
     t.integer "seller_id", null: false
-    t.integer "buyer_id", default: 0
+    t.integer "buyer_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.text "image"
-  end
-
-  create_table "sns_credentials", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "provider"
-    t.string "uid"
-    t.bigint "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_sns_credentials_on_user_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -70,8 +61,6 @@ ActiveRecord::Schema.define(version: 2019_09_25_070353) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "provider"
-    t.string "uid"
     t.string "nickname", default: "", null: false
     t.string "family_name", default: "", null: false
     t.string "first_name", default: "", null: false
@@ -91,5 +80,4 @@ ActiveRecord::Schema.define(version: 2019_09_25_070353) do
   end
 
   add_foreign_key "cards", "users"
-  add_foreign_key "sns_credentials", "users"
 end
