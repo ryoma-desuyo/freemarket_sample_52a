@@ -48,7 +48,7 @@
       .sell-page__context__delivery
         .sell-page__context__delivery__form-group
           %h3.sell-sub-head 配送について
-          %a.form-question{:href => "/jp/help_center/article/64/", :target => "_blank"} ?
+          = link_to '?', mypage_path, class: "form-question", target: "_blank"
           .sell-page__context__delivery__form-group__right
             %label.content 配送料の負担
             %span.form-arbitrary  必須
@@ -69,7 +69,7 @@
       .sell-page__context__price
         .sell-page__context__price__form-group
           %h3.sell-sub-head 販売価格(300〜9,999,999)
-          %a.form-question{:href => "/jp/help_center/article/64/", :target => "_blank"} ?
+          = link_to '?', mypage_path, class: "form-question", target: "_blank"
           .sell-page__context__price__form-group__right
             .sell-page__context__price__form-group__right__price
               %label.content 価格
