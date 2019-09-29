@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:edit, :update, :destroy, :exhibit]
-
+  before_action :ensure_correct_user, only: [:edit, :update, :destroy]
   require 'payjp'
 
   def details
@@ -85,6 +85,15 @@ private
     params.require(:product).permit(:id, :name, :description, :product_category_id, :brand, :condition, :delivery_fee,
     :shipping_area, :days_before_shipping, :price, :status, product_images_attributes: [:image]).merge(seller_id: current_user.id)
   end
+
+  def ensure_correct_user
+    @product = Product.find_by(id: params[:id])
+    if @product.seller_id != current_user.id
+      flash[:notice] = "エラー：自分の投稿のみ編集・削除可能です。"
+      redirect_to root_path
+    end
+  end
+
 
 end
 
