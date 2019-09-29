@@ -1,5 +1,5 @@
 .containar-sell
-  = link_to image_tag('mercari_logo_sell.svg', size: '100×49', id: 'mercari_logo_sell'), root_path
+  = link_to image_tag('mercari_logo_sell.svg', class: 'logo', size: '100×49', id: 'mercari_logo_sell'), root_path
   .sell-page
     = form_for @product, html: {class: "sell-form dropzone", id: "item-dropzone"} do |f|
       .sell-page__head
@@ -12,13 +12,13 @@
             .dropzone-container.clearfix
               #preview
               .dropzone-area
-                = image.label :image, class: "dropzone-box", for: "upload-image" do
+                = image.label :image[], class: "dropzone-box", for: "upload-image" do
                   .input_area
-                    = image.file_field :image, multiple: true, name: 'product_images[image][]', id: "upload-image", class: "upload-image", 'data-image': 0
+                    = image.file_field :image[], multiple: true, name: 'product_images[image][]', id: "upload-image", class: "upload-image", 'data-image': 0
                   %p ここをクリックしてください
               #preview2
               .dropzone-area2
-                = image.label :image, class: "dropzone-box", for: "upload-image" do
+                = image.label :image[], class: "dropzone-box", for: "upload-image" do
                   %p ここをクリックしてください
         .sell-page__contxt__upload__form
         .sell-page__context__explain
@@ -105,10 +105,10 @@
           %button.btn-default.btn-red{type:"submit"} 出品する
           %button.btn-default.btn-gray{type:"submit"} もどる
           
-    .sell-page__fotter
-      .sellpage__fotter__terms
-        %a プライバシーポリシー
-        %a メルカリ利用規約
-        %a 特定商取引に関する表記
+  .sell-page__fotter
+    .sellpage__fotter__terms
+      %a プライバシーポリシー
+      %a メルカリ利用規約
+      %a 特定商取引に関する表記
       = image_tag 'mercari_logo-gray .svg', size: '50×30', class: 'mercari_logo-gray'
       %p.copyright © 2019 Mercari
