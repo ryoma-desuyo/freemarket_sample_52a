@@ -5,5 +5,6 @@ class CreateProductImages < ActiveRecord::Migration[5.2]
       t.string :product_id, null:false
       t.timestamps
     end
+    add_index :product_images, :product_id
   end
 end
