@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  before_action :set_product, only: [:destroy, :exhibit]
+  before_action :set_product, only: [:edit, :update, :destroy, :exhibit]
 
   require 'payjp'
 
@@ -45,6 +45,11 @@ class ProductsController < ApplicationController
   end
 
   def update
+    if @product.update(product_params)
+      redirect_to exhibit_product_path
+    else
+      redirect_to product_edit_path, alert: '編集に失敗しました'
+    end
   end
 
   def destroy
@@ -79,9 +84,6 @@ private
   def product_params
     params.require(:product).permit(:id, :name, :description, :product_category_id, :brand, :condition, :delivery_fee,
     :shipping_area, :days_before_shipping, :price, :status, product_images_attributes: [:image]).merge(seller_id: current_user.id)
-  end
-  
-  def sell
   end
 
 end
