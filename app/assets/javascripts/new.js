@@ -82,7 +82,7 @@ $(document).on('turbolinks:load', function(){
       'data-image': inputs.length
     })
     $.each(inputs, function(index, input) {
-      var input = $(this)
+      input = $(this)
       input.attr({
         'data-image': index
       })
