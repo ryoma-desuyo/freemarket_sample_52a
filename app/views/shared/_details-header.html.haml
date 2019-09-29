@@ -10,19 +10,19 @@
     .mypage-header__bottom__btn
       %ul.buttons
         %li.likes
-          =link_to "", class: "mypage-header__bottom__btn__likes" do
+          =link_to "mypages_path", class: "mypage-header__bottom__btn__likes" do
             = fa_icon 'heart-o'
             %span#likes-letter いいね！一覧
         %li.news
-          =link_to "", class: "mypage-header__bottom__btn__news" do
+          =link_to "mypages_path", class: "mypage-header__bottom__btn__news" do
             = fa_icon 'bell-o'
             %span#news-letter お知らせ
         %li.lists
-          =link_to "", class: "mypage-header__bottom__btn__lists" do
+          =link_to "mypages_path", class: "mypage-header__bottom__btn__lists" do
             = fa_icon 'check'
             %span#list-letter やることリスト
         %li.mypage
-          =link_to "", class: "mypage-header__bottom__btn__mypage" do
+          =link_to "mypages_path", class: "mypage-header__bottom__btn__mypage" do
             = image_tag 'user-icon.png', size: '32x32', id: 'user-icon'
             %span#mypage-letter マイページ
       
