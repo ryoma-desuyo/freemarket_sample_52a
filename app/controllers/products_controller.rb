@@ -83,10 +83,5 @@ private
   def sell
   end
 
-  def exhibit
-    @product = Product.find(params[:id])
-    @product_images = product_images.image.find(params[:id])
-  end
-
 end
 
