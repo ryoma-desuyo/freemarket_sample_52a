@@ -3,7 +3,6 @@ class CreateProducts < ActiveRecord::Migration[5.2]
     create_table :products do |t|
       t.string  :name,                 null: false
       t.text    :description,          null: false
-      t.text    :image,                null: false
       t.text    :product_category_id,  null: false, foreign_key: true
       t.text    :brand,                foreign_key: true
       t.text    :condition,            null: false
@@ -11,7 +10,6 @@ class CreateProducts < ActiveRecord::Migration[5.2]
       t.string  :shipping_area,        null: false
       t.string  :days_before_shipping, null: false
       t.integer :price,                null: false
-      t.string  :status,               null: false
       t.integer :seller_id,            null: false, foreign_key: true
       t.integer :buyer_id,             null: true, foreign_key: true
       t.timestamps                     null: true
