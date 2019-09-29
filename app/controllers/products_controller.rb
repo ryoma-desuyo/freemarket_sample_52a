@@ -37,6 +37,7 @@ class ProductsController < ApplicationController
   end
 
   def edit
+    set_product
   end
 
   def show
@@ -45,6 +46,12 @@ class ProductsController < ApplicationController
   end
 
   def update
+    set_product
+    if @product.update(product_params)
+      redirect_to exhibit_product_path
+    else
+      redirect_to product_edit_path, alert: '編集に失敗しました'
+    end
   end
 
   def destroy
@@ -56,6 +63,7 @@ class ProductsController < ApplicationController
   end
 
   def exhibit
+    set_product
   end
 
   def comfirm
