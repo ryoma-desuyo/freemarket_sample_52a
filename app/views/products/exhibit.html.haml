@@ -7,7 +7,7 @@
     %h1.item-details__name aaaaaaaaaaaaa
     .item-details__main
       .item-details__main__photo
-        = image_tag @product_image.image.url, width: 238.33, height: 300
+        = image_tag @product.product_images.image.url, width: 238.33, height: 300
       %table.item-details__main__photo__table
         %tbody
           %tr

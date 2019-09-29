@@ -12,13 +12,13 @@
             .dropzone-container.clearfix
               #preview
               .dropzone-area
-                = image.label :image[], class: "dropzone-box", for: "upload-image" do
+                = image.label :image, class: "dropzone-box", for: "upload-image" do
                   .input_area
-                    = image.file_field :image[], multiple: true, name: 'product_images[image][]', id: "upload-image", class: "upload-image", 'data-image': 0
+                    = image.file_field :image, multiple: true, name: 'product_images[image][]', id: "upload-image", class: "upload-image", 'data-image': 0
                   %p ここをクリックしてください
               #preview2
               .dropzone-area2
-                = image.label :image[], class: "dropzone-box", for: "upload-image" do
+                = image.label :image, class: "dropzone-box", for: "upload-image" do
                   %p ここをクリックしてください
         .sell-page__contxt__upload__form
         .sell-page__context__explain

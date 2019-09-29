@@ -41,7 +41,7 @@ class ProductsController < ApplicationController
 
   def show
     @products = Product.all
-    @product_image = ProductImage.all
+    @product_images = ProductImage.all
   end
 
   def update
@@ -85,6 +85,7 @@ private
 
   def exhibit
     @product = Product.find(params[:id])
+    @product_images = product_images.image.find(params[:id])
   end
 
 end
