@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  before_action :set_product, only: [:destroy, :exhibit]
+  before_action :set_product, only: [:edit, :update, :destroy, :exhibit]
 
   require 'payjp'
 
@@ -37,7 +37,6 @@ class ProductsController < ApplicationController
   end
 
   def edit
-    set_product
   end
 
   def show
@@ -46,7 +45,6 @@ class ProductsController < ApplicationController
   end
 
   def update
-    set_product
     if @product.update(product_params)
       redirect_to exhibit_product_path
     else
@@ -63,7 +61,6 @@ class ProductsController < ApplicationController
   end
 
   def exhibit
-    set_product
   end
 
   def comfirm
