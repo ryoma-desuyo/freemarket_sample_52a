@@ -77,7 +77,8 @@ private
   end
 
   def product_params
-    params.require(:product).permit(:id, :name, :description, :product_category_id, :brand, :condition, :delivery_fee, :shipping_area, :days_before_shipping, :price, :status, product_images_attributes: [:image]).merge(seller_id: current_user.id)
+    params.require(:product).permit(:id, :name, :description, :product_category_id, :brand, :condition, :delivery_fee,
+    :shipping_area, :days_before_shipping, :price, :status, product_images_attributes: [:image]).merge(seller_id: current_user.id)
   end
   
   def sell
