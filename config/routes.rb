@@ -33,11 +33,10 @@ Rails.application.routes.draw do
 
     collection do
       get 'card'
-      get 'products-list'
     end
   end
   
-  resources :products, only: [:index, :create, :new, :edit, :update, :show] do
+  resources :products, only: [:index, :create, :new, :show, :destroy] do
     member do
       get 'buying'
       get 'exhibit'
