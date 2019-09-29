@@ -76,7 +76,8 @@
       %p.item-description__text
         = @product.description
   .item-change
-    %a.item-edit-button 商品の編集
+    = link_to edit_product_path do
+      %button.go-edit-page 商品の編集
     %p or
     %button.send-message 出品を一旦停止する
     %button.send-message
