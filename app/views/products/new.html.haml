@@ -32,7 +32,7 @@
                 %label.content 商品の説明
                 %span.form-arbitrary 必須
                 %br
-                = f.text_field :description, placeholder:"商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。", class: "textarea-explain"
+                = f.text_area :description, placeholder:"商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。", class: "textarea-explain"
         .sell-page__context__property
           .sell-page__context__property__form-group
             %h3.sell-sub-head 商品の詳細
@@ -104,11 +104,5 @@
 
           %button.btn-default.btn-red{type:"submit"} 出品する
           %button.btn-default.btn-gray{type:"submit"} もどる
-          
-  .sell-page__fotter
-    .sellpage__fotter__terms
-      %a プライバシーポリシー
-      %a メルカリ利用規約
-      %a 特定商取引に関する表記
-      = image_tag 'mercari_logo-gray .svg', size: '50×30', class: 'mercari_logo-gray'
-      %p.copyright © 2019 Mercari
+
+  = render 'devise/registrations/rg-footer'
