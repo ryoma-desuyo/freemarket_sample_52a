@@ -87,7 +87,7 @@ private
   end
 
   def ensure_correct_user
-    @product = Product.find_by(id: params[:id])
+    @product = Product.find(params[:id])
     if @product.seller_id != current_user.id
       flash[:notice] = "エラー：自分の投稿のみ編集・削除可能です。"
       redirect_to root_path
