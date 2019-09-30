@@ -8,13 +8,36 @@
         %input{type:"search",name:"keyword",value:"",placeholder:"何かお探しですか？",class: "input-search"}
           =fa_icon "search",class:"search-icon"
   .header__bottom
-    %ul.header__bottom__btn
-      %li.header__bottom__btn__user
-        =link_to users_new_path, class: "user-btn" do
-          %span.sign-up 新規会員登録
-      %li.header__bottom__btn__sign 
-        =link_to edit_user_registration_path, class: "sign-btn" do
-          %span.sign-in ログイン
+    - if user_signed_in? && current_user.id
+      .mypage-header__bottom
+        .mypage-header__bottom__btn{style: "padding-bottom: 10px;"}
+          %ul.buttons
+            %li.likes
+              =link_to mypages_path, class: "mypage-header__bottom__btn__likes" do
+                = fa_icon 'heart-o'
+                %span#likes-letter いいね！一覧
+            %li.news
+              =link_to mypages_path, class: "mypage-header__bottom__btn__news" do
+                = fa_icon 'bell-o'
+                %span#news-letter お知らせ
+            %li.lists
+              =link_to "", class: "mypage-header__bottom__btn__lists" do
+                = fa_icon 'check'
+                %span#list-letter やることリスト
+            %li.mypage
+              =link_to mypages_path, class: "mypage-header__bottom__btn__mypage" do
+                = image_tag 'user-icon.png', size: '32x32', id: 'user-icon'
+                %span#mypage-letter マイページ
+    - else
+      %ul.header__bottom__btn
+        %li.header__bottom__btn__user
+          =link_to users_new_path, class: "user-btn" do
+            %span.sign-up 新規会員登録
+        %li.header__bottom__btn__sign 
+          =link_to edit_user_registration_path, class: "sign-btn" do
+            %span.sign-in ログイン
+
+
 
     .header__bottom__left
       %a
