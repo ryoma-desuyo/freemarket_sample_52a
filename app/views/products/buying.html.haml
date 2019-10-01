@@ -7,11 +7,11 @@
       購入内容の確認
     .buying-container__main__content
       .buying-container__main__content__product
-        =image_tag 'product.jpg', class: 'buying-container__main__content__product__image', size: '64x64'
+        = image_tag  @product.product_images[0].image.url, width: 64, height: 64, class: 'buying-container__main__content__product__image'
         .buying-container__main__content__product__name
-          商品名をここに入力商品名をここに入力商品名をここに入力
+          = @product.name
       .buying-container__main__content__price
-        ¥9,999
+        = @product.price
         %span.buying-container__main__content__price__detail
           送料込み
       .buying-container__main__content__point
@@ -19,11 +19,11 @@
       .buying-container__main__content__payment
         支払い金額
         .buying-container__main__content__payment__right
-          ¥9,999
+          = @product.price
       .buying-container__main__content__alert
         配送先と支払い方法の入力を完了してください。
       .buying-container__main__content__buy-button
-        購入する
+        =link_to "購入する", comfirm_product_path(@product)
     .buying-container__main__address
       .buying-container__main__address__content
         .buying-container__main__address__content__title
@@ -43,7 +43,7 @@
           支払い方法
         .buying-container__main__payment__content__detail
           ＼
-        = link_to '', class: 'buying-container__main__payment__content__change' do
+        = link_to credits_users_path, class: 'buying-container__main__payment__content__change' do
           変更する
           = fa_icon 'chevron-right'
 

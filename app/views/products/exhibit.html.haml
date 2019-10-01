@@ -4,7 +4,8 @@
 = render "layouts/breadcrumbs"
 .details-back
   .item-details{ style: "margin-left: 540px;" }
-    %h1.item-details__name aaaaaaaaaaaaa
+    %h1.item-details__name
+      = @product.name
     .item-details__main
       .item-details__main__photo
         = image_tag  @product.product_images[0].image.url, width: 238.33, height: 300
