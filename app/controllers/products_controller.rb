@@ -27,7 +27,7 @@ class ProductsController < ApplicationController
         redirect_to exhibit_product_path(@product.id)
       else
         @product.product_images.build
-        redirect_to exhibit_product_path, alert: '出品に失敗しました。入力内容を確認してください'
+        redirect_to new_product_path, alert: '出品に失敗しました'
       end
   end
 
