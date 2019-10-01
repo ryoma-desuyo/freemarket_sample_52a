@@ -1,0 +1,28 @@
+%head
+= render 'shared/mypage-header'
+.details-back
+  .details-back__head
+    %h2.title 購入しました。
+  .item-details
+    %h1.item-details__name
+      = @product.name
+    .item-details__main
+      .item-details__main__photo{style:"padding-left: 130px;"}
+        = image_tag  @product.product_images[0].image.url, width: 350.33, height: 300
+    .item-price
+      .paymant-price ¥
+      .payment-amount
+        = @product.price
+      .item-tax (税込)
+      .shipping-fee 送料込み
+    .point
+      = link_to root_path do
+        %button.btn-default.btn-gray トップページへ戻る
+    .payresult
+      .price-result 支払金額
+      .paymant-price2 ¥
+      .payment-amount2
+        = @product.price
+  .blank 
+
+= render "shared/footer"
