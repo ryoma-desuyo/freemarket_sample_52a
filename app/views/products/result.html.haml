@@ -1,5 +1,6 @@
-%head
-= render 'shared/mypage-header'
+.buying-container
+  .buying-container__header
+    = link_to image_tag('logo.svg', size: '185x49', class: 'buying-container__header__image'), root_path
 .details-back
   .details-back__head
     %h2.title 購入しました。
@@ -25,4 +26,15 @@
         = @product.price
   .blank 
 
-= render "shared/footer"
+  .buying-container__footer
+    %ul.buying-container__footer__list
+      %li.buying-container__footer__list__part
+        プライバシーポリシー
+      %li.buying-container__footer__list__part
+        メルカリ利用規約
+      %li.buying-container__footer__list__part
+        特定商取引に関する表記
+    =link_to '', class: 'buying-container__footer__link' do
+      =image_tag 'logo-gray.svg', size: '80x65', class: 'buying-container__footer__link__logo'
+    .buying-container__footer__copyright
+      © 2019 Mercari
