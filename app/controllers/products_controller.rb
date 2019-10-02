@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  before_action :set_product, only: [:edit, :update, :destroy, :exhibit]
+  before_action :set_product, only: [:edit, :update, :destroy, :exhibit, :comfirm, :details, :buying, :result]
   before_action :ensure_correct_user, only: [:edit, :update, :destroy]
   skip_before_action :authenticate_user!, only: [:index, :exhibit]
   require 'payjp'
@@ -69,9 +69,13 @@ class ProductsController < ApplicationController
   end
 
   def buying
-    Payjp.api_key = "sk_test_b7523af6ac88df1a31e90bbe"
+
+  end
+
+  def result
+    Payjp.api_key = ENV['PAYJP_PRIVATE_KEY']
     Payjp::Charge.create(
-      amount: 809,
+      amount: @product.price,
       card: params['payjp-token'],
       currency: 'jpy'
     )
