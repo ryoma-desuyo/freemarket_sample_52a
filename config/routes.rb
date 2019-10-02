@@ -43,10 +43,8 @@ Rails.application.routes.draw do
       get 'exhibit'
       get 'comfirm'
       post 'buying'
-    end
-
-    collection do
       get 'details'
+      post 'result'
     end
   end
   

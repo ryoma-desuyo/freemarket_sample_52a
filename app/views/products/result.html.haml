@@ -1,10 +1,9 @@
 .buying-container
   .buying-container__header
     = link_to image_tag('logo.svg', size: '185x49', class: 'buying-container__header__image'), root_path
-
 .details-back
   .details-back__head
-    %h2.title 購入を確定しますか？
+    %h2.title 購入しました。
   .item-details
     %h1.item-details__name
       = @product.name
@@ -18,17 +17,13 @@
       .item-tax (税込)
       .shipping-fee 送料込み
     .point
-      = link_to exhibit_product_path do
-        %button.btn-default.btn-gray ポイントはありません
+      = link_to root_path do
+        %button.btn-default.btn-gray トップページへ戻る
     .payresult
       .price-result 支払金額
       .paymant-price2 ¥
       .payment-amount2
         = @product.price
-    
-    = form_with url: result_product_path do
-      :plain
-            <script type="text/javascript" src="https://checkout.pay.jp" class="payjp-button" data-key="pk_test_8119584aef930bf4412e634e"></script>
   .blank 
 
   .buying-container__footer
