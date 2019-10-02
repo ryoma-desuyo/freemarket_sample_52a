@@ -1,4 +1,4 @@
-- if user_signed_in?
+- if user_signed_in? && @product.seller_id == current_user.id
   %head
   = render 'shared/mypage-header'
   - breadcrumb :exhibit
