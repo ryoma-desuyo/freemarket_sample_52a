@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:edit, :update, :destroy, :exhibit, :comfirm, :details, :buying, :result]
   before_action :ensure_correct_user, only: [:edit, :update, :destroy]
+  skip_before_action :authenticate_user!, only: [:index, :exhibit]
   require 'payjp'
 
   def details
@@ -27,7 +28,7 @@ class ProductsController < ApplicationController
         redirect_to exhibit_product_path(@product.id)
       else
         @product.product_images.build
-        render "index"
+        redirect_to new_product_path, alert: '出品に失敗しました'
       end
   end
 

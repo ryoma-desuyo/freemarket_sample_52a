@@ -1,96 +1,11 @@
-%head
-= render 'shared/mypage-header'
-- breadcrumb :exhibit
-= render "layouts/breadcrumbs"
-.details-back
-  .item-details{ style: "margin-left: 540px;" }
-    %h1.item-details__name
-      = @product.name
-    .item-details__main
-      .item-details__main__photo
-        = image_tag  @product.product_images[0].image.url, width: 238.33, height: 300
-      %table.item-details__main__photo__table
-        %tbody
-          %tr
-            %th 出品者
-            %td
-              %a aaaaa
-              .table-icons
-                .table-icons__icon-good
-                  =fa_icon 'smile-o'
-                  %span 23
-                .table-icons__icon-normal
-                  =fa_icon 'meh-o'
-                  %span 21
-                .table-icons__icon-bad
-                  =fa_icon 'frown-o'
-                  %span 12
-          %tr
-            %th カテゴリー
-            %td
-              %a 
-                = @product.product_category_id
-              %br/
-              %a
-                = fa_icon 'chevron-right'
-                トップス
-              %br/
-              %a
-                = fa_icon 'chevron-right'
-                パーカー
-          %tr
-            %th ブランド
-            %td
-              %a
-                = @product.brand
-          %tr
-            %th 商品のサイズ
-            %td S
-          %tr
-            %th 商品の状態
-            %td 
-              = @product.condition
-          %tr
-            %th 配送料の負担
-            %td
-              = @product.delivery_fee
-          %tr
-            %th 配送の方法
-            %td らくらくメルカリ便
-          %tr
-            %th 配送元地域
-            %td
-              %a
-                = @product.shipping_area
-          %tr
-            %th 配送日の目安
-            %td
-              = @product.days_before_shipping
-    .item-price
-      .paymant-price ¥
-      .payment-amount
-        = @product.price
-      .item-tax (税込)
-      .shipping-fee 送料込み
-    
-    .item-description
-      %p.item-description__text
-        = @product.description
-  .item-change
-    = link_to edit_product_path do
-      %button.go-edit-page 商品の編集
-    %p or
-    %button.send-message 出品を一旦停止する
-    %button.send-message
-      = link_to 'この商品を削除する', product_path(@product), method: :delete 
+- if user_signed_in?
+  %head
+  = render 'shared/mypage-header'
+  - breadcrumb :exhibit
+  = render "layouts/breadcrumbs"
+  .details-back
+    = render "products/exhibit"
 
-
-  .item-message{ style: "margin-left: 540px;" }
-    .item-message__field
-      .item-message__field__input-area
-        %p 相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
-        %textarea{type: "text", name: "body", class: "message-for-seller"}
-        %button.send-message
-          %span コメントする
-
-= render "shared/footer"
+  = render "shared/footer"
+- else
+  = render "products/details" 
