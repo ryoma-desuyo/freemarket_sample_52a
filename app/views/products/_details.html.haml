@@ -1,12 +1,28 @@
 %head
-= render "shared/details-header"
+= render "shared/header"
 .details-back
   .item-details
     %h1.item-details__name 
       = @product.name
     .item-details__main
       .item-details__main__photo
-        = image_tag  @product.product_images[0].image.url, width: 350.33, height: 300
+
+        .owl-carousel.owl-loaded.owl-drag
+          .owl-stage-outer
+            .owl-stage{ style: 'left:0px',width: '900px'}
+              - @product_images.each do |i|
+                - if i.image.present?
+                  .owl-item{ style: 'width:300px'}
+                    .owl-item__inner.is-higher-width
+                      = image_tag i.image.url
+
+          .owl-dots
+            - if @product_images.present?
+              - @product_images.each do |i|
+                .owl-dot
+                  .owl-dot-inner
+                    = image_tag i.image.url
+              
       %table.item-details__main__photo__table
         %tbody
           %tr
@@ -118,141 +134,141 @@
       %li.pinterest-icon
         = fa_icon 'pinterest-square'
 
-  .other-users-products
-    .other-users-products__items
-      %h2 xxxxxさんのその他の出品
-      .other-products
-        .item-box
-          = image_tag("item-parker4.jpg")
-          .box-body
-            %h3 aaaaaa
-            .body-num
-              .body-num__price
-                ¥3333
-              .body-num__price__like
-                = fa_icon "heart-o"
-                %span 8
-        .item-box
-          = image_tag("item-t-shirt.jpg")
-          .box-body
-            %h3 aaaaaa
-            .body-num
-              .body-num__price
-                ¥3333
-              .body-num__price__like
-                = fa_icon "heart-o"
-                %span 8
-        .item-box
-          = image_tag("item-hat.jpg")
-          .box-body
-            %h3 aaaaaaa
-            .body-num
-              .body-num__price
-                ¥3333
-              .body-num__price__like
-                = fa_icon "heart-o"
-                %span 8
-        .item-box
-          = image_tag("item-parker4.jpg")
-          .box-body
-            %h3 aaaaaa
-            .body-num
-              .body-num__price
-                ¥3333
-              .body-num__price__like
-                = fa_icon "heart-o"
-                %span 8
-        .item-box
-          = image_tag("item-t-shirt.jpg")
-          .box-body
-            %h3 aaaaaa
-            .body-num
-              .body-num__price
-                ¥3333
-              .body-num__price__like
-                = fa_icon "heart-o"
-                %span 8
-        .item-box
-          = image_tag("item-hat.jpg")
-          .box-body
-            %h3 aaaaaaa
-            .body-num
-              .body-num__price
-                ¥3333
-              .body-num__price__like
-                = fa_icon "heart-o"
-                %span 8
+-#   .other-users-products
+-#     .other-users-products__items
+-#       %h2 xxxxxさんのその他の出品
+-#       .other-products
+-#         .item-box
+-#           = image_tag("item-parker4.jpg")
+-#           .box-body
+-#             %h3 aaaaaa
+-#             .body-num
+-#               .body-num__price
+-#                 ¥3333
+-#               .body-num__price__like
+-#                 = fa_icon "heart-o"
+-#                 %span 8
+-#         .item-box
+-#           = image_tag("item-t-shirt.jpg")
+-#           .box-body
+-#             %h3 aaaaaa
+-#             .body-num
+-#               .body-num__price
+-#                 ¥3333
+-#               .body-num__price__like
+-#                 = fa_icon "heart-o"
+-#                 %span 8
+-#         .item-box
+-#           = image_tag("item-hat.jpg")
+-#           .box-body
+-#             %h3 aaaaaaa
+-#             .body-num
+-#               .body-num__price
+-#                 ¥3333
+-#               .body-num__price__like
+-#                 = fa_icon "heart-o"
+-#                 %span 8
+-#         .item-box
+-#           = image_tag("item-parker4.jpg")
+-#           .box-body
+-#             %h3 aaaaaa
+-#             .body-num
+-#               .body-num__price
+-#                 ¥3333
+-#               .body-num__price__like
+-#                 = fa_icon "heart-o"
+-#                 %span 8
+-#         .item-box
+-#           = image_tag("item-t-shirt.jpg")
+-#           .box-body
+-#             %h3 aaaaaa
+-#             .body-num
+-#               .body-num__price
+-#                 ¥3333
+-#               .body-num__price__like
+-#                 = fa_icon "heart-o"
+-#                 %span 8
+-#         .item-box
+-#           = image_tag("item-hat.jpg")
+-#           .box-body
+-#             %h3 aaaaaaa
+-#             .body-num
+-#               .body-num__price
+-#                 ¥3333
+-#               .body-num__price__like
+-#                 = fa_icon "heart-o"
+-#                 %span 8
 
-    .other-users-products__items
-      %h2 xxxxxのxxxx その他の商品
-      .other-products
-        .item-box
-          = image_tag("item-parker2.jpg")
-          .box-body
-            %h3 aaaaaaa
-            .body-num
-              .body-num__price
-                ¥3333
-              .body-num__price__like
-                = fa_icon "heart-o"
-                %span 8
-        .item-box
-          = image_tag("item-parker3.jpg")
-          .box-body
-            %h3 aaaaaaaa
-            .body-num
-              .body-num__price
-                ¥3333
-              .body-num__price__like
-                = fa_icon "heart-o"
-                %span 8
-        .item-box
-          = image_tag("item-parker5.jpg")
-          .box-body
-            %h3 aaaaaaa
-            .body-num
-              .body-num__price
-                ¥3333
-              .body-num__price__like
-                = fa_icon "heart-o"
-                %span 8
-        .item-box
-          = image_tag("item-parker2.jpg")
-          .box-body
-            %h3 aaaaaaa
-            .body-num
-              .body-num__price
-                ¥3333
-              .body-num__price__like
-                = fa_icon "heart-o"
-                %span 8
-        .item-box
-          = image_tag("item-parker3.jpg")
-          .box-body
-            %h3 aaaaaaaa
-            .body-num
-              .body-num__price
-                ¥3333
-              .body-num__price__like
-                = fa_icon "heart-o"
-                %span 8
-        .item-box
-          = image_tag("item-parker5.jpg")
-          .box-body
-            %h3 aaaaaaa
-            .body-num
-              .body-num__price
-                ¥3333
-              .body-num__price__like
-                = fa_icon "heart-o"
-                %span 8
+-#     .other-users-products__items
+-#       %h2 xxxxxのxxxx その他の商品
+-#       .other-products
+-#         .item-box
+-#           = image_tag("item-parker2.jpg")
+-#           .box-body
+-#             %h3 aaaaaaa
+-#             .body-num
+-#               .body-num__price
+-#                 ¥3333
+-#               .body-num__price__like
+-#                 = fa_icon "heart-o"
+-#                 %span 8
+-#         .item-box
+-#           = image_tag("item-parker3.jpg")
+-#           .box-body
+-#             %h3 aaaaaaaa
+-#             .body-num
+-#               .body-num__price
+-#                 ¥3333
+-#               .body-num__price__like
+-#                 = fa_icon "heart-o"
+-#                 %span 8
+-#         .item-box
+-#           = image_tag("item-parker5.jpg")
+-#           .box-body
+-#             %h3 aaaaaaa
+-#             .body-num
+-#               .body-num__price
+-#                 ¥3333
+-#               .body-num__price__like
+-#                 = fa_icon "heart-o"
+-#                 %span 8
+-#         .item-box
+-#           = image_tag("item-parker2.jpg")
+-#           .box-body
+-#             %h3 aaaaaaa
+-#             .body-num
+-#               .body-num__price
+-#                 ¥3333
+-#               .body-num__price__like
+-#                 = fa_icon "heart-o"
+-#                 %span 8
+-#         .item-box
+-#           = image_tag("item-parker3.jpg")
+-#           .box-body
+-#             %h3 aaaaaaaa
+-#             .body-num
+-#               .body-num__price
+-#                 ¥3333
+-#               .body-num__price__like
+-#                 = fa_icon "heart-o"
+-#                 %span 8
+-#         .item-box
+-#           = image_tag("item-parker5.jpg")
+-#           .box-body
+-#             %h3 aaaaaaa
+-#             .body-num
+-#               .body-num__price
+-#                 ¥3333
+-#               .body-num__price__like
+-#                 = fa_icon "heart-o"
+-#                 %span 8
 
 
-.bread-crumbs
-  %ul
-    %li 
-      メルカリ
-      = fa_icon 'chevron-right'
-    %li 
-      = @product.name
+-# .bread-crumbs
+-#   %ul
+-#     %li 
+-#       メルカリ
+-#       = fa_icon 'chevron-right'
+-#     %li 
+-#       = @product.name
 = render "shared/footer"
