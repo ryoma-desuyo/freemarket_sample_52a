@@ -17,19 +17,23 @@
           =fa_icon "chevron-right", class: "icon"
       .profile-identification__context__form-group
         %label.content お名前
-        %p テスト 太郎
+        %h4.name-form
+          %p.family_name= current_user.family_name 
+          %p.family_name= current_user.first_name
       .profile-identification__context__form-group
         %label.content お名前カナ
-        %p テスト タロウ
+        %h4.name-form
+          %p.family_name= current_user.family_name_kana
+          %p.first_name= current_user.first_name_kana
       .profile-identification__context__form-group
         %label.content 生年月日
-        %p 1991/11/11
+        %p= current_user.birthday
       .profile-identification__context__form-group
         = form_tag do
           %label.content 郵便番号
           %span.form-arbitrary 任意
           %br
-          %input{type:"text", name:"address-number",value:"" ,placeholder:"例）1234567", class: "input-defalt"}
+          %input{type:"text", name:"address-number",value:current_user.postal_code ,placeholder:"例）1234567", class: "input-defalt"}
       .profile-identification__context__form-group
         %label.content 都道府県
         %span.form-arbitrary  任意
@@ -42,19 +46,19 @@
           %label.content 市区町村
           %span.form-arbitrary  任意
           %br
-          %input{type:"text", name:"address-number",value:"" ,placeholder:"例）横浜市緑区", class: "input-defalt"}
+          %input{type:"text", name:"address-number",value:current_user.city ,placeholder:"例）横浜市緑区", class: "input-defalt"}
       .profile-identification__context__form-group
         = form_tag do
           %label.content 番地
           %span.form-arbitrary  任意
           %br
-          %input{type:"text", name:"address-number",value:"" ,placeholder:"例）青山1-1-1", class: "input-defalt"}
+          %input{type:"text", name:"address-number",value:current_user.house_number ,placeholder:"例）青山1-1-1", class: "input-defalt"}
       .profile-identification__context__form-group
         = form_tag do
           %label.content 建物名
           %span.form-arbitrary  任意
           %br
-          %input{type:"text", name:"address-number",value:"" ,placeholder:"例）柳ビル103", class: "input-defalt"}
+          %input{type:"text", name:"address-number",value:current_user.building_name ,placeholder:"例）柳ビル103", class: "input-defalt"}
 
     .profile-identification__update
       %button.btn-default.btn-red{type:"submit"} 登録する
