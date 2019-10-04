@@ -9,10 +9,10 @@
 
         .owl-carousel.owl-loaded.owl-drag
           .owl-stage-outer
-            .owl-stage{ style: 'left:0px',width: '900px'}
+            .owl-stage
               - @product_images.each do |i|
                 - if i.image.present?
-                  .owl-item{ style: 'width:300px'}
+                  .owl-item
                     .owl-item__inner.is-higher-width
                       = image_tag i.image.url
 
