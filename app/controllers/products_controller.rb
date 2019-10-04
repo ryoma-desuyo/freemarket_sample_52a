@@ -62,6 +62,7 @@ class ProductsController < ApplicationController
   end
 
   def exhibit
+    @product_images = @product.product_images
   end
 
   def comfirm

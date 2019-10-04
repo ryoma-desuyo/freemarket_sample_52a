@@ -1,12 +1,28 @@
 %head
-= render "shared/details-header"
+= render "shared/header"
 .details-back
   .item-details
     %h1.item-details__name 
       = @product.name
     .item-details__main
       .item-details__main__photo
-        = image_tag  @product.product_images[0].image.url, width: 350.33, height: 300
+
+        .owl-carousel.owl-loaded.owl-drag
+          .owl-stage-outer
+            .owl-stage
+              - @product_images.each do |i|
+                - if i.image.present?
+                  .owl-item
+                    .owl-item__inner.is-higher-width
+                      = image_tag i.image.url
+
+          .owl-dots
+            - if @product_images.present?
+              - @product_images.each do |i|
+                .owl-dot
+                  .owl-dot-inner
+                    = image_tag i.image.url
+              
       %table.item-details__main__photo__table
         %tbody
           %tr
