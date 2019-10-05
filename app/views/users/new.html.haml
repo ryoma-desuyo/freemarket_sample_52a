@@ -16,10 +16,10 @@
             %span メールアドレスで登録する
         .signup-btn__form__facebook
           =fa_icon "facebook-square", class: "f-icon"
-          %span Facebookで登録する
+          = link_to "Facebookで登録する", "/users/auth/facebook", id: "sign_in"
         .signup-btn__form__google
           =fa_icon "google", class: "g-icon"
-          %span Googleで登録する
+          = link_to "Googleで登録する", "/users/auth/google_oauth2", id: "sign_in"
   
   .footer_color
     = render 'devise/sessions/footer'

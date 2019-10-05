@@ -12,11 +12,10 @@
       .login-main__form
         .login-main__form__facebook
           =fa_icon "facebook-square", class: "f-icon"
-          %span Facebookでログイン
+          = link_to "Facebookでログイン", "/users/auth/facebook", id: "sign_in"
         .login-main__form__google
           =fa_icon "google", class: "g-icon"
-          %span Googleでログイン
-
+          = link_to "Googleでログイン", "/users/auth/google_oauth2", id: "sign_in"
       .login-main__input-form
         = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
           .login-main__input-form__mail
