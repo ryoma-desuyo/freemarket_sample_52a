@@ -62,7 +62,6 @@
 
     &__input-form {
       background-color: white;
-      padding-bottom: 50px;
 
       &__mail {
         width: 100%;
@@ -106,6 +105,10 @@
       float: left;
       color: #0099e8;
       text-decoration: none;
+    }
+
+    .sns-credential {
+      display: none;
     }
 }
 
