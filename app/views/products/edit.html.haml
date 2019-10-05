@@ -1,5 +1,5 @@
 .containar-edit
-  = image_tag 'mercari_logo_sell.svg', size: '100×49', id: 'mercari_logo_sell', class: "mercari-lg"
+  = link_to image_tag('mercari_logo_sell.svg', size: '100×49', id: 'mercari_logo_sell', class: "mercari-lg"), root_path
   .sell-page
     = form_for @product do |f|
       .sell-page__head
