@@ -36,11 +36,16 @@
         width: 114px;
         height: 85px;
       }
+      .img_view {
+        float: left;
+        padding-right: 20px;
+      }
       .uploadfile-image-defalt{
         width: 625px;
         margin-left: 0px;
         margin-top: 0px;
         height: 165px;
+        cursor : pointer;
       }
       .dropzone-area2 {
         display: none;
@@ -71,6 +76,20 @@
         padding: 2px 4px;
         border-radius: 2px;
         top: 20px
+      }
+      .btn_wrapper {
+        display: flex;
+        padding-left: 15px;
+      }
+      .btn.delete {
+        color: #0099e8;
+        cursor : pointer;
+        padding-right: 10px;
+      }
+      .btn.edit {
+        color: #0099e8;
+        cursor: pointer;
+        padding-right: 20px;
       }
     }
     &__context__explain {
