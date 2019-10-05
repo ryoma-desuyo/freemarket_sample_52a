@@ -14,9 +14,9 @@
       text-align: center;
       border-bottom: 1px solid #f5f5f5;
       .title {
-        margin: 34px;
         font-size: 20px;
-        padding: 4px;
+        padding: 20px 4px;
+        margin-top: 20px;
       }
     }
     &__context__upload {
@@ -30,6 +30,11 @@
       }
       .upload-image {
         display: none;
+      }
+      img {
+        border-style: none;
+        width: 114px;
+        height: 85px;
       }
       .dropzone-area2 {
         display: none;
