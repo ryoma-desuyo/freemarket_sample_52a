@@ -1,0 +1,6 @@
+export GOOGLE_CLIENT_ID='19286099538-n380enj3oe8qehe54plnrs93u4ivnv8b.apps.googleusercontent.com'
+export GOOGLE_CLIENT_SECRET='3-Y7aPw1a0rr1D4FLi30k350'
+
+export FACEBOOK_CLIENT_ID='943109479369762'
+export FACEBOOK_CLIENT_SECRET='d71abed0b58ee9abb6448ce7e9f71b21'
+
