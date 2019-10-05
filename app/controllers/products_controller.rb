@@ -73,12 +73,16 @@ class ProductsController < ApplicationController
   end
 
   def result
-    Payjp.api_key = ENV['PAYJP_PRIVATE_KEY']
-    Payjp::Charge.create(
-      amount: @product.price,
-      card: params['payjp-token'],
-      currency: 'jpy'
-    )
+    if Product.find(params[:id]).seller_id !=current_user.id
+      Payjp.api_key = ENV['PAYJP_PRIVATE_KEY']
+      Payjp::Charge.create(
+        amount: @product.price,
+        card: params['payjp-token'],
+        currency: 'jpy'
+      )
+    else
+      redirect_to comfirm_product_path(id: params[:id]), alert: '自分が出品した商品の購入はできません'
+    end
   end
 
 private
