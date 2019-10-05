@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   devise_for :users, controllers: {
     registrations: "users/registrations",
     sessions: "users/sessions"
+    omniauth_callbacks: "users/omniauth_callbacks"
+  
   },
   skip: %i[sessions]
   as :user do
@@ -16,7 +18,7 @@ Rails.application.routes.draw do
     get '/users/logout', to: "users#logout"
     delete 'logout', to:'users/sessions#destroy', as: :destroy_user_session
   end
-  
+
   resources :users do
     collection do
       get 'logout'
