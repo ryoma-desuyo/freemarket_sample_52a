@@ -3,7 +3,7 @@ class MypagesController < ApplicationController
   end
 
   def products_list
-    @products = Product.all
+    @products = Product.where(seller_id: current_user.id)
   end
 
   def edit
