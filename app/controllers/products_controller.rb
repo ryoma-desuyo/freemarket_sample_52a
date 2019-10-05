@@ -79,6 +79,9 @@ class ProductsController < ApplicationController
       card: params['payjp-token'],
       currency: 'jpy'
     )
+
+    @product.buyer_id = current_user.id
+    @product.save
   end
 
 private
