@@ -1,11 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: {
     registrations: "users/registrations",
-    sessions: "users/sessions"
-    omniauth_callbacks: "users/omniauth_callbacks"
-  
-  },
+    sessions: "users/sessions",
+    omniauth_callbacks: 'users/omniauth_callbacks' },
   skip: %i[sessions]
+
   as :user do
     get "/sign_up/basic_info", to: "users/registrations#basic_info"
     post "sign_up/number", to:"users/registrations#number"
@@ -56,4 +55,5 @@ Rails.application.routes.draw do
   get 'users/new'
 
   resources :cards, only: [:new, :create]
+
 end
