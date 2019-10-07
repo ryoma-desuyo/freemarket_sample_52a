@@ -73,15 +73,16 @@ class ProductsController < ApplicationController
   end
 
   def result
-    if Product.find(params[:id]).seller_id !=current_user.id
+    
+    if current_user.selling_products.present? && current_user.selling_products.find(params[:id]).seller ==current_user
+      redirect_to comfirm_product_path(id: params[:id]), alert: '自分が出品した商品の購入はできません'
+    else 
       Payjp.api_key = ENV['PAYJP_PRIVATE_KEY']
       Payjp::Charge.create(
         amount: @product.price,
         card: params['payjp-token'],
         currency: 'jpy'
       )
-    else
-      redirect_to comfirm_product_path(id: params[:id]), alert: '自分が出品した商品の購入はできません'
     end
   end
 
