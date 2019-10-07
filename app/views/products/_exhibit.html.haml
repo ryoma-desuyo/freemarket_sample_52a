@@ -1,4 +1,4 @@
-.item-details{style: "margin-left: 540px"}
+.item-details
   %h1.item-details__name
     = @product.name
   .item-details__main
@@ -100,7 +100,7 @@
       = link_to 'この商品を削除する', product_path(@product), method: :delete 
 
 
-.item-message{style: "margin-left: 540px"}
+.item-message
   .item-message__field
     .item-message__field__input-area
       %p 相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
