@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  before_action :set_product, only: [:edit, :update, :destroy, :exhibit, :comfirm, :details, :buying, :result]
+  before_action :set_product, only: [:edit, :update, :destroy, :exhibit, :comfirm, :details, :buying]
   before_action :ensure_correct_user, only: [:edit, :update, :destroy]
   skip_before_action :authenticate_user!, only: [:index, :exhibit]
   require 'payjp'
@@ -73,10 +73,10 @@ class ProductsController < ApplicationController
   end
 
   def result
-    
     if current_user.selling_products.present? && current_user.selling_products.find(params[:id]).seller ==current_user
       redirect_to comfirm_product_path(id: params[:id]), alert: '自分が出品した商品の購入はできません'
-    else 
+    else
+      @product = Product.find(params[:id])
       Payjp.api_key = ENV['PAYJP_PRIVATE_KEY']
       Payjp::Charge.create(
         amount: @product.price,
