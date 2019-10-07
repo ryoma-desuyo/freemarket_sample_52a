@@ -8,6 +8,7 @@
   width: 700px;
   padding: 24px 40px 40px;
   box-sizing: border-box;
+  margin-left: 540px;
   &__name {
     font-size: 21px;
     text-align: center;
@@ -138,6 +139,7 @@
 }
 .item-message {
   width: 700px;
+  margin-left: 540px;
   &__field__input-area {
     padding: 24px;
     background-color: #fff;
@@ -159,4 +161,24 @@
     border: 1px solid #aaa;
     color: #fff;
     cursor: pointer;
+}
+
+.item-sold {
+  margin-left: 540px;
+  margin-right: 200px;
+  padding: 20px;
+  background-color: #fff;
+  font-size: 13px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  &__message {
+  display: block;
+  margin-top: 16px;
+  background: #ea352d;
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 60px;
+  }
 }

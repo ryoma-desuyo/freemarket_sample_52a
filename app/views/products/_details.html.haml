@@ -6,7 +6,6 @@
       = @product.name
     .item-details__main
       .item-details__main__photo
-
         .owl-carousel.owl-loaded.owl-drag
           .owl-stage-outer
             .owl-stage
@@ -15,14 +14,14 @@
                   .owl-item
                     .owl-item__inner.is-higher-width
                       = image_tag i.image.url
-
           .owl-dots
             - if @product_images.present?
               - @product_images.each do |i|
                 .owl-dot
                   .owl-dot-inner
                     = image_tag i.image.url
-              
+          = render "shared/sold"
+
       %table.item-details__main__photo__table
         %tbody
           %tr
@@ -87,8 +86,11 @@
       .item-tax (税込)
       .shipping-fee 送料込み
 
-    .item-buy-button
-      = link_to "購入画面に進む", buying_product_path(@product)
+    -if @product.buyer_id.present?
+      .item-buy-button この商品は売り切れました。
+    - else
+      .item-buy-button
+        = link_to "購入画面に進む", buying_product_path(@product)
     
     .item-description
       %p.item-description__text
