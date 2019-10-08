@@ -1,3 +1,6 @@
+- if flash[:alert]
+  %p.flash= flash[:alert]
+
 .buying-container
   .buying-container__header
     = link_to image_tag('logo.svg', size: '185x49', class: 'buying-container__header__image'), root_path
