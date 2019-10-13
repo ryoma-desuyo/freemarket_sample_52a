@@ -584,7 +584,10 @@
     &__update {
       margin: 40px 0 0;
       padding-bottom: 1px;
-      
+      a {
+        background-color: transparent;
+        text-decoration: none;
+      }
       &__precautions {
         padding: 40px;
         font-size: 14px;
