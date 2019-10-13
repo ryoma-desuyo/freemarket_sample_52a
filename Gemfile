@@ -87,3 +87,7 @@ gem "gretel"
 gem 'payjp'
 gem 'gon'
 gem 'jquery-rails'
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'omniauth-google-oauth2'
+gem 'dotenv-rails'

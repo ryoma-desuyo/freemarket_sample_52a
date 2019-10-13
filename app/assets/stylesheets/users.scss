@@ -1,4 +1,13 @@
-
+.wrapper {
+  .sign-facebook:visited {
+    color:white; 
+    text-decoration: none; 
+  }
+  .sign-google:visited {
+    color: black; 
+    text-decoration: none;
+  }
+}
 
 .signup {
   display: block;
@@ -43,6 +52,11 @@
           @include icon (25px);
         }
       }
+      sign-in {
+        background-color: transparent;
+        color: white;
+        text-decoration: blink;
+    }
 
       &__facebook{
         border-radius: 4px;
