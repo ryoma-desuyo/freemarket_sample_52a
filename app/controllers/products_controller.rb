@@ -70,7 +70,7 @@ class ProductsController < ApplicationController
 
   def buying
     if current_user.selling_products.present? && current_user.selling_products.find_by(id: params[:id]).present?
-      redirect_to comfirm_product_path(id: params[:id]), alert: '自分が出品した商品の購入はできません'
+      redirect_to root_path, alert: '自分が出品した商品の購入はできません'
     end
   end
 
