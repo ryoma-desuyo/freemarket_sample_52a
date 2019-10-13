@@ -18,7 +18,7 @@
                   .input_area
                     = image.file_field :image, multiple: true, name: 'product_images[image][]', id: "upload-image", class: "upload-image", 'data-image': 0
                     = image.hidden_field :id
-                  %p= image_tag 'uploadfile-image.png', class:'uploadfile-image-defalt',style: "width:625px;"
+                  %p= image_tag 'uploadfile-image.png', class:'uploadfile-image-defalt'
               #preview2
               .dropzone-area2
                 = image.label :image, class: "dropzone-box", for: "upload-image" do
@@ -117,7 +117,7 @@
 
         %button.btn-default.btn-red{type:"submit"} 変更する
         
-        = link_to exhibit_product_path, style: "text-decoration: none;" do
+        = link_to exhibit_product_path do
           %button.btn-default.btn-gray{type:"submit"} キャンセル
         
   = render 'devise/registrations/rg-footer'
