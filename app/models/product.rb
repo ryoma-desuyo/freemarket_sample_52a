@@ -9,6 +9,6 @@ class Product < ApplicationRecord
 
   has_one :like
 
-  validates :name, :description, :product_category_id, :condition, :delivery_fee, :shipping_area, :days_before_shipping, :price, :seller_id, presence: true
+  validates :name, :description, :product_category, :condition, :delivery_fee, :shipping_area, :days_before_shipping, :price, :seller_id, presence: true
   
 end
