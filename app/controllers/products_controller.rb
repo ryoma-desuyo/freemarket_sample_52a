@@ -9,10 +9,10 @@ class ProductsController < ApplicationController
   
   def index
     @products = Product.all
-    @products_ladies = Product.where(product_category_id: 'レディース')
-    @products_mens = Product.where(product_category_id: 'メンズ')
-    @products_appliances = Product.where(product_category_id: '家電・スマホ・カメラ')
-    @products_toys = Product.where(product_category_id: 'おもちゃ・ホビー・グッズ')
+    @products_ladies = Product.where(product_category: 'レディース')
+    @products_mens = Product.where(product_category: 'メンズ')
+    @products_appliances = Product.where(product_category: '家電・スマホ・カメラ')
+    @products_toys = Product.where(product_category: 'おもちゃ・ホビー・グッズ')
     @products_chanel = Product.where(brand: 'シャネル')
     @products_louis_vuitton = Product.where(brand: 'ルイヴィトン')
     @products_supreme = Product.where(brand: 'シュプリーム')
@@ -93,7 +93,7 @@ private
   end
 
   def product_params
-    params.require(:product).permit(:id, :name, :description, :product_category_id, :brand, :condition, :delivery_fee,
+    params.require(:product).permit(:id, :name, :description, :product_category, :brand, :condition, :delivery_fee,
     :shipping_area, :days_before_shipping, :price, :status, product_images_attributes: [:image]).merge(seller_id: current_user.id)
   end
 
