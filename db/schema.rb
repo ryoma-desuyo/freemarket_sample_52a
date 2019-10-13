@@ -34,7 +34,6 @@ ActiveRecord::Schema.define(version: 2019_10_13_051228) do
     t.string "product_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["product_id"], name: "index_product_images_on_product_id"
   end
 
   create_table "products", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -48,7 +47,7 @@ ActiveRecord::Schema.define(version: 2019_10_13_051228) do
     t.string "days_before_shipping", null: false
     t.integer "price", null: false
     t.integer "seller_id", null: false
-    t.integer "buyer_id"
+    t.integer "buyer_id", default: 0
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -61,6 +60,8 @@ ActiveRecord::Schema.define(version: 2019_10_13_051228) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "provider"
+    t.string "uid"
     t.string "nickname", default: "", null: false
     t.string "family_name", default: "", null: false
     t.string "first_name", default: "", null: false
