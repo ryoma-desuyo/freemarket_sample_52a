@@ -15,7 +15,7 @@
               #preview
               .dropzone-area
                 = image.label :image, class: "dropzone-box", for: "upload-image" do
-                  .input_area{style: "display: none;"}
+                  .input_area
                     = image.file_field :image, multiple: true, name: 'product_images[image][]', id: "upload-image", class: "upload-image", 'data-image': 0
                     = image.hidden_field :id
                   %p= image_tag 'uploadfile-image.png', class:'uploadfile-image-defalt',style: "width:625px;"
