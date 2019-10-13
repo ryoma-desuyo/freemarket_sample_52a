@@ -1,7 +1,7 @@
-.containar-edit
+.containar-sell
   = link_to image_tag('mercari_logo_sell.svg', size: '100×49', id: 'mercari_logo_sell', class: "mercari-lg"), root_path
   .sell-page
-    = form_for @product do |f|
+    = form_for @product, html: {class: "sell-form dropzone", id: "item-dropzone"}  do |f|
       .sell-page__head
         %h2.title 商品の情報を入力
       .sell-page__context
@@ -9,13 +9,20 @@
           %label.content 出品画像
           %span.form-arbitrary 必須
           %p 最大10枚までアップロードできます
-          .image-container
-            %figure
-              = image_tag @product.product_images[0].image.url
-          .upload-mask
-            = f.label :image, class: "uploadfile-image-mask" do
-              = image_tag 'uploadfile-image.png', class: 'uploadfile-image'
-              =f.file_field :image, class: 'hidden'
+          = image_tag @product.product_images[0].image.url, {width: 85, height: 115}
+          = f.fields_for :product_images do |image|
+            .dropzone-container.clearfix
+              #preview
+              .dropzone-area
+                = image.label :image, class: "dropzone-box", for: "upload-image" do
+                  .input_area
+                    = image.file_field :image, multiple: true, name: 'product_images[image][]', id: "upload-image", class: "upload-image", 'data-image': 0
+                    = image.hidden_field :id
+                  %p= image_tag 'uploadfile-image.png', class:'uploadfile-image-defalt'
+              #preview2
+              .dropzone-area2
+                = image.label :image, class: "dropzone-box", for: "upload-image" do
+                  %p
       .sell-page__contxt__upload__form
       .sell-page__context__explain
         .sell-page__context__explain__form-group
@@ -111,6 +118,6 @@
         %button.btn-default.btn-red{type:"submit"} 変更する
         
         = link_to exhibit_product_path do
-          %button.btn-default.btn-gray キャンセル
+          %button.btn-default.btn-gray{type:"submit"} キャンセル
         
   = render 'devise/registrations/rg-footer'
