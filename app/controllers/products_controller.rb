@@ -35,6 +35,7 @@ class ProductsController < ApplicationController
 
   def edit
     @image_count = @product.product_images.length
+    @product.product_images.build
   end
 
   def show
