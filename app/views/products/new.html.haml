@@ -9,7 +9,7 @@
       .sell-page__context
         .sell-page__context__upload
           %label.content 出品画像
-          %span.form-arbitrary 出品
+          %span.form-arbitrary 必須
           = f.fields_for :product_images do |image|
             .dropzone-container.clearfix
               #preview
@@ -17,11 +17,12 @@
                 = image.label :image, class: "dropzone-box", for: "upload-image" do
                   .input_area
                     = image.file_field :image, multiple: true, name: 'product_images[image][]', id: "upload-image", class: "upload-image", 'data-image': 0
-                  %p= image_tag 'uploadfile-image.png', class:'uploadfile-image-defalt'
-              #preview2
+                    .uploadfile-image-defalt
+
+            #preview2
               .dropzone-area2
-                = image.label :image, class: "dropzone-box", for: "upload-image" do
-                  %p
+                .uploadfile-image-defalt2
+
         .sell-page__contxt__upload__form
         .sell-page__context__explain
           .sell-page__context__explain__form-group
