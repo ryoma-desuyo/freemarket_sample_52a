@@ -25,7 +25,12 @@
                     = f.fields_for :product_images, class: "sell-upload-drop-file" do |image|
                       = image.file_field :image, class: "file-icon delete_file_#{image.object.id}", id: "file_#{image.object.id}"
                       -if image.object.id.present?
-                        = image.check_box :_destroy, id: "delete_file_#{image.object.id}__destroy"                    
+                        = image.check_box :_destroy, id: "delete_file_#{image.object.id}__destroy"   
+
+            %label.sell-upload-drop-box.have-item-0.new-box{for:"file_"}
+              %pre.visible-pc
+                %p= image_tag 'uploadfile-image.png', class:'uploadfile-image-defalt'
+
 
       .sell-page__contxt__upload__form
       .sell-page__context__explain
