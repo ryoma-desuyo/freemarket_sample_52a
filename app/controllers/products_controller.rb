@@ -21,14 +21,11 @@ class ProductsController < ApplicationController
 
   def create
     @product = Product.new(product_params)
-      if @product.save && !params[:product_images].nil?
-          params[:product_images][:image].each do |image|
-            @product.product_images.create(image: image, product_id: @product.id)
-          end
-        redirect_to exhibit_product_path(@product.id)
-      else
-        redirect_to new_product_path, alert: '出品に失敗しました'
-      end
+    if @product.save
+      redirect_to exhibit_product_path(@product.id)
+    else
+      redirect_to new_product_path, alert: '出品に失敗しました。'
+    end
   end
 
   def new
@@ -37,6 +34,7 @@ class ProductsController < ApplicationController
   end
 
   def edit
+    @image_count = @product.product_images.length
   end
 
   def show
@@ -45,7 +43,7 @@ class ProductsController < ApplicationController
   end
 
   def update
-    if @product.update(product_params)
+    if @product.update(update_product_params)
       redirect_to exhibit_product_path
     else
       redirect_to product_edit_path, alert: '編集に失敗しました'
@@ -103,6 +101,11 @@ private
   def product_params
     params.require(:product).permit(:id, :name, :description, :product_category, :brand, :condition, :delivery_fee,
     :shipping_area, :days_before_shipping, :price, :status, product_images_attributes: [:image]).merge(seller_id: current_user.id)
+  end
+
+  def update_product_params
+    params.require(:product).permit(:id, :name, :description, :product_category, :brand, :condition, :delivery_fee,
+    :shipping_area, :days_before_shipping, :price, :status, product_images_attributes: [:image, :_destroy, :id]).merge(seller_id: current_user.id)
   end
 
   def ensure_correct_user

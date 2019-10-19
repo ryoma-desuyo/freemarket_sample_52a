@@ -650,3 +650,24 @@
     }
   }
 }
+
+#preview {
+  list-style: none;
+}
+.field-hiden {
+  display: none;
+}
+
+.sell-upload-button,.edit-upload-button {
+  color: #0099e8;
+  display: flex;
+  cursor: pointer;
+  & .sell-upload-edit {
+    padding-left: 10px;
+    padding-right: 30px;
+  }
+}
+
+.sell-upload-edit {
+  cursor: pointer;
+}
