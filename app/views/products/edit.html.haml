@@ -25,18 +25,7 @@
                     = f.fields_for :product_images, class: "sell-upload-drop-file" do |image|
                       = image.file_field :image, class: "file-icon delete_file_#{image.object.id}", id: "file_#{image.object.id}"
                       -if image.object.id.present?
-                        = image.check_box :_destroy, id: "delete_file_#{image.object.id}__destroy"
-
-          -# .uploaded-items
-          -#   %ul.preview-images
-          -#     - @product.product_images.first(@image_count).each do |images|
-          -#       %li.preview-images.registered-image{id: "current-image"}
-          -#         %figure.sell-upload-figure{class:"file_#{images.id}"}
-          -#           = image_tag image_url("#{images.image}")
-          -#         .sell-upload-button.edit-upload-button
-          -#           %label.sell-upload-edit 編集
-          -#           .sell-upload-delete{id:"#{images.id}"} 削除
-                    
+                        = image.check_box :_destroy, id: "delete_file_#{image.object.id}__destroy"                    
 
       .sell-page__contxt__upload__form
       .sell-page__context__explain

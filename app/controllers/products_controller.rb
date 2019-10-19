@@ -20,15 +20,6 @@ class ProductsController < ApplicationController
   end
 
   def create
-    # @product = Product.new(product_params)
-    #   if @product.save && !params[:product_images].nil?
-    #       params[:product_images][:image].each do |image|
-    #         @product.product_images.create(image: image, product_id: @product.id)
-    #       end
-    #     redirect_to exhibit_product_path(@product.id)
-    #   else
-    #     redirect_to new_product_path, alert: '出品に失敗しました'
-    #   end
     @product = Product.new(product_params)
     if @product.save
       redirect_to exhibit_product_path(@product.id)
