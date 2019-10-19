@@ -8,21 +8,25 @@
         .sell-page__context__upload
           %label.content 出品画像
           %span.form-arbitrary 必須
-          %p 最大10枚までアップロードできます
-          = image_tag @product.product_images[0].image.url, {width: 85, height: 115}
-          = f.fields_for :product_images do |image|
-            .dropzone-container.clearfix
-              #preview
-              .dropzone-area
-                = image.label :image, class: "dropzone-box", for: "upload-image" do
-                  .input_area
-                    = image.file_field :image, multiple: true, name: 'product_images[image][]', id: "upload-image", class: "upload-image", 'data-image': 0
-                    = image.hidden_field :id
-                  %p= image_tag 'uploadfile-image.png', class:'uploadfile-image-defalt'
-              #preview2
-              .dropzone-area2
-                = image.label :image, class: "dropzone-box", for: "upload-image" do
-                  %p
+          %p 
+            最大10枚までアップロードできます
+          .sell-dropbox-container.clearfix.state-image-number-10
+            .sell-upload-items-container
+              .sell-upload-items.have-item-0
+                %ul#preview
+                  - @product.product_images.first(@image_count).each do |images|
+                    %li.sell-upload-item.registered-image{class:"delete_file_#{images.id}"}
+                      %figure.sell-upload-figure{class:"file_#{images.id}"}
+                        = image_tag image_url("#{images.image}")
+                      .sell-upload-button.edit-upload-button
+                        %label.sell-upload-edit{for:"file_#{images.id}"} 編集
+                        .sell-upload-delete{id:"delete_file_#{images.id}"} 削除
+                  .field-hiden
+                    = f.fields_for :product_images, class: "sell-upload-drop-file" do |image|
+                      = image.file_field :image, class: "file-icon delete_file_#{image.object.id}", id: "file_#{image.object.id}"
+                      -if image.object.id.present?
+                        = image.check_box :_destroy, id: "delete_file_#{image.object.id}__destroy"                    
+
       .sell-page__contxt__upload__form
       .sell-page__context__explain
         .sell-page__context__explain__form-group
