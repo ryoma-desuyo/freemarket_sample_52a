@@ -1,3 +1,13 @@
+.wrapper {
+  .sign-facebook:visited {
+    color:white; 
+    text-decoration: none; 
+  }
+  .sign-google:visited {
+    color: black; 
+    text-decoration: none;
+  }
+}
 
 .rg-header-sign {
   text-align: center;
@@ -62,7 +72,6 @@
 
     &__input-form {
       background-color: white;
-      padding-bottom: 50px;
 
       &__mail {
         width: 100%;
@@ -106,6 +115,10 @@
       float: left;
       color: #0099e8;
       text-decoration: none;
+    }
+
+    .sns-credential {
+      display: none;
     }
 }
 

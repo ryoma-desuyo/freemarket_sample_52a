@@ -1,8 +1,24 @@
-.item-details{ style: "margin-left: 540px;" }
-  %h1.item-details__name aaaaaaaaaaaaa
+.item-details
+  %h1.item-details__name
+    = @product.name
   .item-details__main
     .item-details__main__photo
-      = image_tag  @product.product_images[0].image.url, width: 238.33, height: 300
+      .owl-carousel.owl-loaded.owl-drag
+        .owl-stage-outer
+          .owl-stage
+            - @product_images.each do |i|
+              - if i.image.present?
+                .owl-item
+                  .owl-item__inner.is-higher-width
+                    = image_tag i.image.url
+          .owl-dots
+            - if @product_images.present?
+              - @product_images.each do |i|
+                .owl-dot
+                  .owl-dot-inner
+                    = image_tag i.image.url
+        = render "shared/sold"
+
     %table.item-details__main__photo__table
       %tbody
         %tr
@@ -23,7 +39,7 @@
           %th カテゴリー
           %td
             %a 
-              = @product.product_category_id
+              = @product.product_category
             %br/
             %a
               = fa_icon 'chevron-right'
@@ -70,16 +86,21 @@
   .item-description
     %p.item-description__text
       = @product.description
-.item-change
-  = link_to edit_product_path do
-    %button.go-edit-page 商品の編集
-  %p or
-  %button.send-message 出品を一旦停止する
-  %button.send-message
-    = link_to 'この商品を削除する', product_path(@product), method: :delete 
+
+-if @product.buyer_id.present?
+  .item-sold 
+    %a.item-sold__message この商品は購入されました。
+-else
+  .item-change
+    = link_to edit_product_path do
+      %button.go-edit-page 商品の編集
+    %p or
+    %button.send-message 出品を一旦停止する
+    = link_to  product_path(@product), method: :delete do
+      %button.send-message この商品を削除する
 
 
-.item-message{ style: "margin-left: 540px;" }
+.item-message
   .item-message__field
     .item-message__field__input-area
       %p 相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。

@@ -14,9 +14,9 @@
       text-align: center;
       border-bottom: 1px solid #f5f5f5;
       .title {
-        margin: 34px;
         font-size: 20px;
-        padding: 4px;
+        padding: 20px 4px;
+        margin-top: 20px;
       }
     }
     &__context__upload {
@@ -31,10 +31,25 @@
       .upload-image {
         display: none;
       }
+      img {
+        border-style: none;
+        width: 114px;
+        height: 85px;
+      }
+      .img_view {
+        float: left;
+        padding-right: 20px;
+      }
+      .uploadfile-image-defalt{
+        width: 625px;
+        margin-left: 0px;
+        margin-top: 0px;
+        height: 165px;
+        cursor : pointer;
+      }
       .dropzone-area2 {
         display: none;
       }
-
       p {
         font-size: 13px;
         padding-top: 10px;
@@ -61,6 +76,20 @@
         padding: 2px 4px;
         border-radius: 2px;
         top: 20px
+      }
+      .btn_wrapper {
+        display: flex;
+        padding-left: 15px;
+      }
+      .btn.delete {
+        color: #0099e8;
+        cursor : pointer;
+        padding-right: 10px;
+      }
+      .btn.edit {
+        color: #0099e8;
+        cursor: pointer;
+        padding-right: 20px;
       }
     }
     &__context__explain {
@@ -554,7 +583,11 @@
     }
     &__update {
       margin: 40px 0 0;
-      
+      padding-bottom: 1px;
+      a {
+        background-color: transparent;
+        text-decoration: none;
+      }
       &__precautions {
         padding: 40px;
         font-size: 14px;
@@ -572,6 +605,7 @@
         border: 1px solid #ea352d;
         color: #fff;
         margin-bottom: 40px;
+        cursor : pointer;
       }
       .btn-gray {
         background: #aaa;
@@ -579,6 +613,7 @@
         width: 50%;
         margin-left: 175px;
         margin-bottom: 50px;
+        cursor : pointer;
       }
       .text-right {
         text-align: right;
@@ -615,3 +650,35 @@
     }
   }
 }
+
+.field-hiden {
+  display: none;
+}
+
+.sell-upload-button,.edit-upload-button {
+  color: #0099e8;
+  display: flex;
+  cursor: pointer;
+  & .sell-upload-edit {
+    padding-left: 10px;
+    padding-right: 30px;
+  }
+}
+
+.sell-upload-edit {
+  cursor: pointer;
+}
+
+
+#preview {
+  display: inline-flex;
+  list-style: none;
+  & li {
+    margin-right: 2%;
+  }
+}
+.sell-dropbox-container{
+  input[type="file"]{
+    display: none;
+  }
+}    

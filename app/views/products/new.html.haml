@@ -9,19 +9,19 @@
       .sell-page__context
         .sell-page__context__upload
           %label.content 出品画像
-          %span.form-arbitrary 出品
-          = f.fields_for :product_images do |image|
-            .dropzone-container.clearfix
-              #preview
-              .dropzone-area
-                = image.label :image, class: "dropzone-box", for: "upload-image" do
-                  .input_area
-                    = image.file_field :image, multiple: true, name: 'product_images[image][]', id: "upload-image", class: "upload-image", 'data-image': 0
-                  %p ここをクリックしてください
-              #preview2
-              .dropzone-area2
-                = image.label :image, class: "dropzone-box", for: "upload-image" do
-                  %p ここをクリックしてください
+          %span.form-arbitrary 必須
+          %p 
+            最大10枚までアップロードできます
+          .sell-dropbox-container.clearfix.state-image-number-10
+            .sell-upload-items-container
+              .sell-upload-items.have-item-0
+                %ul#preview
+                  = f.fields_for :product_images, class: "sell-upload-drop-file" do |image|
+                    = image.file_field :image, class: "file-icon delete_file_#{image.object.id}", id: "file_#{image.object.id}"
+              %label.sell-upload-drop-box.have-item-0.new-box{for:"file_"}
+                %pre.visible-pc
+                  %p= image_tag 'uploadfile-image.png', class:'uploadfile-image-defalt'
+
         .sell-page__contxt__upload__form
         .sell-page__context__explain
           .sell-page__context__explain__form-group
@@ -44,7 +44,7 @@
               %span.form-arbitrary  必須
               %br
               .select-wrap
-                = f.select :product_category_id, [['--', ""],['レディース', "レディース"], ['メンズ', "メンズ"], ['ベビー・キッズ', "ベビー・キッズ"], ['インテリア・住まい・小物', "インテリア・住まい・小物"], ['本・音楽・ゲーム', "本・音楽・ゲーム"], ['おもちゃ・ホビー・グッズ', "おもちゃ・ホビー・グッズ"], ['コスメ・香水・美容', "コスメ・香水・美容"], ['家電・スマホ・カメラ', "家電・スマホ・カメラ"], ['スポーツ・レジャー', "スポーツ・レジャー"], ['ハンドメイド', "ハンドメイド"], ['チケット', "チケット"], ['自転車・オートバイ', "自転車・オートバイ"], ['その他', "その他"]]
+                = f.select :product_category, [['--', ""],['レディース', "レディース"], ['メンズ', "メンズ"], ['ベビー・キッズ', "ベビー・キッズ"], ['インテリア・住まい・小物', "インテリア・住まい・小物"], ['本・音楽・ゲーム', "本・音楽・ゲーム"], ['おもちゃ・ホビー・グッズ', "おもちゃ・ホビー・グッズ"], ['コスメ・香水・美容', "コスメ・香水・美容"], ['家電・スマホ・カメラ', "家電・スマホ・カメラ"], ['スポーツ・レジャー', "スポーツ・レジャー"], ['ハンドメイド', "ハンドメイド"], ['チケット', "チケット"], ['自転車・オートバイ', "自転車・オートバイ"], ['その他', "その他"]]
             .sell-page__context__property__form-group__right
               %label.content 商品の状態
               %span.form-arbitrary  必須
@@ -105,6 +105,6 @@
               に同意したことになります。
 
           %button.btn-default.btn-red{type:"submit"} 出品する
-          %button.btn-default.btn-gray{type:"submit"} もどる
+          =link_to "戻る", "#",class: "btn-default btn-gray", onclick: "history.back(); return false;"
 
   = render 'devise/registrations/rg-footer'

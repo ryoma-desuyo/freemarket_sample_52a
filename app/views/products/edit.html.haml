@@ -1,21 +1,37 @@
-.containar-edit
-  = image_tag 'mercari_logo_sell.svg', size: '100×49', id: 'mercari_logo_sell', class: "mercari-lg"
+.containar-sell
+  = link_to image_tag('mercari_logo_sell.svg', size: '100×49', id: 'mercari_logo_sell', class: "mercari-lg"), root_path
   .sell-page
-    = form_for @product do |f|
+    = form_for @product, html: {class: "sell-form dropzone", id: "item-dropzone"}  do |f|
       .sell-page__head
         %h2.title 商品の情報を入力
       .sell-page__context
         .sell-page__context__upload
           %label.content 出品画像
           %span.form-arbitrary 必須
-          %p 最大10枚までアップロードできます
-          .image-container
-            %figure
-              = image_tag @product.product_images[0].image.url
-          .upload-mask
-            = f.label :image, class: "uploadfile-image-mask" do
-              = image_tag 'uploadfile-image.png', class: 'uploadfile-image'
-              =f.file_field :image, class: 'hidden'
+          %p 
+            最大10枚までアップロードできます
+          .sell-dropbox-container.clearfix.state-image-number-10
+            .sell-upload-items-container
+              .sell-upload-items.have-item-0
+                %ul#preview
+                  - @product.product_images.first(@image_count).each do |images|
+                    %li.sell-upload-item.registered-image{class:"delete_file_#{images.id}"}
+                      %figure.sell-upload-figure{class:"file_#{images.id}"}
+                        = image_tag image_url("#{images.image}")
+                      .sell-upload-button.edit-upload-button
+                        %label.sell-upload-edit{for:"file_#{images.id}"} 編集
+                        .sell-upload-delete{id:"delete_file_#{images.id}"} 削除
+                  .field-hiden
+                    = f.fields_for :product_images, class: "sell-upload-drop-file" do |image|
+                      = image.file_field :image, class: "file-icon delete_file_#{image.object.id}", id: "file_#{image.object.id}"
+                      -if image.object.id.present?
+                        = image.check_box :_destroy, id: "delete_file_#{image.object.id}__destroy"   
+
+            %label.sell-upload-drop-box.have-item-0.new-box{for:"file_"}
+              %pre.visible-pc
+                %p= image_tag 'uploadfile-image.png', class:'uploadfile-image-defalt'
+
+
       .sell-page__contxt__upload__form
       .sell-page__context__explain
         .sell-page__context__explain__form-group
@@ -38,7 +54,7 @@
             %span.form-arbitrary  必須
             %br
             .select-wrap
-              = f.select :product_category_id, [['--', ""],['レディース', "レディース"], ['メンズ', "メンズ"], ['ベビー・キッズ', "ベビー・キッズ"], ['インテリア・住まい・小物', "インテリア・住まい・小物"], ['本・音楽・ゲーム', "本・音楽・ゲーム"], ['おもちゃ・ホビー・グッズ', "おもちゃ・ホビー・グッズ"], ['コスメ・香水・美容', "コスメ・香水・美容"], ['家電・スマホ・カメラ', "家電・スマホ・カメラ"], ['スポーツ・レジャー', "スポーツ・レジャー"], ['ハンドメイド', "ハンドメイド"], ['チケット', "チケット"], ['自転車・オートバイ', "自転車・オートバイ"], ['その他', "その他"]]
+              = f.select :product_category, [['--', ""],['レディース', "レディース"], ['メンズ', "メンズ"], ['ベビー・キッズ', "ベビー・キッズ"], ['インテリア・住まい・小物', "インテリア・住まい・小物"], ['本・音楽・ゲーム', "本・音楽・ゲーム"], ['おもちゃ・ホビー・グッズ', "おもちゃ・ホビー・グッズ"], ['コスメ・香水・美容', "コスメ・香水・美容"], ['家電・スマホ・カメラ', "家電・スマホ・カメラ"], ['スポーツ・レジャー', "スポーツ・レジャー"], ['ハンドメイド', "ハンドメイド"], ['チケット', "チケット"], ['自転車・オートバイ', "自転車・オートバイ"], ['その他', "その他"]]
           .sell-page__context__property__form-group__right
             %label.content 商品の状態
             %span.form-arbitrary  必須
@@ -111,6 +127,6 @@
         %button.btn-default.btn-red{type:"submit"} 変更する
         
         = link_to exhibit_product_path do
-          %button.btn-default.btn-gray キャンセル
+          %button.btn-default.btn-gray{type:"submit"} キャンセル
         
   = render 'devise/registrations/rg-footer'

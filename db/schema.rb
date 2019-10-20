@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_25_070353) do
+ActiveRecord::Schema.define(version: 2019_10_19_034247) do
 
   create_table "addresses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "prefecture_id"
@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(version: 2019_09_25_070353) do
   create_table "products", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
     t.text "description", null: false
-    t.text "product_category_id", null: false
+    t.text "product_category", null: false
     t.text "brand"
     t.text "condition", null: false
     t.text "delivery_fee", null: false
@@ -74,7 +74,9 @@ ActiveRecord::Schema.define(version: 2019_09_25_070353) do
     t.string "phone_number", default: ""
     t.string "profile_icon", default: ""
     t.text "self_introduction"
-    t.date "birthday", null: false
+    t.date "birthday"
+    t.string "provider"
+    t.string "uid"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
