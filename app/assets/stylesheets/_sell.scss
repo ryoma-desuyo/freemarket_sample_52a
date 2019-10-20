@@ -651,9 +651,6 @@
   }
 }
 
-#preview {
-  list-style: none;
-}
 .field-hiden {
   display: none;
 }
@@ -671,3 +668,17 @@
 .sell-upload-edit {
   cursor: pointer;
 }
+
+
+#preview {
+  display: inline-flex;
+  list-style: none;
+  & li {
+    margin-right: 2%;
+  }
+}
+.sell-dropbox-container{
+  input[type="file"]{
+    display: none;
+  }
+}    
