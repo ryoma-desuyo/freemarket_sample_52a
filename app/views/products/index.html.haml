@@ -8,7 +8,14 @@
   = render 'shared/header'
 
   .top-img
-    = image_tag("mainimg.png",class: "top-visual")
+    %ul#slider
+      %li 
+        = image_tag("top-image/mainimg.png")
+      %li
+        = image_tag("top-image/top1.png")
+      %li 
+        = image_tag("top-image/top2.png")
+
   .popular-category
     .popular-category__title 人気のカテゴリー
     %ul.popular-category__lists
