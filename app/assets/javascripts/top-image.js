@@ -1,7 +1,7 @@
-$(document).ready(function () {
-  $("top-img").topSwither ({
-    images: ["top-image/maining.png","top-image/top1.png", "top-image/top2.png"],
-    auto: true,
-    pause: 5000,
+$(document).on('turbolinks:load', function(){
+  $('#slider').bxSlider({
+  auto:true,
+  speed:800,
+  pause:5000,
   });
 });
