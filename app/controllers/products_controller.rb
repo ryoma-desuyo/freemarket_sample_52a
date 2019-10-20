@@ -8,15 +8,15 @@ class ProductsController < ApplicationController
   end
   
   def index
-    @products = Product.all
-    @products_ladies = Product.where(product_category: 'レディース')
-    @products_mens = Product.where(product_category: 'メンズ')
-    @products_appliances = Product.where(product_category: '家電・スマホ・カメラ')
-    @products_toys = Product.where(product_category: 'おもちゃ・ホビー・グッズ')
-    @products_chanel = Product.where(brand: 'シャネル')
-    @products_louis_vuitton = Product.where(brand: 'ルイヴィトン')
-    @products_supreme = Product.where(brand: 'シュプリーム')
-    @products_nike = Product.where(brand: 'ナイキ')
+    @products = Product.all.order(created_at: "DESC").order(created_at: "DESC")
+    @products_ladies = Product.where(product_category: 'レディース').order(created_at: "DESC").order(created_at: "DESC")
+    @products_mens = Product.where(product_category: 'メンズ').order(created_at: "DESC")
+    @products_appliances = Product.where(product_category: '家電・スマホ・カメラ').order(created_at: "DESC")
+    @products_toys = Product.where(product_category: 'おもちゃ・ホビー・グッズ').order(created_at: "DESC")
+    @products_chanel = Product.where(brand: 'シャネル').order(created_at: "DESC")
+    @products_louis_vuitton = Product.where(brand: 'ルイヴィトン').order(created_at: "DESC")
+    @products_supreme = Product.where(brand: 'シュプリーム').order(created_at: "DESC")
+    @products_nike = Product.where(brand: 'ナイキ').order(created_at: "DESC")
   end
 
   def create
