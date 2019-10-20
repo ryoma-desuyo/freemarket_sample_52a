@@ -10,11 +10,11 @@
   .top-img
     %ul#slider
       %li 
-        = image_tag("images/top1.png")
+        = image_tag("top1.png")
       %li
-        = image_tag("images/top3.png")
+        = image_tag("top3.png")
       %li 
-        = image_tag("images/top2.png")
+        = image_tag("top2.png")
 
   .popular-category
     .popular-category__title 人気のカテゴリー
@@ -28,7 +28,7 @@
       %li.popular-category__lists__part
         = link_to 'おもちゃ・ホビー・グッズ','#toys__head', class: 'popular-category__lists__part__link'
 
-  = render 'shared/products-category', {products: @products, products_ladies: @products_ladies, products_mens: @products_mens, products_appliances: @products_appliances, products_toys: @products_toys}
+  /= render 'shared/products-category', {products: @products, products_ladies: @products_ladies, products_mens: @products_mens, products_appliances: @products_appliances, products_toys: @products_toys}
 
   .popular-brand
     .popular-brand__title 人気のブランド
