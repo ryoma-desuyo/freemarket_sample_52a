@@ -671,3 +671,16 @@
 .sell-upload-edit {
   cursor: pointer;
 }
+
+
+#preview {
+  display: inline-flex;
+  & li {
+    margin-right: 2%;
+  }
+}
+.sell-dropbox-container{
+  input[type="file"]{
+    display: none;
+  }
+}    
