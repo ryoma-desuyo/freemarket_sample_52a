@@ -651,9 +651,6 @@
   }
 }
 
-#preview {
-  list-style: none;
-}
 .field-hiden {
   display: none;
 }
@@ -675,6 +672,7 @@
 
 #preview {
   display: inline-flex;
+  list-style: none;
   & li {
     margin-right: 2%;
   }
