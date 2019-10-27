@@ -21,10 +21,11 @@ class ProductsController < ApplicationController
 
   def create
     @product = Product.new(product_params)
-    if @product.save
+    
+    if @product.product_images.blank?
+      redirect_to new_product_path, alert: "出品に失敗しました。"
+    else @product.save
       redirect_to exhibit_product_path(@product.id)
-    else
-      redirect_to new_product_path, alert: '出品に失敗しました。'
     end
   end
 
